@@ -120,13 +120,13 @@ Ball.prototype.update = function(){
     coll_ball(this);
     
     //外枠の当たり判定(仮)
-    if(this.x-this.size<1 || this.x+this.size>canvas.width-1){
-        this.vx*=e;
-        (this.x-this.size<1)? this.x=this.size+1 : this.x=canvas.width-this.size-1;
+    if(this.x-this.size/2<1 || this.x+this.size/2>canvas.width-1){
+        this.vx*=-e;
+        (this.x-this.size/2<1)? this.x=this.size/2+1 : this.x=canvas.width-this.size/2-1;
     }
-    if(this.y-this.size<1 || this.y+this.size>canvas.height-1){
-        this.vy*=e;
-        (this.y-this.size<1) ? this.y=1+this.size : this.y=canvas.height-this.size-1;
+    if(this.y-this.size/2<1 || this.y+this.size/2>canvas.height-1){
+        this.vy*=-e;
+        (this.y-this.size/2<1) ? this.y=1+this.size/2 : this.y=canvas.height-this.size/2-1;
     }
     
 }
