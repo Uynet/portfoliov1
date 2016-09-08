@@ -10,9 +10,26 @@
     <meta charset = "UTF-8"/>
     <title>Canvas</title>
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
-      <script type="text/javascript" src ="main.js"></script>
   </head>
   <body>
+      <script type="text/javascript" src ="main.js"></script>
     <canvas id="cv" width="440" height="440"></canvas>
+      <form name="fshape">
+            <select name="shape">
+                <option value="BOX">BOX</option>
+                <option value="BALL">BALL</option>
+            </select>
+      </form>
+        <form name="fsize">
+          size:<input type = "text" name = "size" value = "20"><br>
+        </form>
+      
+        <form name="ftext">
+          text:<input type = "text" name = "text" value = "OBJECT_ID"><br>
+        </form>
+      
+        <form name="ffontsize">
+          fontSize:<input type = "text" name = "ffontsize" value = "10"><br>
+        </form>
   </body>
 </html>
