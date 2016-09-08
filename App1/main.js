@@ -18,7 +18,7 @@ var tempD;
 var tempE;
 var tempF;
 
-var e = 1;//反発係数
+var e = 0.96;//反発係数
 var acc = 0.3//プレイヤーの加速度
 var mu = 0.01//摩擦係数
 var stv = mu + 0.01;//物体が止まる速さ
