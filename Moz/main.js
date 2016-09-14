@@ -21,12 +21,12 @@ var tail = new Array();
 var MAX_VX = 3;
 
 var Map = [
-	["0","0","1","1","1","1","1","0","1","1","0","1","1","1","1"],
-    ["0","0","1","1","1","1","1","0","1","1","1","0","0","0","1"],
-    ["1","1","1","1","1","1","1","0","1","1","1","0","0","0","1"],
+	["P","0","0","1","1","1","1","0","1","1","0","1","1","1","1"],
+    ["0","0","0","1","1","1","1","0","1","1","1","0","0","0","1"],
+    ["1","0","0","1","1","1","1","0","1","1","1","0","0","0","1"],
     ["1","0","0","0","0","0","0","0","1","1","1","0","0","0","1"],
     ["1","0","E","0","0","0","0","0","0","0","0","0","0","0","1"],
-    ["1","0","1","1","1","1","1","0","0","0","0","E","0","0","1"],
+    ["1","0","0","1","1","1","1","0","0","0","0","E","0","0","1"],
     ["1","0","0","0","0","0","0","0","E","0","1","1","1","0","1"],
     ["1","0","0","0","0","1","1","1","1","0","0","0","0","0","1"],
     ["1","0","0","0","0","0","0","0","0","0","0","0","0","0","1"],
@@ -34,7 +34,7 @@ var Map = [
     ["1","0","0","0","0","0","0","0","0","0","0","0","0","0","1"],
     ["1","0","0","0","0","0","0","0","E","0","0","0","0","0","1"],
     ["1","0","0","0","0","0","1","0","1","1","1","0","0","0","1"],
-    ["1","E","0","0","0","0","0","0","0","0","0","0","0","P","1"],
+    ["1","E","0","0","0","0","0","0","0","0","0","0","0","1","1"],
     ["1","1","1","1","1","0","0","1","1","0","1","1","0","1","1"],
 
 ];
@@ -76,9 +76,6 @@ shake_trigerがtrigerを引いてくれる
 //シーケンス管理
 //マップのスクロール
 
-//DOING gravityのカプセル化
-//
-
 
 //物体クラス
 function Entity(x,y){
@@ -104,8 +101,8 @@ function Entity(x,y){
           var ob = new Effect(player.x,player.y,-10*Math.random());
                 
           //ずれ
-        ob.dpx = (Math.random()-0.5)*2;
-        ob.dpy = (Math.random()-0.5)*2;
+        ob.dpx = (Math.random()-0.5)*16;
+        ob.dpy = (Math.random()-0.5)*16;
           
         eff.push(ob);
         ob.id = obj.length-1;   
@@ -161,7 +158,7 @@ function Player(x,y,w){
             this.vy=-40*this.gravity;  
             this.fly = true;
             this.gravity*=-1;
-            shaker_trigger(20);
+            shaker_trigger(10);
             trig_tail = 1;
             click = 1;
         } 
@@ -278,17 +275,6 @@ Enemy.prototype.update = function(){
            if(obj[i] instanceof Wall){
                this.vy = -0.1;
                /*応急処置*/
-                if(this.x<33){
-                   while(this.x<33){
-                        this.x++;
-                    }
-               }
-               if(this.x>480-33-32){
-                   while(this.x>480-33-32){
-                        this.x--;
-                    }
-               }
-               
                 while(coll_box(this.setBox(this.x,this.y,16,16),this.setBox(obj[i].x,obj[i].y,16,16))){
                     this.y -= this.gravity/Math.abs(this.gravity);
                 }
@@ -336,7 +322,7 @@ for(var y=0;y<15;y++){
 //エフェクトクラス
 function Effect(x,y,w){
     this.size = 32;//初期サイズ
-    this.alpha=0;
+    this.alpha=1;
     this.time;//
     this.dpx;
     this.dpy;
@@ -346,12 +332,12 @@ function Effect(x,y,w){
     //エフェクトごとに分ける
   this.update_pos = function(){
       this.size = 1/(0.009+ 1/this.size);//エフェクトの減衰率
-      this.y--;
+      this.y-=3*obj[0].gravity;
 
       if(this.size<1){//小さくなったら消す
         eff.shift();
       }
-      this.alpha+=0.7;//徐々に透明になる
+      this.alpha*=0.95//叙々に透明になる
   }
     Entity.apply(this,arguments);
 }
@@ -381,7 +367,7 @@ function coll_box(boxA,boxB){
 
 //箱と点
 function coll_dot(box,x,y){
-    return  (box.l<x && x<box.r && box.t<y && y<box.b);        
+    return  (box.l<x && x<box.r && box.t<y && y<box.b); 
 }
 
 //押し戻し関数
@@ -489,17 +475,20 @@ function draw() {
     //エフェクトの描画
     for(var i=0;i<eff.length;i++){
         if(eff[i] instanceof Effect){
-                //ctx.strokeStyle = "rgb(255-105/eff[i].alpha,255-33/eff[i].alpha,255-105/eff.alpha)";
+            //ctx.strokeStyle = "rgb(255-105/eff[i].alpha,255-33/eff[i].alpha,255-105/eff.alpha)";
                 
-                tempA = Math.round(255-55/eff[i].alpha+10).toString();
-                tempB = Math.round(255-185/eff[i].alpha).toString();
-                tempC = Math.round(255-185/eff[i].alpha+40).toString();
-                ctx.strokeStyle = "rgb("+tempA+","+tempB+","+tempC+")";
+            tempA = Math.round(220).toString();
+            tempB = Math.round(150).toString();
+            tempC = Math.round(150).toString();
+            ctx.strokeStyle = "rgb("+tempA+","+tempB+","+tempC+")";
                 
-                ctx.beginPath();
-                ctx.arc(eff[i].x+8+eff[i].dpx,eff[i].y+eff[i].dpy,eff[i].size,0,Math.PI*2,true);
+            ctx.beginPath();
+            ctx.globalAlpha = eff[i].alpha;
+
+                ctx.arc(eff[i].x + 8 + eff[i].dpx, eff[i].y + eff[i].dpy, eff[i].size, 0, Math.PI * 2, true);
                 ctx.stroke();
-            }
+        }
+        ctx.globalAlpha = 1;
     }
 
     
