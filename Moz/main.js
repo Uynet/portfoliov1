@@ -21,7 +21,7 @@ var tail = new Array();
 var MAX_VX = 3;
 
 var Map = [
-	["P","0","0","1","1","1","1","0","1","1","0","1","1","1","1"],
+	["P","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],
     ["0","0","0","1","1","1","1","0","1","1","1","0","0","0","1"],
     ["1","0","0","1","1","1","1","0","1","1","1","0","0","0","1"],
     ["1","0","0","0","0","0","0","0","1","1","1","0","0","0","1"],
@@ -46,7 +46,7 @@ var y=0;
 var t = 0;
 var acc = 3//プレイヤーの加速度
 var mu = 4;
-var stv = 1;
+var stv = 10;
 
 var eff = new Array();
 
@@ -148,7 +148,7 @@ function Player(x,y,w){
             ? -acc
             : 0;
         if(!this.fly){
-        this.vy -= 4*this.gravity;
+        this.vy -= 2*this.gravity;
         this.fly = true;
         }
     }
@@ -158,7 +158,7 @@ function Player(x,y,w){
             this.vy=-40*this.gravity;  
             this.fly = true;
             this.gravity*=-1;
-            shaker_trigger(10);
+            shaker_trigger(20);
             trig_tail = 1;
             click = 1;
         } 
@@ -169,17 +169,19 @@ function Player(x,y,w){
             ? acc
             : 0;
         if(!this.fly){
-        this.vy -= 4*this.gravity;
+        this.vy -= 2*this.gravity;
         this.fly = true;
         }
     }
   }
   
   this.update_pos = function(){
-    this.vx+= this.ax;
-    this.x += this.vx;
-    this.vy+= this.ay+this.gravity
-    this.y += this.vy;
+      this.vx+= this.ax;
+      this.x += this.vx;
+      this.vy += this.ay + this.gravity
+      if(this.fly){
+        this.y += this.vy;
+        }
    
     this.ax = 0;
     this.ay = 0;
@@ -210,33 +212,32 @@ Player.prototype.update = function(){
     //すべてのオブジェクトとの当たり判定を計算
     //TODO
     //線分と矩形の判定を作ってどの面で当たったか調べれるようにする
-    for(var i=1;i<obj.length;i++){
-        if(coll_box(this.setBox(this.x,this.y,16,16),this.setBox(obj[i].x,obj[i].y,obj[i].size,obj[i].size))){
-           if(obj[i] instanceof Wall){
-               this.vy *= -0.1;
-               /*応急処置*/
-               //x
-               if(this.x<33){
-                   while(this.x<33){
-                        this.x++;
+    for (var i = 0; i < obj.length; i++) {
+        
+        if (obj[i] instanceof Wall) {
+
+            if (this.y + 16 > obj[i].y && this.y < obj[i].y + obj[i].size && this.x + 16 > obj[i].x && this.x < obj[i].x + obj[i].size) {
+                this.vy *= -0.1;//着地時の反発
+                //y
+                if (obj[i].x -16  < this.x - this.vx && this.x - this.vx <obj[i].x +obj[i].size) {
+                    while ( obj[i].y < this.y + 16 && this.y < obj[i].y + obj[i].size) {
+
+                        this.y -= this.gravity / Math.abs(this.gravity);
                     }
-               }
-               if(this.x>480-33-16){
-                   while(this.x>480-33-16){
-                        this.x--;
-                    }
-               }
-               //y
-               {
-                    while(coll_box(this.setBox(this.x,this.y,16,16),this.setBox(obj[i].x,obj[i].y,obj[i].size,obj[i].size))){
-                        this.y -= this.gravity/Math.abs(this.gravity);
-                    }
-                    if(this.fly){
+                    if (this.fly) {
                         trig_tail = 0;
                     }
-                   this.fly=false;
-               }
-           }
+                    this.fly = false;
+                }
+                    //x
+                else {
+                        while (this.x + 16 > obj[i].x && this.x < obj[i].x + obj[i].size) {
+                            this.x -= this.vx / Math.abs(this.vx);
+                        }
+                      
+                            //this.vx = 0;
+                    }
+            }
         }
     }
     this.rub();
@@ -256,9 +257,7 @@ function Enemy(x,y,w){
   this.update_pos = function(){
     this.vx+= this.ax;
     this.x += this.vx;
-    this.vy+= (this.id==0)
-        ?this.ay+this.gravity
-        :this.ay+this.gravity;
+    this.vy+= this.ay+this.gravity
     this.y += this.vy;
    
     this.ax = (Math.random()-0.5)/40;
@@ -367,7 +366,10 @@ function coll_box(boxA,boxB){
 
 //箱と点
 function coll_dot(box,x,y){
-    return  (box.l<x && x<box.r && box.t<y && y<box.b); 
+    if (box.l < x && x < box.r && box.t < y && y < box.b) {
+        return 1;
+    }
+    else return 0;
 }
 
 //押し戻し関数
@@ -502,7 +504,3 @@ function draw() {
 function clear(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
 }
-
-
-
-
