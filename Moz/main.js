@@ -19,6 +19,7 @@ var trig_tail = 0;
 var tail = new Array();
 
 var MAX_VX = 3;
+var MAX_VY = 50;
 
 var Map = [
 	["P","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],
@@ -75,6 +76,12 @@ shake_trigerがtrigerを引いてくれる
 //プリバッファリング
 //シーケンス管理
 //マップのスクロール
+//HP管理
+//敵の作成/ダメージ判定など
+
+/*プ以外*/
+//ステージ製作
+//マップエディタの作成
 
 
 //物体クラス
@@ -89,9 +96,12 @@ function Entity(x,y){
   this.ay = 0;
   this.gravity = 0.4;
   
-  this.fly = false;
+  this.flip = false;//flip  
+  this.feel = false;//落下
+  this.pop = false;//跳ねる
+  this.landing = !this.flip && !this.feel && this.pop;
     this.setBox = function(x,y,w,h){
-      return new Box(x,y,w,h);
+        return new Box(x, y, w, h);
   }
   //残像
     //TODO
@@ -147,16 +157,17 @@ function Player(x,y,w){
         this.ax=(-MAX_VX < this.vx)
             ? -acc
             : 0;
-        if(!this.fly){
-        this.vy -= 2*this.gravity;
-        this.fly = true;
+        //跳ねる
+        if(this.landing){
+            this.vy -= 4*this.gravity;
+            this.pop = true;
         }
     }
       //上
     if(input_key[38]){
-        if(!this.fly&&!click){
+        if(this.landing&&!click){
             this.vy=-40*this.gravity;  
-            this.fly = true;
+            this.flip = true;
             this.gravity*=-1;
             shaker_trigger(20);
             trig_tail = 1;
@@ -168,27 +179,34 @@ function Player(x,y,w){
         this.ax=(this.vx < MAX_VX)
             ? acc
             : 0;
-        if(!this.fly){
-        this.vy -= 2*this.gravity;
-        this.fly = true;
+        //歩くたびに跳ねる
+        if(this.landing){
+            this.vy -= 4*this.gravity;
+            this.pop = true;
         }
     }
   }
   
-  this.update_pos = function(){
+  this.update_pos = function () {
+      this.landing = !this.flip && !this.feel && !this.pop;
       this.vx+= this.ax;
       this.x += this.vx;
-      this.vy += this.ay + this.gravity
-      if(this.fly){
-        this.y += this.vy;
-        }
-   
+      //vyの加算を着地時に行うかという話
+      //現状は加算するがすぐ地面と衝突して0にリセットされるようにした
+      //↑ぷるぷる現象が発生するので対処中
+
+      //最大速さ制限
+      if (this.landing == false) {
+          this.vy = (Math.abs(this.vy) < MAX_VY) ? this.vy + this.ay + this.gravity : MAX_VY*this.vy/Math.abs(this.vy);
+      }
+      this.y = this.y + this.vy;
     this.ax = 0;
     this.ay = 0;
+    console.log(this.vy);
   }
-  
-  this.rub = function(){
-      if(!this.fly){
+
+  this.rub = function () {
+      if(this.landing){
           if(Math.abs(this.vx)>stv){
               this.vx = (this.vx < 0)
                 ?this.vx+=mu
@@ -199,6 +217,7 @@ function Player(x,y,w){
           }
       }
   }
+
    this.id = obj.length-1;
     Entity.apply(this,arguments);//Entity.thisをPlayer.thisにする的な
 }
@@ -212,31 +231,53 @@ Player.prototype.update = function(){
     //すべてのオブジェクトとの当たり判定を計算
     //TODO
     //線分と矩形の判定を作ってどの面で当たったか調べれるようにする
+    //フレーム毎の初期化処理が必要
+    //etc.加速度を0,ジャンプフラグを1
+    // this.feel = true;//すべてのboxと衝突していなければtrueで通過する
+    //と思ったがclk現象が発生したので良い方法を検討中
+
     for (var i = 0; i < obj.length; i++) {
         
         if (obj[i] instanceof Wall) {
 
             if (this.y + 16 > obj[i].y && this.y < obj[i].y + obj[i].size && this.x + 16 > obj[i].x && this.x < obj[i].x + obj[i].size) {
-                this.vy *= -0.1;//着地時の反発
-                //y
+    
+                //y面で衝突した
                 if (obj[i].x -16  < this.x - this.vx && this.x - this.vx <obj[i].x +obj[i].size) {
                     while ( obj[i].y < this.y + 16 && this.y < obj[i].y + obj[i].size) {
 
                         this.y -= this.gravity / Math.abs(this.gravity);
+                       
                     }
-                    if (this.fly) {
+
+                    if (this.flip) {
                         trig_tail = 0;
                     }
-                    this.fly = false;
+                    this.flip = false;
+                    this.pop = false;
+                    this.feel = false;
+                    this.vy = 0;
+
+                    /*
+                    this.vy *= -0.1;//着地時の反発
+                    //反発が一定以上ならflipをon それ以外ならｖを0にしてflipを切る
+
+                    if (Math.abs(this.vy) >= 0.01) {
+                        this.flip = true;
+                    }
+                    else {
+                        this.vy = 0;
+                    }
+                    */
                 }
-                    //x
+                    //x面で衝突した
                 else {
                         while (this.x + 16 > obj[i].x && this.x < obj[i].x + obj[i].size) {
                             this.x -= this.vx / Math.abs(this.vx);
-                        }
+                       }
                       
-                            //this.vx = 0;
-                    }
+                            this.vx = 0;
+                }
             }
         }
     }
@@ -277,7 +318,7 @@ Enemy.prototype.update = function(){
                 while(coll_box(this.setBox(this.x,this.y,16,16),this.setBox(obj[i].x,obj[i].y,16,16))){
                     this.y -= this.gravity/Math.abs(this.gravity);
                 }
-                this.fly=false;
+                this.flip=false;
            }
         }
     }
