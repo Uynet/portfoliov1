@@ -54,7 +54,7 @@ var eff = new Array();
 function dist(x1,y1,x2,y2){
     return Math.pow((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2),0.5);
 }
-//継承わけ
+//継承
 /*
 Entity
 |-Mover
@@ -78,11 +78,9 @@ shake_trigerがtrigerを引いてくれる
 //マップのスクロール
 //HP管理
 //敵の作成/ダメージ判定など
-
-/*プ以外*/
+//グローバル変数を消す
 //ステージ製作
 //マップエディタの作成
-
 
 //物体クラス
 function Entity(x,y){
@@ -234,7 +232,7 @@ Player.prototype.update = function(){
     //フレーム毎の初期化処理が必要
     //etc.加速度を0,ジャンプフラグを1
     // this.feel = true;//すべてのboxと衝突していなければtrueで通過する
-    //と思ったがclk現象が発生したので良い方法を検討中
+    //と思ったがぷるぷる現象が発生したので良い方法を検討中
 
     for (var i = 0; i < obj.length; i++) {
         
@@ -433,12 +431,26 @@ onload = function(){
 var main = function() {
     clear();
     input();
-    update();
+    if(input_key[90]){
+        SceneMain.update();
+    }
     draw();
 }
 setInterval(main, 10);
 
-
+function SceneMain(){
+    this.update = function() {
+        for(var i=0;i<obj.length;i++){
+            obj[i].update();
+        }
+        for(var i=0;i<eff.length;i++){
+            eff[i].update();
+        }
+        if(trig){
+            shaker(trig);
+        }
+    }
+}
 
 function input(){
     document.onkeydown = function (e){
@@ -453,18 +465,6 @@ function input(){
 }
 
 
-//更新
-function update() {
-    for(var i=0;i<obj.length;i++){
-        obj[i].update();
-    }
-    for(var i=0;i<eff.length;i++){
-        eff[i].update();
-    }
-    if(trig){
-        shaker(trig);
-    }
-}
 
 //TODO
 //trigerを渡す関数を用意⇨その関数から呼び出す
