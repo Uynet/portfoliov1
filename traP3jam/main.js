@@ -23,6 +23,7 @@ var acc = 0.3//プレイヤーの加速度
 var mu = 0.05//摩擦係数
 var stv = mu + 0.01;//物体が止まる速さ
 
+var state = 1;//ゲームオーバーの時0
 function dist(x1,y1,x2,y2){
     return Math.pow((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2),0.5);
 }
@@ -223,7 +224,11 @@ function coll_ball(ob){
                     obj[i].y--;
                 }
                 //反発
-                if(i == 0) alert(obj.length-1);
+                if(i == 0) {
+                    
+
+            state = 0;
+                }
                 tempA = ob.vy;
                 ob.vy = ((1-e)*ob.vy + (1+e)*obj[i].vy)/2;
                 obj[i].vy =((1+e)*tempA + (1-e)*obj[i].vy)/2;
@@ -244,7 +249,12 @@ function coll_ball(ob){
                     obj[i].x--;
                 }
                 //反発
-                if(i == 0) alert(obj.length-1);
+                if(i == 0) {
+
+
+                    state = 0;
+                }
+                
                 tempA = ob.vx;
                 ob.vx = ((1-e)*ob.vx + (1+e)*obj[i].vx)/2;
                 obj[i].vx =((1+e)*tempA + (1-e)*obj[i].vx)/2;
@@ -267,7 +277,14 @@ onload = function(){
 var main = function() {
     clear();
     input();
-    update();
+    if(state ==1){
+        update();
+    }
+    else{
+            ctx.fillStyle ="rgb(120,120,120)";
+            ctx.fillText(obj.length-1,30,30);
+            ctx.strokeStyle = "rgb(160,160,232)";
+    }
     draw();
 
 }
@@ -319,6 +336,8 @@ function input(){
 function update() {
     for(var i=0;i<obj.length;i++){
         obj[i].update();
+        
+        
     }
 }
 
