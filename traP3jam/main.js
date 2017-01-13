@@ -276,8 +276,9 @@ onload = function(){
 //メイン関数
 var main = function() {
     clear();
-    input();
+    
     if(state ==1){
+        input();
         update();
     }
     else{
@@ -311,7 +312,7 @@ function input(){
             var fontsize;
 
                 input_mouse = [e.clientX,e.clientY,true];
-
+                if(state == 1){
                 tempA = new Ball(input_mouse[0],420,size);
     
                 obj.push(tempA);
@@ -322,6 +323,7 @@ function input(){
                 tempA.vini =  -5;
                 tempA.vy =  tempA.vini;
                 tempA.vx = 3*(Math.random() - 0.5);
+                }
 
         }
     }
