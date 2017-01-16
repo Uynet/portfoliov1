@@ -26,6 +26,8 @@ var stv = mu + 0.01;//物体が止まる速さ
 var state = 1;//ゲームオーバーの時0
 var click = false;
 
+var roof = 40;
+
 function dist(x1,y1,x2,y2){
     return Math.pow((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2),0.5);
 }
@@ -57,7 +59,7 @@ function Entity(x,y){
         if(!click){
             click = true;
             if(state == 1){
-                tempA = new Ball(this.x,this.y-40,5);
+                tempA = new Ball(this.x,this.y-40,1);
     
                 obj.push(tempA);
                 tempA.id = obj.length-1;
@@ -71,9 +73,16 @@ function Entity(x,y){
         }
         
     }  
-    if(input_key[39]){
+    if(input_key[84]){
+        var score = ["https://twitter.com/intent/tweet?text=",,obj.length-1, "匹の鰤を養殖しました！ https://uynet.github.io/traP3jam"] ;
+        var con  =  score.join("");
+       location.href = (con);
+    }
+      
+     if(input_key[39]){
         this.vx +=0.1;    
     }  
+      
   }
   this.update_pos = function(){
   //  this.vx+= this.ax;
@@ -120,7 +129,7 @@ Box.prototype.update = function(){
         this.vx*=-e;
         (this.x-this.size/2<1)? this.x=this.size/2+1 : this.x=canvas.width-this.size/2-1;
     }
-    if(this.y-this.size/2<1 || this.y+this.size/2>canvas.height-1){
+    if(this.y-this.size/2<roof || this.y+this.size/2>canvas.height-1){
         this.vy *= 0.6;
         (this.y-this.size/2<1) ? this.y=1+this.size/2 : this.y=canvas.height-this.size/2-1;
     }
@@ -144,14 +153,14 @@ Ball.prototype.update = function(){
         this.vx*=-e;
         (this.x-this.size/2<1)? this.x=this.size/2+1 : this.x=canvas.width-this.size/2-1;
     }
-    if(this.y-this.size/2<1 || this.y+this.size/2>canvas.height-1){
+    if(this.y-this.size/2<roof || this.y+this.size/2>canvas.height-1){
         if(this.y+this.size/2>canvas.height-1){
             this.vy = this.vini;
         }
-        if(this.y-this.size/2<1){
+        if(this.y-this.size/2<roof){
             this.vy *= -1;
         }
-        (this.y-this.size/2<1) ? this.y=1+this.size/2 : this.y=canvas.height-this.size/2-1;
+        (this.y-this.size/2<roof) ? this.y=roof+this.size/2 : this.y=canvas.height-this.size/2-1;
     }
     
 }
@@ -297,16 +306,12 @@ onload = function(){
 //メイン関数
 var main = function() {
     clear();
+    input();
     
     if(state ==1){
-        input();
         update();
     }
-    else{
-            ctx.fillStyle ="rgb(120,120,120)";
-            ctx.fillText(obj.length-1,30,30);
-            ctx.strokeStyle = "rgb(160,160,232)";
-    }
+
     draw();
 }
 setInterval(main, 10);
@@ -339,15 +344,28 @@ function update() {
 
 //描画
 function draw() {
+    
+        ctx.font = "20px 'ＭＳ Ｐゴシック'";
+        ctx.fillStyle ="rgb(120,120,120)";
+        
+            var score = [obj.length-1, "匹"] ;
+            var con  =  score.join("");
+            
+            ctx.fillText(con,10,30);
     for(var i=0;i<obj.length;i++){
+        
+        
         ctx.font = obj[i].fontsize.toString()+"px 'ＭＳ Ｐゴシック'";
-        switch(obj[i].shape){
+        
+        
+        
+        switch(obj[i].shape){               
             case "BALL":
-            ctx.fillStyle ="rgb(120,120,120)";
-            ctx.fillText("鰤",obj[i].x-14-(obj[i].fontsize)*(obj[i].text.length)/4,obj[i].y+10);//中央に寄せて表示
+            ctx.fillStyle ="rgb(180,180,180)";
+            ctx.fillText("鰤",obj[i].x-obj[i].fontsize/2,obj[i].y);//中央に寄せて表示
             ctx.strokeStyle = "rgb(160,160,232)";
         
-             /* 
+            /*
             ctx.beginPath();
             ctx.arc(obj[i].x,obj[i].y,obj[i].size/2,0,Math.PI*2,true);
             ctx.stroke();
@@ -363,11 +381,20 @@ function draw() {
             break;
         }
     }
-
+    //結果
+        if(state != 1){
+            ctx.font = "20px 'ＭＳ Ｐゴシック'";
+            ctx.fillStyle ="rgb(210,120,120)";
+            ctx.fillText("死",80,30);
+            ctx.font = "10px 'ＭＳ Ｐゴシック'";
+            ctx.fillStyle ="rgb(96,96,96)";
+            ctx.fillText("T:ついーとする",280,30);
+            
+        }
     
   //外枠
   ctx.strokeStyle = "rgb(130,128,222)"
-  ctx.strokeRect(0,0,canvas.width,canvas.height);
+  ctx.strokeRect(0,40,canvas.width,canvas.height-40);
 }
 
 //クリア
