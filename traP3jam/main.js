@@ -73,11 +73,6 @@ function Entity(x,y){
         }
         
     }  
-    if(input_key[84]){
-        var score = ["https://twitter.com/intent/tweet?text=",,obj.length-1, "匹の鰤を養殖しました！ https://uynet.github.io/traP3jam"] ;
-        var con  =  score.join("");
-       location.href = (con);
-    }
       
      if(input_key[39]){
         this.vx +=0.1;    
@@ -258,6 +253,7 @@ function coll_ball(ob){
                     
 
             state = 0;
+                    
                 }
                 tempA = ob.vy;
                 ob.vy = ((1-e)*ob.vy + (1+e)*obj[i].vy)/2;
@@ -310,6 +306,13 @@ var main = function() {
     
     if(state ==1){
         update();
+    }
+    else{
+    if(input_key[84]){
+            var score = ["https://twitter.com/intent/tweet?text=",obj.length-1, "匹の鰤を養殖しました！ https://uynet.github.io/traP3jam"] ;
+            var con  =  score.join("");
+            location.href = (con);
+        }
     }
 
     draw();
