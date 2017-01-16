@@ -24,6 +24,8 @@ var mu = 0.05//摩擦係数
 var stv = mu + 0.01;//物体が止まる速さ
 
 var state = 1;//ゲームオーバーの時0
+var click = false;
+
 function dist(x1,y1,x2,y2){
     return Math.pow((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2),0.5);
 }
@@ -44,11 +46,30 @@ function Entity(x,y){
   
   this.text;
   this.fontsize;
+
     
 　//アローキーの入力
   this.input = function (){
     if(input_key[37]){
         this.vx -=0.1;    
+    }  
+    if(input_key[38]){
+        if(!click){
+            click = true;
+            if(state == 1){
+                tempA = new Ball(this.x,this.y-40,5);
+    
+                obj.push(tempA);
+                tempA.id = obj.length-1;
+                tempA.text = "";
+                tempA.fontsize = 30;
+                tempA.gravity =  Math.random()/32;
+                tempA.vini =  -2 + Math.random()/4;
+                tempA.vy =  tempA.vini;
+                tempA.vx = 3*(Math.random() - 0.5);
+            }
+        }
+        
     }  
     if(input_key[39]){
         this.vx +=0.1;    
@@ -287,13 +308,13 @@ var main = function() {
             ctx.strokeStyle = "rgb(160,160,232)";
     }
     draw();
-
 }
 setInterval(main, 10);
 
 
 
 function input(){
+
     document.onkeydown = function (e){
 	    if(!e) e = window.event;
         input_key[e.keyCode] = true;
@@ -301,34 +322,7 @@ function input(){
     document.onkeyup = function (e){
         if(!e) e = window.event;
         input_key[e.keyCode] = false;
-    }
-    
-    //TODO
-    //マウス入力をちゃんと分ける
-    //スマホ対応する
-    document.onmousedown = function (e){
-        if(e.clientX<canvas.width && e.clientY<canvas.height){
-            var size = 30;
-            var fontsize;
-
-                input_mouse = [e.clientX,e.clientY,true];
-                if(state == 1){
-                tempA = new Ball(input_mouse[0],420,size);
-    
-                obj.push(tempA);
-                tempA.id = obj.length-1;
-                tempA.text = "";
-                tempA.fontsize = 30;
-                tempA.gravity =  Math.random()/16;
-                tempA.vini =  -5;
-                tempA.vy =  tempA.vini;
-                tempA.vx = 3*(Math.random() - 0.5);
-                }
-
-        }
-    }
-    document.onmouseup = function (e){
-        input_mouse = [e.clientX,e.clientY,false];
+        click = false;
     }
     
 }
