@@ -1,15 +1,13 @@
 var canvas;
 
+var t = 0;//タイマー
+
 
 var ctx;
 var isClicked = false;
 var input_key = new Array();//キーの押下状態
 var input_mouse = [false,0,0,0,0];//マウス入力 x座標、y座標、入力状態
 
-var X=0;
-var Y;
-var vvx;
-var vvy;
 
 var tempA;//いつでもテンプレート
 var tempB;
@@ -59,16 +57,7 @@ function Entity(x,y){
         if(!click){
             click = true;
             if(state == 1){
-                tempA = new Ball(this.x,this.y-40,1);
-    
-                obj.push(tempA);
-                tempA.id = obj.length-1;
-                tempA.text = "";
-                tempA.fontsize = 30;
-                tempA.gravity =  Math.random()/32;
-                tempA.vini =  -2 + Math.random()/4;
-                tempA.vy =  tempA.vini;
-                tempA.vx = 3*(Math.random() - 0.5);
+                
             }
         }
         
@@ -227,68 +216,14 @@ function coll_box(ob){
 
 //衝突判定
 function coll_ball(ob){
-    for(var i=0;i<ob.id;i++){
         //今の状態
-        tempA = Math.abs(ob.x-obj[i].x)<=(ob.size+obj[i].size)/2;
-        tempB = Math.abs(ob.y-obj[i].y)<=(ob.size+obj[i].size)/2;
+        tempA = Math.abs(ob.x-obj[0].x)<=(ob.size+obj[0].size)/2;
+        tempB = Math.abs(ob.y-obj[0].y)<=(ob.size+obj[0].size)/2;
         
-        //直前の状態
-        tempC = Math.abs(ob.x-ob.vx-obj[i].x+obj[i].vx)<=(ob.size+obj[i].size)/2;
-        tempD = Math.abs(ob.y-ob.vy-obj[i].y+obj[i].vy)<=(ob.size+obj[i].size)/2;
-        
-      if(tempC){
-          if(tempB){
-            //y方向の押しだし
-            while(Math.abs(ob.y-obj[i].y)<=(ob.size+obj[i].size)/2+1){
-                if(ob.y<obj[i].y){
-                    ob.y--;
-                    obj[i].y++;
-                }
-                else{
-                    ob.y++;
-                    obj[i].y--;
-                }
-                //反発
-                if(i == 0) {
-                    
-
-            state = 0;
-                    
-                }
-                tempA = ob.vy;
-                ob.vy = ((1-e)*ob.vy + (1+e)*obj[i].vy)/2;
-                obj[i].vy =((1+e)*tempA + (1-e)*obj[i].vy)/2;
-            }
+      if(tempB && tempA){
+          state = 0;
+        }
               
-          }
-      }
-      if(tempD){
-          if(tempA){
-              //x方向の押しだし
-            while(Math.abs(ob.x-obj[i].x)<=(ob.size+obj[i].size)/2+1){
-                if(ob.x<obj[i].x){
-                    ob.x--;
-                    obj[i].x++;
-                }
-                else{
-                    ob.x++;
-                    obj[i].x--;
-                }
-                //反発
-                if(i == 0) {
-
-
-                    state = 0;
-                }
-                
-                tempA = ob.vx;
-                ob.vx = ((1-e)*ob.vx + (1+e)*obj[i].vx)/2;
-                obj[i].vx =((1+e)*tempA + (1-e)*obj[i].vx)/2;
-            }
-              
-          }
-      }
-    }
 }
 
 //ロード時関数
@@ -304,18 +239,50 @@ var main = function() {
     clear();
     input();
     
-    if(state ==1){
-        update();
-    }
-    else{
-    if(input_key[84]){
-            var score = ["https://twitter.com/intent/tweet?text=",obj.length-1, "匹の鰤を養殖しました！ https://uynet.github.io/traP3jam"] ;
-            var con  =  score.join("");
-            location.href = (con);
+    switch(state){
+        case 1:
+            update();
+            
+            if(t %40 ==  0){
+                    var ball = new Ball(Math.random()*canvas.width,40,30);
+    
+                    obj.push(ball);     
+                    ball.id = obj.length-1;
+                    ball.text = "";
+                    ball.fontsize = 30;
+                    ball.gravity =  1/1024;
+                    ball.vini =  -0.6 - Math.random()/2;
+                    ball.vy =  ball.vini;
+                    ball.vx = 1*(Math.random() - 0.5);
+                }
+            break;
+        case 0:
+            //ツイート
+            if(input_key[84]){
+                var score = ["https://twitter.com/intent/tweet?text=",obj.length-1, "匹の鰤を養殖しました！ https://uynet.github.io/traP3jam"] ;
+                var con  =  score.join("");
+                location.href = (con);
+            }
+            //再開
+            if(input_key[90]){
+                while(obj.length>1){
+                    obj.pop();
+                }
+                state = 1;
+                obj[0] = new Box(220,420,20);
+                obj[0].id = 0;
+                obj[0].text = "";
+                obj[0].fontsize = 10;
+                obj[0].gravity = 0.1;
+                obj[0].vini = -3;
+                obj[0].vy = obj[0].vini;
+            }
+            break;
         }
-    }
 
     draw();
+    t++;
+    
 }
 setInterval(main, 10);
 
@@ -365,7 +332,7 @@ function draw() {
         switch(obj[i].shape){               
             case "BALL":
             ctx.fillStyle ="rgb(180,180,180)";
-            ctx.fillText("鰤",obj[i].x-obj[i].fontsize/2,obj[i].y);//中央に寄せて表示
+            ctx.fillText("鰤",obj[i].x-15,obj[i].y+12);//中央に寄せて表示
             ctx.strokeStyle = "rgb(160,160,232)";
         
             /*
@@ -391,7 +358,7 @@ function draw() {
             ctx.fillText("死",80,30);
             ctx.font = "10px 'ＭＳ Ｐゴシック'";
             ctx.fillStyle ="rgb(96,96,96)";
-            ctx.fillText("T:ついーとする",280,30);
+            ctx.fillText("Z:もういちど   T:ついーとする",280,30);
             
         }
     
