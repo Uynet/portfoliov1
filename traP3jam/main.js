@@ -264,7 +264,7 @@ var main = function() {
                 location.href = (con);
             }
             //再開
-            if(input_key[90]){
+            if(input_key[38]){
                 while(obj.length>1){
                     obj.pop();
                 }
@@ -358,7 +358,7 @@ function draw() {
             ctx.fillText("死",80,30);
             ctx.font = "10px 'ＭＳ Ｐゴシック'";
             ctx.fillStyle ="rgb(96,96,96)";
-            ctx.fillText("Z:もういちど   T:ついーとする",280,30);
+            ctx.fillText("↑:もういちど   T:ついーとする",280,30);
             
         }
     
