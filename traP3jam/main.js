@@ -243,7 +243,8 @@ var main = function() {
         case 1:
             update();
             
-            if(t %40 ==  0){
+            if(t % 50 ==  0){
+                    for(var i = 0;i<1;i++){
                     var ball = new Ball(Math.random()*canvas.width,40,30);
     
                     obj.push(ball);     
@@ -255,6 +256,8 @@ var main = function() {
                     ball.vy =  ball.vini;
                     ball.vx = 1*(Math.random() - 0.5);
                 }
+                        }
+            
             break;
         case 0:
             //ツイート
