@@ -1,2 +1,2 @@
 # Uynet
-open projects
+これはuynetのgithub.ioです。
