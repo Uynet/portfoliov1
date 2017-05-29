@@ -268,6 +268,7 @@ function input(){
     document.onkeydown = function (e){
 	    if(!e) e = window.event;
         input_key[e.keyCode] = true;
+        e.preventDefault();
     }
     document.onkeyup = function (e){
         if(!e) e = window.event;
