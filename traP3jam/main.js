@@ -9,12 +9,11 @@ var input_key = new Array();//キーの押下状態
 var input_mouse = [false,0,0,0,0];//マウス入力 x座標、y座標、入力状態
 
 
-var tempA;//いつでもテンプレート
+var tempA;
 var tempB;
 var tempC;
 var tempD;
-var tempE;
-var tempF;
+
 
 var e = 1;//反発係数
 var acc = 0.3//プレイヤーの加速度
@@ -158,7 +157,6 @@ obj[0].vini = -3;
 obj[0].vy = obj[0].vini;
 
 //衝突判定
-//やばい
 function coll_box(ob){
     for(var i=0;i<ob.id;i++){
         //今の状態
@@ -296,6 +294,7 @@ function input(){
     document.onkeydown = function (e){
 	    if(!e) e = window.event;
         input_key[e.keyCode] = true;
+        e.preventDefault();
     }
     document.onkeyup = function (e){
         if(!e) e = window.event;

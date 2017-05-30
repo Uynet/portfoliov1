@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
   <head>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -13,20 +14,26 @@
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
   </head>
   <body>
-      <script type="text/javascript" src ="main.js"></script>
-      <div align = center>
-    <canvas id="cv" width="480" height="480"></canvas>
+    <div class = "container">
+        <script type="text/javascript" src ="main.js"></script>
+        <div align = center>
+        <canvas id="cv" width="480" height="480"></canvas>
+        </div>
 
-      </div>
-      <div id = center>
-      <h4>MozFlipper</h4>
-    　振動とEasingを使ったアニメーションが作りたかった<br>
-      実装はごみなので、敵が変な挙動をします。<br>
-      画面外に出たら更新してください。クリアとかそういうのはないです。<br>
-      <hr>
-      操作方法:<br>
-        ↑...Flip<br>
-        ←→..移動<br>
-      </div>
+            
+        <div class="card-block">
+            <h4>MozFlipper</h4>
+    　       振動とEasingを使ったアニメーションのテスト
+        </div>
+        <hr>
+        
+        <div class="card-block">
+            <p>操作方法</p>
+        ←→ : 移動<br>
+        </div>
+
+        <hr>
+        <a href = "../">戻る</a>
+    </div>
   </body>
 </html>

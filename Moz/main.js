@@ -4,12 +4,12 @@ var isClicked = false;
 var click = false;
 var input_key = new Array();//キーの押下状態
 
-var tempA;//いつでもテンプレート
+var tempA;
 var tempB;
 var tempC;
 var tempD;
-var tempE;
-var tempF;
+
+
 
 var shakeX=0;
 var shakeY=0;
@@ -72,16 +72,6 @@ shake_trigerがtrigerを引いてくれる
 一定時間shakeが発動する
 */
 
-//TODO
-//プリバッファリング
-//シーケンス管理
-//マップのスクロール
-//HP管理
-//敵の作成/ダメージ判定など
-//グローバル変数を消す
-//ステージ製作
-//マップエディタの作成
-
 //物体クラス
 function Entity(x,y){
   this.id;
@@ -102,8 +92,6 @@ function Entity(x,y){
         return new Box(x, y, w, h);
   }
   //残像
-    //TODO
-    //しかるべき場所に移す
   this.tailing = function (player){
       if(Math.random()<1){
           var ob = new Effect(player.x,player.y,-10*Math.random());
@@ -161,8 +149,8 @@ function Player(x,y,w){
             this.pop = true;
         }
     }
-      //上
-    if(input_key[38]){
+      //autoflip
+    if(true){
         if(this.landing&&!click){
             this.vy=-40*this.gravity;  
             this.flip = true;
@@ -189,9 +177,6 @@ function Player(x,y,w){
       this.landing = !this.flip && !this.feel && !this.pop;
       this.vx+= this.ax;
       this.x += this.vx;
-      //vyの加算を着地時に行うかという話
-      //現状は加算するがすぐ地面と衝突して0にリセットされるようにした
-      //↑ぷるぷる現象が発生するので対処中
 
       //最大速さ制限
       if (this.landing == false) {
@@ -222,17 +207,9 @@ function Player(x,y,w){
 Player.prototype = new Entity;//プロトタイプを経由してEntityから継承
 Player.prototype.update = function(){
     
-    //TODO
-    //方を作る
+
     this.input();
     this.update_pos();
-    //すべてのオブジェクトとの当たり判定を計算
-    //TODO
-    //線分と矩形の判定を作ってどの面で当たったか調べれるようにする
-    //フレーム毎の初期化処理が必要
-    //etc.加速度を0,ジャンプフラグを1
-    // this.feel = true;//すべてのboxと衝突していなければtrueで通過する
-    //と思ったがぷるぷる現象が発生したので良い方法を検討中
 
     for (var i = 0; i < obj.length; i++) {
         
@@ -335,10 +312,6 @@ Wall.prototype.update = function(){
     this.update_pos;
 }
 
-//TODO
-//Wall専用のリストを作る
-//番号をきちんとしたい
-
 //マップ描画部分
 for(var y=0;y<15;y++){
     for(var x=0;x<15;x++){
@@ -365,9 +338,6 @@ function Effect(x,y,w){
     this.dpx;
     this.dpy;
 
-    //TODO
-    //関数の名前を適切なものにする
-    //エフェクトごとに分ける
   this.update_pos = function(){
       this.size = 1/(0.009+ 1/this.size);//エフェクトの減衰率
       this.y-=3*obj[0].gravity;
@@ -384,11 +354,6 @@ Effect.prototype.update = function(){
     this.update_pos();
 }
 
-//衝突判定
-//箱と箱
-//TODO
-//判定部分と処理部分を分ける
-//BOX型を作り 計算したいやつの頂点をBOX方でnewして関数に渡すようにする
 function coll_box(boxA,boxB){
     
     if(boxA.b>boxB.t && boxB.b>boxA.t && boxA.r>boxB.l && boxB.r>boxA.l){
@@ -464,8 +429,6 @@ function input(){
 
 
 
-//TODO
-//trigerを渡す関数を用意⇨その関数から呼び出す
 function shaker_trigger(amp){
     trig = amp;
 }

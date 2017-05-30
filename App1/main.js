@@ -268,7 +268,6 @@ function input(){
     document.onkeydown = function (e){
 	    if(!e) e = window.event;
         input_key[e.keyCode] = true;
-        e.preventDefault();
     }
     document.onkeyup = function (e){
         if(!e) e = window.event;
@@ -281,7 +280,8 @@ function input(){
     document.onmousedown = function (e){
         if(e.clientX<canvas.width && e.clientY<canvas.height){
             var size = parseInt(fsize.size.value);
-            var fontsize = parseInt(ffontsize.ffontsize.value);
+            //var fontsize = parseInt(ffontsize.ffontsize.value);
+            var fontsize = 10;
             if(!size){
                 alert("は？");
                 fsize.size.value = "";
@@ -298,11 +298,14 @@ function input(){
                 }      
                 obj.push(tempA);
                 tempA.id = obj.length-1;
+                /*
                 tempA.text = (ftext.text.value == "OBJECT_ID")
                     ? tempA.id.toString()
                     : ftext.text.value;
                 tempA.fontsize = ffontsize.ffontsize.value;
-                    
+                */
+                tempA.text = tempA.id.toString()
+                tempA.fontsize = 10;
             }
         }
     }
