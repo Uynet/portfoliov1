@@ -7,12 +7,14 @@ let Entity=[];
 /* graphics handler */
 let canvas;
 let ctx;
-
-
+let quakeX = 0;
+let quakeY = 0;
+let po =0; 
 /* initialization */
 onload = function() {
   init();
   render();
+  loop();
 };
 
 /* initialization */

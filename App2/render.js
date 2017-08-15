@@ -8,6 +8,9 @@ const render =_=> {
   if(t == 50){
     Entity[0].type = 2;
   }
+  if(Entity[0].size <= 0){
+    Entity[0].Bomb
+  }
 
   /* 枠線 */
   ctx.beginPath();
