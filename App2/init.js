@@ -7,10 +7,8 @@ const load = _=>{
 const init = _=>{
   canvas = document.getElementById('canvassample');
   ctx = canvas.getContext('2d');
-  let a = new Object(5,20);
+  let a = new Object(10,0);
   Entity.push(a);
-
-
 
   load();
 }

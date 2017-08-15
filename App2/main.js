@@ -3,7 +3,6 @@ let mej;
 let input_key=[];
 /* objects */
 let Entity=[];
-
 /* graphics handler */
 let canvas;
 let ctx;
@@ -19,9 +18,7 @@ onload = function() {
 /* main loop */
 const loop =_=> {
   window.requestAnimationFrame(loop);
-
-  input();
+//  input();
   update();
   render();
 }
-

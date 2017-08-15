@@ -2,9 +2,8 @@ const render =_=> {
   clear();
   /*draw Entity object */
   for(i=0;i<Entity.length;i++){
-    Entity[i].draw(ctx);
+    Entity[i].draw();
   }
-  console.log(input_key[40]);
 
   /* 枠線 */
   ctx.beginPath();
