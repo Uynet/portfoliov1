@@ -1,7 +1,27 @@
+/* global変数群 */
 let mej;
+let input_key=[];
+/* objects */
+let Entity=[];
 
-let objects;
+/* graphics handler */
+let canvas;
+let ctx;
+
+
+
+/* initialization */
 onload = function() {
   init();
-  render();
+  loop();
 };
+
+/* main loop */
+const loop =_=> {
+  window.requestAnimationFrame(loop);
+
+  input();
+  update();
+  render();
+}
+

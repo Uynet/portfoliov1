@@ -1,12 +1,18 @@
 const load = _=>{
-  console.log("load");
+  /* load images*/
   mej = new Image();
   mej.src = "images/mej.png" ;
 }
 
 const init = _=>{
-console.log("init");
-  load();//オブジェクト
+  canvas = document.getElementById('canvassample');
+  ctx = canvas.getContext('2d');
+  let a = new Object(5,20);
+  Entity.push(a);
+
+
+
+  load();
 }
 
 

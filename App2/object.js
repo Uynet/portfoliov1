@@ -1,10 +1,9 @@
 class Object{
   constructor(x,y){
     this.x = x;
-    this.y = x;
+    this.y = y;
   } 
   draw(ctx){
-    ctx.drawImage(mej, 0, 0);
-
+    ctx.drawImage(mej, this.x, this.y);
   }
 }

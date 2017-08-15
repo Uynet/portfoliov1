@@ -1,21 +1,20 @@
-
-class Objectw{
-  constructor(x,y){
-    this.x = x;
-    this.y = x;
-  } 
-  draw(ctx){
-    ctx.drawImage(mej, 0, 0);
-    console.log("po");
-  }
-}
-
 const render =_=> {
-let a = new Object(5,0);
-  window.requestAnimationFrame(render);
-  let canvas = document.getElementById('canvassample');
-  let ctx = canvas.getContext('2d');
-  /* Imageオブジェクトを生成 */
-  a.draw(ctx);
+  clear();
+  /*draw Entity object */
+  for(i=0;i<Entity.length;i++){
+    Entity[i].draw(ctx);
+  }
+  console.log(input_key[40]);
 
+  /* 枠線 */
+  ctx.beginPath();
+  ctx.fillStyle = 'rgb(192, 80, 77)';
+  ctx.strokeRect(0, 0,canvas.width, canvas.height);
 }
+
+const clear = _=>{
+  ctx.fillStyle = 'rgb(255,255,255)';
+  ctx.beginPath();
+  ctx.fillRect(0, 0,canvas.width, canvas.height);
+}
+
