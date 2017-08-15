@@ -19,8 +19,10 @@ const render =_=> {
 }
 
 const clear = _=>{
-  ctx.fillStyle = 'rgb(25,4,42)';
   ctx.beginPath();
+  ctx.fillStyle = 'rgb(255,255,255)';
   ctx.fillRect(0, 0,canvas.width, canvas.height);
+  ctx.fillStyle = 'rgb(25,4,42)';
+  ctx.fillRect(quakeX, quakeY,canvas.width, canvas.height);
 }
 

@@ -7,9 +7,11 @@ class Vector2D{
 
 function yure(){
   if(po == 1){
-    quakeX *= -0.98;
-    quakeY *= -0.98;
+    quakeX *= -0.6+0.1*Math.random();
+    quakeY *= -0.6+0.1*Math.random();
     if(quakeX <= 0.001 && quakeX >= -0.001){
+      quakeX = 0;
+      quakeY = 0;
       po = 0;
     }
   }

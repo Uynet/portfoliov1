@@ -28,5 +28,6 @@ const loop =_=> {
 //  input();
   update();
   render();
+  yure();
   t++;
 }

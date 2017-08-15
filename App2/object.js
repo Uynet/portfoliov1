@@ -37,9 +37,8 @@ class Object{
   }
 
   draw(){
-      yure();
       ctx.beginPath();
-      ctx.globalAlpha = this.alpha;
+      ctx.Alpha = this.alpha;
       ctx.fillStyle = 'rgb(' + this.r  +',' + this.g + ',' + this.b + ')';
       ctx.fillRect(this.x+quakeX,this.y+quakeY,this.size,this.size);
       //  ctx.drawImage(mej, this.x, this.y);
@@ -75,7 +74,7 @@ class Object{
       if(this.size <= 0){
         this.bomb();
         po = 1;
-          quakeX =50;
+          quakeX =100;
           quakeY =50;
         Entity.pop();
       }
@@ -85,24 +84,24 @@ class Object{
       this.y += this.vy;
       this.vx *= 0.99;
       this.vy *= 0.79;
-      this.alpha = 0.1;
+      this.alpha -= 0.1;
     break;
     case 4:
       this.x += this.vx;
       this.y += this.vy;
-      this.vx *= (0.93-this.size*0.002);
-      this.vy *= (0.93-this.size*0.002);
+      this.vx *= (0.92+this.size*0.01);
+      this.vy *= (0.92+this.size*0.01);
       this.y += 0.2;
-      this.alpha *= 0.97;
+      this.alpha -=0.1;
     break;
     }
   }
 
 
   bomb(){
-    for(i = 0;i<50;i++){
+    for(i = 0;i<200;i++){
         let arg = 2*Math.PI*Math.random();
-        let Vel =15;
+        let Vel =11;
         let b = new Object(this.x,this.y);
         let H = 1+Math.floor(6*Math.random());
         b.r = 100+(H == 1|| H == 4 || H == 5)*(75 + Math.floor(80* Math.random()));
