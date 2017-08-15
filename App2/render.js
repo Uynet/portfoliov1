@@ -5,6 +5,10 @@ const render =_=> {
     Entity[i].draw();
   }
 
+  if(t == 50){
+    Entity[0].type = 2;
+  }
+
   /* 枠線 */
   ctx.beginPath();
   ctx.fillStyle = 'rgb(192, 80, 77)';
@@ -12,7 +16,7 @@ const render =_=> {
 }
 
 const clear = _=>{
-  ctx.fillStyle = 'rgb(255,255,255)';
+  ctx.fillStyle = 'rgb(25,4,42)';
   ctx.beginPath();
   ctx.fillRect(0, 0,canvas.width, canvas.height);
 }
