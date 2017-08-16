@@ -58,12 +58,13 @@ class Object{
       this.x += this.vx;
       this.y += this.vy;
       this.vy *=0.9;
-      this.g+=3;
-      this.r+=1;
-      this.b+=1;
+      let rise = 1.05;
+      this.r = Math.floor(this.r * rise);
+      this.g = Math.floor(this.g * rise+2.5);
       if(t%2 == 0){
 }
       if(this.born - t  == 50){
+        this.size += 5000000;
         this.type = 2;
       }
       if(this.size <= 0){
@@ -71,7 +72,7 @@ class Object{
         po = 1;
         yo = 1;
           quakeX =100;
-          quakeY =50;
+          quakeY =100;
         Entity.pop();
       }
       break;
@@ -85,27 +86,28 @@ class Object{
     case 4:
       this.x += this.vx;
       this.y += this.vy;
-      this.vx *= (0.92+this.size*0.01);
-      this.vy *= (0.92+this.size*0.01);
+      this.vx *= (0.91+this.size*0.007);
+      this.vy = this.vy * (0.91+this.size*0.007);
       this.y += 0.2;
       this.alpha -=0.1;
+      this.size*=0.99;
     break;
     }
   }
 
 
   bomb(){
-    for(i = 0;i<200;i++){
+    for(i = 0;i<300;i++){
         let arg = 2*Math.PI*Math.random();
         let Vel =11;
         let H = 1+Math.floor(6*Math.random());
         let b = new Object(this.x,this.y);
-        b.r = 100+(H == 1|| H == 4 || H == 5)*(75 + Math.floor(80* Math.random()));
-        b.g = 100+(H == 2|| H == 5 || H == 6)*(75 + Math.floor(80* Math.random()));
-        b.b = 100+(H == 3|| H == 6 || H == 4)*(75 + Math.floor(80* Math.random()));
+        b.r = 100+(H == 1|| H == 4 || H == 5)*(80 + Math.floor(75* Math.random()));
+        b.g = 100+(H == 2|| H == 5 || H == 6)*(80 + Math.floor(75* Math.random()));
+        b.b = 100+(H == 3|| H == 6 || H == 4)*(80 + Math.floor(75* Math.random()));
         b.setV(Vel * Math.cos(arg),Vel * Math.sin(arg));
         b.settype(4);
-        b.setsize(40*Math.random()*Math.random());
+        b.setsize(40*Math.random());
         Entity.push(b);
     }
   }
