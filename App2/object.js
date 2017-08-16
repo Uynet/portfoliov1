@@ -6,6 +6,7 @@
 class Object{
   constructor(x,y){
     this.born = t;
+    this.t = t-this.born;
     this.x = x;
     this.y = y;
     this.vx = 0;
@@ -52,7 +53,6 @@ class Object{
       this.y+=8;
       if(this.size <= 0){
         this.type = 3;
-        Entity.pop();
       }
     case 0:
       this.x += this.vx;
@@ -61,12 +61,6 @@ class Object{
       let rise = 1.05;
       this.r = Math.floor(this.r * rise);
       this.g = Math.floor(this.g * rise+2.5);
-      if(t%2 == 0){
-}
-      if(this.born - t  == 50){
-        this.size += 5000000;
-        this.type = 2;
-      }
       if(this.size <= 0){
         this.bomb();
         po = 1;
@@ -75,6 +69,14 @@ class Object{
           quakeY =100;
         Entity.pop();
       }
+      
+  if(t-this.born == 50){
+    let bang = 60;
+    this.size+=bang;
+    this.x-=bang/2;
+    this.y-=bang/2;
+    this.type = 2;
+  }
       break;
     case 1:
       this.x += this.vx;
@@ -97,6 +99,8 @@ class Object{
 
 
   bomb(){
+    //SE_Bomb.currentTime = 0;
+    //SE_Bomb.play();
     for(i = 0;i<300;i++){
         let arg = 2*Math.PI*Math.random();
         let Vel =11;

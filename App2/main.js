@@ -1,5 +1,8 @@
 /* global変数群 */
 let mej;
+let SE_Bomb;
+let SE_shot1;
+let SE_shot2;
 let input_key=[];
 /* objects */
 let Entity=[];
@@ -14,7 +17,14 @@ let yo =0;
 
 
 const launch = _=>{
-  init();
+  let a = new Object(280,680,0);
+  a.setsize(30);
+  a.setV(1*(Math.random()-0.5),-45-5*Math.random());
+  a.settype(0);
+  a.r = 250;
+  a.g = 0;
+  a.b = 100;
+  Entity.push(a);
   render();
 }
 

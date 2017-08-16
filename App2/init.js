@@ -2,14 +2,13 @@ const load = _=>{
   /* load images*/
   mej = new Image();
   mej.src = "images/mej.png" ;
+  SE_Bomb = new Audio();
+  SE_Bomb.src = "bomb.wav";
 }
 
 const init = _=>{
   canvas = document.getElementById('canvassample');
   ctx = canvas.getContext('2d');
-  while(Entity.length>0){
-    Entity.pop();
-  }
   t  = 0;
   quakeX = 0;
   quakeY = 0;
@@ -17,7 +16,7 @@ const init = _=>{
   yo =0; 
   let a = new Object(280,680,0);
   a.setsize(30);
-  a.setV(0,-50);
+  a.setV(13*(Math.random()-0.5),-40-10*Math.random());
   a.settype(0);
   Entity.push(a);
 

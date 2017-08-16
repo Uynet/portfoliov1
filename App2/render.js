@@ -2,17 +2,10 @@ const render =_=> {
   clear();
   /*draw Entity object */
   for(i=0;i<Entity.length;i++){
-    if(Entity[i].size<=0.01){ Entity.pop(Entity[i]); }
+    if(Entity[i].size<0.5){ Entity.splice(i,1); }
     else{ Entity[i].draw(); }
   }
 
-  if(t == 50){
-    let bang = 60;
-    Entity[0].size+=bang;
-    Entity[0].x-=bang/2;
-    Entity[0].y-=bang/2;
-    Entity[0].type = 2;
-  }
 
   /* 枠線 */
   ctx.beginPath();
@@ -30,8 +23,6 @@ const clear = _=>{
     ctx.fillStyle = 'rgb(169,255,255)';
   ctx.fillRect(0, 0,canvas.width, canvas.height);
     return;
-  }
-  if(t>60){
   }
 
   ctx.fillRect(quakeX, quakeY,canvas.width, canvas.height);
