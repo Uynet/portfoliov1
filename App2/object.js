@@ -62,11 +62,6 @@ class Object{
       this.r+=1;
       this.b+=1;
       if(t%2 == 0){
-//        let b = new object(this.x + 20*math.random(),this.y);
-//        b.setv(this.vx+math.random()-0.5,this.vy);
-//        b.settype(1);
-//        b.setsize(10);
-//        entity.push(b);
 }
       if(this.born - t  == 50){
         this.type = 2;
@@ -74,6 +69,7 @@ class Object{
       if(this.size <= 0){
         this.bomb();
         po = 1;
+        yo = 1;
           quakeX =100;
           quakeY =50;
         Entity.pop();
@@ -102,8 +98,8 @@ class Object{
     for(i = 0;i<200;i++){
         let arg = 2*Math.PI*Math.random();
         let Vel =11;
-        let b = new Object(this.x,this.y);
         let H = 1+Math.floor(6*Math.random());
+        let b = new Object(this.x,this.y);
         b.r = 100+(H == 1|| H == 4 || H == 5)*(75 + Math.floor(80* Math.random()));
         b.g = 100+(H == 2|| H == 5 || H == 6)*(75 + Math.floor(80* Math.random()));
         b.b = 100+(H == 3|| H == 6 || H == 4)*(75 + Math.floor(80* Math.random()));

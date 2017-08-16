@@ -8,9 +8,6 @@ const render =_=> {
   if(t == 50){
     Entity[0].type = 2;
   }
-  if(Entity[0].size <= 0){
-    Entity[0].Bomb
-  }
 
   /* 枠線 */
   ctx.beginPath();
@@ -19,10 +16,13 @@ const render =_=> {
 }
 
 const clear = _=>{
-  ctx.beginPath();
   ctx.fillStyle = 'rgb(255,255,255)';
+  ctx.beginPath();
   ctx.fillRect(0, 0,canvas.width, canvas.height);
   ctx.fillStyle = 'rgb(25,4,42)';
+  if(yo == 1){
+    ctx.fillStyle = 'rgb(240,255,255)';
+  }
   ctx.fillRect(quakeX, quakeY,canvas.width, canvas.height);
 }
 
