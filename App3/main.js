@@ -20,6 +20,7 @@ let ARROW_DOWN = 40;
 let SPACE = 32;
 let score = 0;
 let SUIKA = [];
+let exit = false;
 
 /* initialization */
 onload = _=> {
@@ -31,7 +32,7 @@ onload = _=> {
 
 /* main loop */
 const loop =_=> {
-  window.requestAnimationFrame(loop);
+  if(!exit)window.requestAnimationFrame(loop);
   input();
   yure();
 //  update();
