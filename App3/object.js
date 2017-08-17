@@ -16,10 +16,10 @@ class Object{
       ctx.beginPath();
       switch(this.type){
       case 0:
-        ctx.drawImage(banana, this.x, this.y);
+        ctx.drawImage(banana, this.x+quakeX, this.y+quakeY);
       break;
       case 1:
-        ctx.drawImage(suika, this.x, this.y);
+        ctx.drawImage(suika, this.x+quakeX, this.y+quakeY);
       break;
       }
   }
