@@ -22,12 +22,12 @@ const render =_=> {
       ctx.fillText("press SPACE",80+quakeX,100+quakeY);
       break;
     case 1://game
-      if(t <=0) state = 2;
+      if(timer <=0) state = 2;
       if(!suikaSetting)makeSuika();
       ctx.fillstyle = 'rgb(55,55,55)';
       ctx.font = "23px 'Monotype Corsiva'";
       ctx.fillText(score,150+quakeX,150+quakeY);
-      ctx.fillText("残り時間 "+t,250+quakeX,380+quakeY);
+      ctx.fillText("残り時間 "+timer,250+quakeX,380+quakeY);
 
       if(input_key[ARROW_LEFT]&&click){
         if(SUIKA[0]==1){
