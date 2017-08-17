@@ -29,7 +29,7 @@ const launch = _=>{
 }
 
 /* initialization */
-onload = function() {
+onload = _=> {
   init();
   render();
   loop();

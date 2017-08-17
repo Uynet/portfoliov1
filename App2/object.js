@@ -42,7 +42,7 @@ class Object{
       ctx.Alpha = this.alpha;
       ctx.fillStyle = 'rgb(' + this.r  +',' + this.g + ',' + this.b + ')';
       ctx.fillRect(this.x+quakeX,this.y+quakeY,this.size,this.size);
-      //  ctx.drawImage(mej, this.x, this.y);
+      //ctx.drawImage(mej, this.x, this.y);
   }
 
   update(){
