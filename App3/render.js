@@ -68,7 +68,7 @@ const render =_=> {
       ctx.font = "26px 'Monotype Corsiva'";
       ctx.fillText("game over :"+score+"てん!",150,120);
       exit = true;
-      let tweet = ["https://twitter.com/intent/tweet?text=",score,"玉のスイカを破壊しました！ https://uynet.github.io/app3/index.html #traP3jam"] ;
+      let tweet = ["https://twitter.com/intent/tweet?text=",score,"玉のスイカを破壊しました！ https://uynet.github.io/App3/index.html #traP3jam"] ;
       let con  =  tweet.join("");
       location.href = (con);
       break;
