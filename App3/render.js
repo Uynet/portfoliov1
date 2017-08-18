@@ -63,14 +63,18 @@ const render =_=> {
       }
       break;
     case 2://gameover
-      if(input_key[SPACE] == 1) state = 0;
+      if(input_key[SPACE] == 1) init();
       ctx.fillStyle = 'rgb(255,55,55)';
-      ctx.font = "26px 'Monotype Corsiva'";
-      ctx.fillText("game over :"+score+"てん!",150,120);
-      exit = true;
-      let tweet = ["https://twitter.com/intent/tweet?text=",score,"玉のスイカを破壊しました！ https://uynet.github.io/App3/index.html #traP3jam"] ;
-      let con  =  tweet.join("");
-      location.href = (con);
+      ctx.font = "23px 'Monotype Corsiva'";
+      ctx.fillText("game over :"+score+"てん!",70,110);
+      ctx.fillText("Tweet:ENTER",70,140);
+      ctx.fillText("Rstart:SPACE",70,170);
+      if(input_key[ENTER]){
+        exit = true;
+        let tweet = ["https://twitter.com/intent/tweet?text=",score,"玉のスイカを破壊しました！ https://uynet.github.io/App3/index.html #traP3jam"] ;
+        let con  =  tweet.join("");
+        location.href = (con);
+      }
       break;
     case 3://suika
       po = 1;
@@ -98,7 +102,7 @@ const makeSuika = _=>{
   }
 
   SUIKA[Math.floor(4*Math.random())] = 1;
-  for(i=0;i<SUIKA.length;i++){
+  for(i=0;i<4;i++){
     x = 150 + Math.floor(150 *(-Math.cos(Math.PI * i/2)));
     y = 150 + Math.floor(150 *(-Math.sin(Math.PI * i/2)));
     a = new Object(x,y);
@@ -109,8 +113,6 @@ suikaSetting = 1;
 }
 
 const deleteSuika =_=>{
-  for(i=0;i<4;i++){
-    Entities.pop();
-  }
+  while(Entities.length>0)Entities.pop();
   suikaSetting = 0;
 }

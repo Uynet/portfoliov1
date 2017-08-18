@@ -18,6 +18,7 @@ let ARROW_UP = 38;
 let ARROW_RIGHT = 39;
 let ARROW_DOWN = 40;
 let SPACE = 32;
+let ENTER = 13;
 let score = 0;
 let SUIKA = [];
 let exit = false;

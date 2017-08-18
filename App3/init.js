@@ -11,11 +11,19 @@ const load = _=>{
 const init = _=>{
   canvas = document.getElementById('canvassample');
   ctx = canvas.getContext('2d');
+  deleteSuika();
   t  = 0;
+ suikaSetting=0;
   quakeX = 0;
   quakeY = 0;
   po =0; 
   yo =0; 
+  timer = 500;
+  state = 0;
+  click = false;
+  score = 0;
+  SUIKA = [];
+  exit = false;
   load();
 }
 
