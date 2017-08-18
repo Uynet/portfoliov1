@@ -1,6 +1,6 @@
 const update = _=>{
   /*update Entity object */
-  for(i=0;i<Entities.length;i++){
-    Entities[i].update();
+  for(i=0;i<Particles.length;i++){
+    Particles[i].update();
   }
 }

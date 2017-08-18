@@ -18,7 +18,8 @@ const init = _=>{
   quakeY = 0;
   po =0; 
   yo =0; 
-  timer = 500;
+  timer_reset = 100;
+  timer = timer_reset;
   state = 0;
   click = false;
   score = 0;

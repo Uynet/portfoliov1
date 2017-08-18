@@ -4,6 +4,16 @@ const render =_=> {
   for(i=0;i<Entities.length;i++){
     Entities[i].draw();
   }
+  /*draw Entity object */
+  for(i=0;i<Particles.length;i++){
+    if(Particles[i].size<0.5){ 
+      Particles.splice(i,1); 
+    }
+    else{
+      Particles[i].draw();
+    }
+  }
+
 
   /* 枠線 */
   ctx.beginPath();
@@ -17,58 +27,67 @@ const render =_=> {
     case 0://title
       if(input_key[SPACE]==1)state = 1;
       ctx.drawImage(title,0,-160);
-      ctx.fillStyle = 'rgb(55,55,205)';
+      ctx.fillStyle = 'rgb(255,255,255)';
       ctx.font = "26px 'Monotype Corsiva'";
       ctx.fillText("press SPACE",80+quakeX,100+quakeY);
       break;
     case 1://game
       if(timer <=0) state = 2;
       if(!suikaSetting)makeSuika();
-      ctx.fillstyle = 'rgb(55,55,55)';
+      ctx.fillStyle = 'rgb(255,255,255)';
       ctx.font = "23px 'Monotype Corsiva'";
-      ctx.fillText(score,150+quakeX,150+quakeY);
-      ctx.fillText("残り時間 "+timer,250+quakeX,380+quakeY);
+      ctx.fillText("すこあ :"+score,160+quakeX,70+quakeY);
+      ctx.fillText(""+timer,190+quakeX,210+quakeY);
 
       if(input_key[ARROW_LEFT]&&click){
-        if(SUIKA[0]==1){
+          vec = 0;
+        if(!SUIKA[0]){
           state = 3;
         }
         else{
+          Entities[0].bomb();
           state = 2;
         }
       }
       if(input_key[ARROW_UP]&&click){
-        if(SUIKA[1]==1){
+          vec = 1;
+        if(!SUIKA[1]){
           state = 3;
         }
         else{
+          Entities[1].bomb();
           state = 2;
         }
       }
       if(input_key[ARROW_RIGHT]&&click){
-        if(SUIKA[2]==1){
+          vec = 2;
+        if(!SUIKA[2]){
           state = 3;
         }
         else{
+          Entities[2].bomb();
           state = 2;
         }
       }
       if(input_key[ARROW_DOWN]&&click){
-        if(SUIKA[3]==1){
+          vec = 3;
+        if(!SUIKA[3]){
           state = 3;
         }
         else{
+          Entities[3].bomb();
           state = 2;
         }
       }
       break;
     case 2://gameover
+      
       if(input_key[SPACE] == 1) init();
-      ctx.fillStyle = 'rgb(255,55,55)';
-      ctx.font = "23px 'Monotype Corsiva'";
-      ctx.fillText("game over :"+score+"てん!",70,110);
-      ctx.fillText("Tweet:ENTER",70,140);
-      ctx.fillText("Rstart:SPACE",70,170);
+      ctx.fillStyle = 'rgb(255,255,255)';
+      ctx.font = "18px 'Monotype Corsiva'";
+      ctx.fillText("game over :"+score+"てん!",0,30);
+      ctx.fillText("Tweet:ENTER",0,70);
+      ctx.fillText("Rstart:SPACE",0,100);
       if(input_key[ENTER]){
         exit = true;
         let tweet = ["https://twitter.com/intent/tweet?text=",score,"玉のスイカを破壊しました！ https://uynet.github.io/App3/index.html #traP3jam"] ;
@@ -77,10 +96,9 @@ const render =_=> {
       }
       break;
     case 3://suika
-      po = 1;
-      yo = 1;
-      quakeX =(50+Math.random()*70)* (2*Math.floor(Math.random())-1);
-      quakeY =(50+Math.random()*70)* (2*Math.floor(Math.random())-1);
+      timer_reset *= 0.97;
+      timer = Math.floor(timer_reset); 
+      Entities[vec].bomb();
       deleteSuika();
       score ++;
       click = false;
@@ -91,7 +109,7 @@ const render =_=> {
 }
 
 const clear = _=>{
-  ctx.fillStyle = 'rgb(255,255,255)';
+  ctx.fillStyle = 'rgb(210,185,165)';
   ctx.beginPath();
   ctx.fillRect(0, 0,canvas.width, canvas.height);
 }
@@ -102,9 +120,10 @@ const makeSuika = _=>{
   }
 
   SUIKA[Math.floor(4*Math.random())] = 1;
+    let rad = 70;
   for(i=0;i<4;i++){
-    x = 150 + Math.floor(150 *(-Math.cos(Math.PI * i/2)));
-    y = 150 + Math.floor(150 *(-Math.sin(Math.PI * i/2)));
+    x = 172 + Math.floor(rad *(-Math.cos(Math.PI * i/2)));
+    y = 172 + Math.floor(rad *(-Math.sin(Math.PI * i/2)));
     a = new Object(x,y);
     a.type = SUIKA[i];
     Entities.push(a);
