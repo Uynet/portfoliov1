@@ -58,5 +58,6 @@ class Rect extends Object{
   update(){
     this.r = Math.floor(map[this.j][this.i]);
     this.g = Math.floor(map[this.j][this.i]-256);
+    this.b = Math.floor(map[this.j][this.i]-512);
   }
 }

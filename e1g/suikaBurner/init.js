@@ -15,7 +15,7 @@ const init = _=>{
   for(j=glid-1;j>=0;j--){
     for(i=0;i<glid;i++){
       if(j == glid-1){
-        map[j][i] = (512 * Math.random());   
+        map[j][i] = (768 * Math.random());   
       }
       else if(j == glid-2){
         if(i>0 && i<glid-1)map[j][i] = (map[j+1][i-1]+map[j+1][i]+map[j+1][i+1])/3;   

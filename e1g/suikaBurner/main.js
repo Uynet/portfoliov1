@@ -10,6 +10,7 @@ let state = 0;
 let utilHandler;
 let map= new Array(256);
 let glid = 100;
+let phase = 0;
 for(let y = 0; y < 256; y++) {
   map[y] = new Array(256).fill(0);
 };
