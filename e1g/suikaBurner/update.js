@@ -19,6 +19,7 @@ ctx.save();
         else if(i==glid-1)map[j][i] = (map[j+1][i-1]+map[j+1][i]+map[j+2][i])/3;   
       }
         map[j][i] += 105 *( Math.random()-0.5);
+        map[j][i] -= 4;
     }
   }
 
