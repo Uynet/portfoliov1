@@ -77,10 +77,10 @@ class Wave extends Object{
   }
   update(){
     this.size+=this.vx;
-    this.r = Math.floor(255*(1 + Math.sin(timer/this.hz)));
-    this.g = Math.floor(255*(1 + Math.sin(timer/this.hz)));
-    this.b = Math.floor(255*(1 + Math.sin(timer/this.hz)));
-    if(this.r > 200 && Math.abs((this.x-a.x-16)*(this.x-a.x-16)+(this.y-a.y-16)*(this.y-a.y-16) -this.size*this.size )<1001 ){
+    this.r = Math.floor(128*(1 + Math.sin(timer/this.hz)));
+    this.g = Math.floor(128*(1 + Math.sin(timer/this.hz)));
+    this.b = Math.floor(128*(1 + Math.sin(timer/this.hz)));
+    if(this.r > 172 && Math.abs((this.x-a.x-16)*(this.x-a.x-16)+(this.y-a.y-16)*(this.y-a.y-16) -this.size*this.size )<1001 ){
       console.log("po");
       state = 1;
     }
