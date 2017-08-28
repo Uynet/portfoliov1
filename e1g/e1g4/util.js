@@ -6,9 +6,14 @@ class Vector2D{
 }
 
 class util{
-  shake(depth){
-      ctx.translate(depth,depth);
-      console.log(depth);
+  constructor(){
+    this.shake = function*(depth){
+      while(depth>0){
+        ctx.translate(depth,depth);
+        depth--;
+        yield;
+      }
+    }
   }
 }
 
