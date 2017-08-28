@@ -50,7 +50,7 @@ const update = _=>{
     }
       if(input_key[13]){
         exit = true;
-        let tweet = ["https://twitter.com/intent/tweet?text=",score,"点 https://uynet.github.io/traP3jam/shake/index.html #traP3jam"] ;
+        let tweet = ["[なみなみ]https://twitter.com/intent/tweet?text=",score,"点 https://uynet.github.io/traP3jam/shake/js/index.html #traP3jam"] ;
         let con  =  tweet.join("");
         location.href = (con);
       }
