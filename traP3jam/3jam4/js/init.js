@@ -3,7 +3,7 @@ const load = _=>{
   banana = new Image();
   banana.src = "images/banana.png" ;
   suika = new Image();
-  suika.src = "images/aa.png" ;
+  suika.src = "images/suika.png" ;
 }
 
 const init = _=>{
@@ -13,15 +13,7 @@ const init = _=>{
   EffectHandler = EffectHandlerGetter();
   state = 0;
   timer = 0;
-  state = 0;
-  term = 100;
-  dep = 40; 
-  score = 0; 
-  while(Entities.length>0){
-    Entities.pop();
-  }
-  a = new Apple(150,150);
-  Entities.push(a);
+  g = EffectHandler.shake(33);
   load();
 }
 

@@ -1,10 +1,9 @@
 class Effect{
   constructor(){
-    this.shake = function*(depthX,depthY){
-      while(Math.abs(depthX) + Math.abs(depthY)>0.1){
-        ctx.translate(depthX*2*(Math.random()-0.5),depthY*2*(Math.random()-0.5));
-        depthX*=(-0.6-0.2*Math.random())
-        depthY*=(-0.6-0.2*Math.random())
+    this.shake = function*(depth){
+      while(Math.abs(depth)>0.1){
+        ctx.translate(depth*Math.sin(timer),depth*Math.cos(timer));
+        depth*=0.7;
         yield;
       }
     }
