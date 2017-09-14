@@ -6,13 +6,12 @@ let Entities=[];
 let canvas;
 let ctx;
 let timer;
+let state = 0;
 let EffectHandler;
 let g;
-let state = 0;
-let term = 10;
-let dep = 10; /* initialization */
-let score = 0; /* initialization */
- onload = _=> {
+
+/* initialization */
+onload = _=> {
   init();
   loop();
 };
@@ -21,7 +20,7 @@ let score = 0; /* initialization */
 const loop =_=> {
   window.requestAnimationFrame(loop);
       input();
-      update();
+      update(state);
       render();
       timer+=1;
 }
