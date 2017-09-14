@@ -12,32 +12,43 @@
     <meta charset = "UTF-8"/>
     
     <title>Canvas</title>
-         <style>
-        canvas{
-            display: block;
-            width: 400px;
-            height: 400px;
-            margin: 0px auto; 
-        } 
-    </style>
+    <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
   </head>
   <body>
       
       <div class = "container">
       <script type="text/javascript" src ="main.js"></script>
     <canvas id="cv" width="440" height="440"></canvas>
-
-
-
+      <form name="fshape">
+            <select name="shape">
+                <option value="BOX">BOX</option>
+                <option value="BALL">BALL</option>
+            </select>
+      </form>
+        <form name="fsize">
+          size:<input type = "text" name = "size" value = "20"><br>
+        </form>
+        
+        <!--  
+        <form name="ftext">
+          text:<input type = "text" name = "text" value = "OBJECT_ID"><br>
+        </form>
+      
+        <form name="ffontsize">
+          fontSize:<input type = "text" name = "ffontsize" value = "10"><br>
+        </form>
+        -->
       <div class="card-block">
-        <h5>木</h5>
+        <h5>Canvastest</h5>
 
-     
+          オブジェクト指向の練習<br>
+          メニューから物体を編集できます。
     </div>
       
       <div class="card-block">
-      説明:<br>
-      完成しませんでした
+      操作方法:<br>
+      クリック...物体を追加<br>
+      ←→↑↓ うごかす
       </div>
       <hr>
       <a href = "../../">戻る</a><br>
