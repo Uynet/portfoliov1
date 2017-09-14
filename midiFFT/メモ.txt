@@ -1,0 +1,8 @@
+メモ
+
+for(i=0;i<16;i++){
+	tracki_head szi
+	tracki ff2f
+}
+
+00
