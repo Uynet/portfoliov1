@@ -72,19 +72,18 @@ class Wave extends Object{
   draw(){
     ctx.beginPath();
     ctx.strokeStyle = 'rgb('+this.r+','+ this.g+','+ this.b+')';
-    for(this.i=0;this.i<10;this.i,this.i++){
+    for(this.i=0;this.i<5;this.i,this.i++){
       ctx.arc(this.x,this.y,this.size+this.i/2, 0, Math.PI*2,true );
     }
     ctx.stroke();
   }
   update(){
     this.size+=this.vx;
-    this.r = Math.floor(this.size/2 + 128*(1 + Math.sin(timer/this.hz)));
+    this.r = Math.floor(128*(1 + Math.sin(timer/this.hz)));
     this.g = Math.floor(128*(1 + Math.sin(timer/this.hz)));
     this.b = Math.floor(128*(1 + Math.sin(timer/this.hz)));
     if(this.r > 172 && Math.abs((this.x-a.x-16)*(this.x-a.x-16)+(this.y-a.y-16)*(this.y-a.y-16) -this.size*this.size )<1001 ){
-      console.log("po");
-      //state = 1;
+      state = 1;
     }
   }
 }
