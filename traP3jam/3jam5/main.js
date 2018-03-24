@@ -1,17 +1,20 @@
 /* global変数群 */
 let input_key=[];
+let click_key=[];
 /* objects */
 let Entities=[];
 /* graphics handler */
 let canvas;
+let click = false;
 let ctx;
 let timer;
-let state = 0;
 let EffectHandler;
-let g;
-
-/* initialization */
-onload = _=> {
+let g; 
+let state = 0;
+let term = 10;
+let dep = 10; /* initialization */
+let score = 0; /* initialization */
+ onload = _=> {
   init();
   loop();
 };
@@ -20,7 +23,7 @@ onload = _=> {
 const loop =_=> {
   window.requestAnimationFrame(loop);
       input();
-      update(state);
+      update();
       render();
       timer+=1;
 }
