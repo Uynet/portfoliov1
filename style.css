@@ -1,0 +1,71 @@
+html {
+  height:100%;
+}
+body {
+  min-height: 100%;
+  background-color: #e0e0e1;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.logo{
+  color:#c40245;
+  padding:46px 40px;
+  font-size:70px;
+  font-family: "Rounded Mplus 1c"; 
+}
+.logo_subtext{
+  color:#90747c;
+  font-size:12px;
+  font-family: "Rounded Mplus 1c"; 
+}
+.menu{
+  position:relative;
+  right:110px;
+}
+.box{
+  text-align:center;
+  margin : 10px;
+  padding : 4px;
+  background-color:#222034;
+  color:#e0e0e1;
+  width:20%;
+  font-family: "Rounded Mplus 1c"; 
+}
+div{
+  display:block;
+}
+.chara{
+  text-align:center;
+  padding:20px 80px;
+}
+.greeting{
+  color:#222034;
+  font-family: "Rounded Mplus 1c"; 
+}
+
+.footer {
+  display:flex;
+  padding:20px;
+  height:70px;
+  color:#e0e0e1;
+  background-color: #a6b7b9;
+}
+.copy{
+  margin-left:70%;
+}
+.link{
+  margin-left:4%;
+  font-size:20px;
+}
+
+a:visited {
+  color: #e0e0e1; }
+
+a:link {
+  color: #e0e0e1; }
+
+a:hover {
+  color: #334; }
+
+a {
+  text-decoration: none; }
