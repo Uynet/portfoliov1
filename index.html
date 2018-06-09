@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>uynet</title>
+    <title>uynet</title>
 
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 
-  <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet" />
-<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-</head>
-<body>
-  <div class = "logo">
-    ゆいブログ
-    <div class = "logo_subtext">
-    </div>
-  </div>
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class = container>
+      <div class = "logo">
+        こんにちは♨
+        <div class = "logo_subtext">
+          こんにちは
+          <input type="radio">
+      <transition name="component-fade" mode="out-in" id="trans">
+      <component v-bind:is="view"></component>
+      </transition>
+        </div>
+      </div>
+      <div class="static"
+           v-bind:class="{ active: isActive, 'text-danger': hasError }" id = "ye">
+        あ
+      </div>
 
-    <div class = "menu" align = "right">
-      <div class = "box">about</div>
-      <div class = "box">works</div>
-      <div class = "box">hello</div>
-    </div>
+      <div id="po">
+        <li v-for="t in todos">
+          {{t.text}}
+        </li>
+        <button v-on:click="add">aaa</button>
+        <p>{{message}}</p>
+        <input v-model="message">
+      </div>
 
+      <div class="menuWrapper">
+        <div class="sidebar">
+          <div id="app" v-on:click="a" align="center">
+            <todo-item v-for="item in menu" v-bind:todo="item"></todo-item>
+          </div>
+        </div>
+      </div>
 
-  <div class = "chara">
-    <div class = "greeting">よおこそ</div>
-    <img src="chara.png"></img>
-  </div>
-  <footer class="footer">
-    <div class = "link">
-      <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-lg"></i></a>
-      <a href = "http://github.com/uynet"><i class="fab fa-github fa-lg"></i></a>
-      <a href="https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-lg"></i></a>
-      <a href = "http://uynet.work"><i class="fab fa-blogger fa-lg"></i></a>
-    </div>
-    <div class = "copy">
-      <span style="font-size:10pt">© 2018 uynet</span>
-    </div>
-  </footer>
-</body>
+      <div class="content" align="right">po</div>
+
+<div id="ii">
+  <blog v-for="post in posts" v-bind:post="post"></blog>
+</div>
+
+    </section>
+      <footer class="footer">
+        <div class = "link">
+          <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-lg"></i></a>
+          <a href = "http://github.com/uynet"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-lg"></i></a>
+          <a href = "http://uynet.work"><i class="fab fa-blogger fa-lg"></i></a>
+        </div>
+        <div class = "copy">
+          <span style="font-size:10pt">Copyright 2018 uynet</span>
+        </div>
+      </footer>
+  </body>
+  <script src="dist/build.js"></script>
 </html>
