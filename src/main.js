@@ -13,7 +13,7 @@ var app = new Vue({
     menu: [
       { id: 0, text: 'About' },
       { id: 1, text: "Works" },
-      { id: 1, text: "経歴" },
+      { id: 2, text: "po" },
     ],
   },
   methods: {
@@ -29,63 +29,20 @@ var app = new Vue({
 new Vue({
   el: "#trans",
   data: { 
-    view: 'v-a',
-    count:0,
+    view: 'v-b',
   },
   components: {
-    'v-a': { template: '<div>Component A</div>' },
-    'v-b': { template: '<div>Component B</div>' }
-  }
-})
-
-new Vue({
-  el:"#po",
-  data:{
-    todos:[
-      {text:0},
-      {text:1},
-      {text:2},
-    ],
-    message:"p"
+    'v-a': { template: '<div>A</div>' },
+    'v-b': { template: '<div>B</div>' }
   },
   methods:{
-    add:function(){
-      this.todos.push({text:"unko"})
+    change:function(){
+      if(this.view == "v-a")this.view = "v-b";
+      else if (this.view == "v-b")this.view = "v-a";
+      console.log(this.view);
     }
   },
-  watch:{
-    message:function(){
-      this.todos[0].text.concat(".");
-    }
-  }
+})
+
   
-})
 
-new Vue({
-  el:"#ye",
-  data:{
-    isActive: false,
-    hasError: false
-  }
-})
-
-Vue.component("blog",{
-  props:["post"],
-  template: `
-  <div class="blog">
-  <h3>{{ post.title }}</h3>
-  <div v-html="post.content"></div>
-  </div>
-  `
-
-})
-new Vue({
-  el:"#ii",
-  data:{
-    posts:[
-     { title:"un1",content:"<h1>うｎかおあおｒｋゔぁのろあ<br></h1><s>ぽぽぽぽぽwwwwww<br><br><br><i>うんちうんち</i> <img src=`chara.png`></s>" },
-     { title:"un1" },
-     { title:"un1" },
-    ],
-  }
-})

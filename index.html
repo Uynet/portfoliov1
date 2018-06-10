@@ -13,31 +13,35 @@
     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="corner1"></div>
+    <div class="corner2"></div>
+
+    <div class = "links">
+      <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-black"></i></a>
+      <a href = "http://github.com/uynet"><i class="fab fa-github fa-black"></i></a>
+      <a href="https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-black"></i></a>
+      <a href = "http://uynet.work"><i class="fab fa-blogger fa-black"></i></a>
+    </div>
+
     <section class = container>
       <div class = "logo">
         こんにちは♨
         <div class = "logo_subtext">
-          こんにちは
-          <input type="radio">
-      <transition name="component-fade" mode="out-in" id="trans">
-      <component v-bind:is="view"></component>
-      </transition>
+          <div name="component-fade" mode="out-in" id="trans">
+          <button v-on:click="change">vueJS</button>
+          <component v-bind:is="view"></component>
+          </div>
         </div>
       </div>
-      <div class="static"
-           v-bind:class="{ active: isActive, 'text-danger': hasError }" id = "ye">
-        あ
-      </div>
 
-      <div id="po">
-        <li v-for="t in todos">
-          {{t.text}}
-        </li>
-        <button v-on:click="add">aaa</button>
-        <p>{{message}}</p>
-        <input v-model="message">
+      <div class="chara" align="center">
+        <div class="greeting">
+          よおこそ
+        </div>
+        <img src="chara.png">
       </div>
 
       <div class="menuWrapper">
@@ -48,20 +52,8 @@
         </div>
       </div>
 
-      <div class="content" align="right">po</div>
-
-<div id="ii">
-  <blog v-for="post in posts" v-bind:post="post"></blog>
-</div>
-
     </section>
       <footer class="footer">
-        <div class = "link">
-          <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-lg"></i></a>
-          <a href = "http://github.com/uynet"><i class="fab fa-github fa-lg"></i></a>
-          <a href="https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-lg"></i></a>
-          <a href = "http://uynet.work"><i class="fab fa-blogger fa-lg"></i></a>
-        </div>
         <div class = "copy">
           <span style="font-size:10pt">Copyright 2018 uynet</span>
         </div>
