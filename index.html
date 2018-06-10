@@ -17,12 +17,13 @@
   </head>
   <body>
     <div class="BG1"></div>
-    <div class="sidelineL"></div>
-    <div class="sidelineR"></div>
-    <div class="cornerLT"></div>
-    <div class="cornerLB"></div>
-    <div class="cornerRT"></div>
-    <div class="cornerRB"></div>
+    <div class="BG2"></div>
+    <div class="side">
+      <div class="sidelineL"></div>
+      <div class="sidelineR"></div>
+      <div class="cornerLT"></div>
+      <div class="cornerRT"></div>
+    </div>
 
     <div class = "links">
       <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-black"></i></a>
@@ -55,7 +56,7 @@
 
       <div class="menuWrapper">
         <div class="sidebar">
-          <div id="app" v-on:click="a" align="center">
+          <div id="app" v-if="seen" v-on:click="a" align="center">
             <todo-item v-for="item in menu" v-bind:todo="item"></todo-item>
           </div>
         </div>

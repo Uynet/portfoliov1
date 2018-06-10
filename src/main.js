@@ -10,6 +10,7 @@ Vue.component('todo-item', {
 var app = new Vue({
   el: '#app',
   data: {
+    seen : false,
     menu: [
       { id: 0, text: 'About' },
       { id: 1, text: "Works" },
