@@ -7,6 +7,22 @@ body {
   display: grid;
   grid-template-rows: 1fr auto; }
 
+.BG1 {
+  background-color: #f5f9fc;
+  position: absolute;
+  top: 0px;
+  left: -25%;
+  width: 100%;
+  height: 100%;
+  transform: rotate(65deg);
+  z-index: -1; }
+
+.bar {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 85%;
+  font-size: 36px; }
+
 .logo {
   position: absolute;
   top: 30%;
@@ -73,12 +89,49 @@ div {
   padding: 20px;
   height: 50px;
   color: #ffffff;
-  background-color: #111144; }
+  background-color: #222034; }
 
 .copy {
-  margin-left: 60%; }
+  font-family: "Rounded Mplus 1c";
+  margin-left: 80%; }
 
-.corner1 {
+.cornerLT {
+  border-radius: 4px;
+  background-color: #777699;
+  position: absolute;
+  top: 12px;
+  left: 3%;
+  width: 32px;
+  height: 16px; }
+
+.cornerLB {
+  border-radius: 4px;
+  background-color: #777699;
+  position: absolute;
+  top: 77%;
+  left: 3%;
+  width: 32px;
+  height: 16px; }
+
+.cornerRT {
+  border-radius: 4px;
+  background-color: #777699;
+  position: absolute;
+  top: 12px;
+  left: 94.3%;
+  width: 32px;
+  height: 16px; }
+
+.cornerRB {
+  border-radius: 4px;
+  background-color: #777699;
+  position: absolute;
+  top: 77%;
+  left: 94.3%;
+  width: 32px;
+  height: 16px; }
+
+.sidelineL {
   border-radius: 1px;
   background-color: #777699;
   position: absolute;
@@ -87,7 +140,7 @@ div {
   width: 8px;
   height: 80%; }
 
-.corner2 {
+.sidelineR {
   border-radius: 1px;
   background-color: #777699;
   position: absolute;
@@ -97,7 +150,8 @@ div {
   height: 80%; }
 
 .links {
-  margin-left: 4%;
+  margin-top: 6%;
+  margin-left: 10%;
   font-size: 28px; }
 
 a:visited {
