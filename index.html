@@ -19,38 +19,43 @@
     <div class="BG1"></div>
     <div class="BG2"></div>
     <div class="side">
-      <div class="sidelineL"></div>
-      <div class="sidelineR"></div>
-      <div class="cornerLT"></div>
-      <div class="cornerRT"></div>
+      <div class="sidelineL">
+        <div class="cornerLB"></div>
+      </div>
+      <div class="sidelineR">
+        <div class="cornerRT"></div>
+      </div>
     </div>
 
-    <div class = "links">
-      <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-black"></i></a>
-      <a href = "http://github.com/uynet"><i class="fab fa-github fa-black"></i></a>
-      <a href="https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-black"></i></a>
-      <a href = "http://uynet.work"><i class="fab fa-blogger fa-black"></i></a>
-    </div>
-
-    <div class ="bar">
-      <i class="fas fa-bars"></i>
-    </div>
 
     <section class = container>
-      <div class = "logo">
-        こんにちわ♨
-        <div class = "logo_subtext">
-          <div name="component-fade" mode="out-in" id="trans">
-          <button v-on:click="change">vueJS</button>
+
+      <div class = "menu">
+        <div class = "links">
+          <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-black"></i></a>
+          <a href = "http://github.com/uynet"><i class="fab fa-github fa-black"></i></a>
+          <a href="https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-black"></i></a>
+          <a href = "http://uynet.work"><i class="fab fa-blogger fa-black"></i></a>
+        </div>
+
+        <div align="center" id=hambar class="bar">
           <component v-bind:is="view"></component>
-          </div>
+          <i class="fas fa-bars" v-on:click="po"></i>
+        </div>
+      </div>
+
+
+      <div class = "logo">
+        ゆいブログ
+        <div class = "logo_subtext">
         </div>
       </div>
 
       <div class="chara" align="center">
-        <div class="greeting">
-          よおこそ
+        <div class="greeting" align="center">
+          <marquee scrolldelay="500">よおこそ</marquee>
         </div>
+        <br>
         <img src="chara.png">
       </div>
 
@@ -63,7 +68,7 @@
       </div>
 
     </section>
-      <footer class="footer">
+      <footer class="footer" align="center">
         <div class = "copy">
           <span style="font-size:10pt">Copyright 2018 uynet</span>
         </div>

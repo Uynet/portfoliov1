@@ -33,8 +33,12 @@ new Vue({
     view: 'v-b',
   },
   components: {
-    'v-a': { template: '<div>A</div>' },
-    'v-b': { template: '<div>B</div>' }
+    'v-a': {
+      template: '<div class="unko">A</div>'
+    },
+    'v-b': {
+      template: '<div>B</div>'
+    }
   },
   methods:{
     change:function(){
@@ -44,6 +48,26 @@ new Vue({
     }
   },
 })
-
-  
-
+new Vue({
+  el:"#hambar",
+  data:{
+    view:"v-a",
+    count:0,
+  },
+  components:{
+    'v-a': {
+      template: '<div class="unko"></div>'
+    },
+    'v-b': {
+      template: '<div>B</div>'
+    },
+  },
+  methods:{
+    po:function(){
+      this.count++;
+      if(this.view == "v-a")this.view = "v-b";
+      else if (this.view == "v-b")this.view = "v-a";
+      console.log(this.count);
+    }
+  },
+});
