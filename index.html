@@ -30,18 +30,28 @@
 
     <section class = container>
 
-      <div class = "menu">
-        <div class = "links">
-          <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-black"></i></a>
-          <a href = "http://github.com/uynet"><i class="fab fa-github fa-black"></i></a>
-          <a href="https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-black"></i></a>
-          <a href = "http://uynet.work"><i class="fab fa-blogger fa-black"></i></a>
-        </div>
+      <div class = "links">
+        <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-black"></i></a>
+        <a href = "http://github.com/uynet"><i class="fab fa-github fa-black"></i></a>
+        <a href="https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-black"></i></a>
+        <a href = "http://uynet.work"><i class="fab fa-blogger fa-black"></i></a>
+      </div>
 
-        <div align="center" id=hambar class="bar">
-          <component v-bind:is="view"></component>
-          <i class="fas fa-bars" v-on:click="po"></i>
-        </div>
+      <div class="sidebar">
+        さいどばー
+      </div>
+      <div id="demo">
+        <button v-on:click="show = !show">
+          Toggle
+        </button>
+        <transition name="fade">
+        <p v-if="show">hello</p>
+        </transition>
+      </div>
+
+      <div align="center" id=hambar class="bar">
+        <i class="fas fa-bars" v-on:click="po"></i>
+        <component v-bind:is="view"></component>
       </div>
 
 
@@ -57,14 +67,6 @@
         </div>
         <br>
         <img src="chara.png">
-      </div>
-
-      <div class="menuWrapper">
-        <div class="sidebar">
-          <div id="app" v-if="seen" v-on:click="a" align="center">
-            <todo-item v-for="item in menu" v-bind:todo="item"></todo-item>
-          </div>
-        </div>
       </div>
 
     </section>

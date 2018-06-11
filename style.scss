@@ -1,7 +1,7 @@
 $BGColor:#ffffff;
 $cornerColor:#334478;
 $footerColor:#222034;
-$popColor:#6a70a4;
+$popColor:#3a7094;
 html {
   height:100%;
 }
@@ -13,7 +13,7 @@ body {
 }
 
 .BG1{
-  background-color: #d6eeff;
+  background-color: #e6eeff;
   position:absolute;
   top:0px;
   left:40%;
@@ -33,39 +33,41 @@ body {
   transform: rotate(-25deg);
   z-index:-5;
 }
-
-.unko{
+.sidebar{
   position:absolute;
   top:0px;
-  left:0px;
+  left:800px;
+  width:200px;
+  height:100%;
+  color:#fff;
+  background-color:$cornerColor;
+  z-index:2;
+}
+.unko{
+  position:absolute;
+  top:-10px;
+  left:-10px;
   width:100%;
   height:100%;
-  color:#999999;
-  background-color:#eeeeee;
-  z-index:-4;
+  opacity:0.5;
+  color:#000;
+  background-color:#000;
+  z-index:0;
 }
-
 .bar{
   border-radius:4px;
   width:48px;
   height:48px;
-  position:absolute;
-  margin-top:5%;
-  margin-left:85%;
   font-size:36px;
-  color:#000000;
-  transition:all 300ms 0s ease;
+  transition:all 100ms 0s ease;
+  position:relative;
+  top:240px;
+  left:700px;
 }
 .bar:hover{
   backgroun-color:#000000;
-  font-size:40px;
+  font-size:48px;
 }
-
-.fas fa-bars:before{
-  margin-top:10px;
-  backgroun-color:#000000;
-}
-
 .logo{
   position:absolute;
   top:30%;
@@ -89,9 +91,6 @@ body {
   left:0px;
   width:100%;
   height:100%;
-}
-.menuWrapper{
-  margin-top:20%;
 }
 .content{
   opacity:0;
@@ -129,7 +128,9 @@ div{
 }
 .chara{
   position:relative;
-  top:30%;
+  top:24%;
+  left:40%;
+  max-width:200px;
 }
 .greeting{
   font-family: "Rounded Mplus 1c"; 
@@ -162,7 +163,7 @@ div{
   height:50px;
   color:$BGColor;
   background-color: $footerColor;
-  
+  z-index:3; 
 }
 .copy{
   font-family: "Rounded Mplus 1c";
@@ -239,9 +240,6 @@ div{
   color:#3370c9;
 }
 
-.menu{
-}
-
 a:visited {
   color: #e0e0e1; }
 
@@ -254,11 +252,9 @@ a {
   transition: color .2s;
   text-decoration: none;
 }
-.component-fade-enter-active, .component-fade-leave-active {
-  transition: opacity .3s ease;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
 }
-.component-fade-enter, .component-fade-leave-to
-/* .component-fade-leave-active for below version 2.1.8 */ {
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-

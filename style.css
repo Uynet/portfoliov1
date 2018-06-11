@@ -8,7 +8,7 @@ body {
   grid-template-rows: 1fr auto; }
 
 .BG1 {
-  background-color: #d6eeff;
+  background-color: #e6eeff;
   position: absolute;
   top: 0px;
   left: 40%;
@@ -28,34 +28,40 @@ body {
   transform: rotate(-25deg);
   z-index: -5; }
 
-.unko {
+.sidebar {
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: 800px;
+  width: 200px;
+  height: 100%;
+  color: #fff;
+  background-color: #334478;
+  z-index: 2; }
+
+.unko {
+  position: absolute;
+  top: -10px;
+  left: -10px;
   width: 100%;
   height: 100%;
-  color: #999999;
-  background-color: #eeeeee;
-  z-index: -4; }
+  opacity: 0.5;
+  color: #000;
+  background-color: #000;
+  z-index: 0; }
 
 .bar {
   border-radius: 4px;
   width: 48px;
   height: 48px;
-  position: absolute;
-  margin-top: 5%;
-  margin-left: 85%;
   font-size: 36px;
-  color: #000000;
-  transition: all 300ms 0s ease; }
+  transition: all 100ms 0s ease;
+  position: relative;
+  top: 240px;
+  left: 700px; }
 
 .bar:hover {
   backgroun-color: #000000;
-  font-size: 40px; }
-
-.fas fa-bars:before {
-  margin-top: 10px;
-  backgroun-color: #000000; }
+  font-size: 48px; }
 
 .logo {
   position: absolute;
@@ -80,9 +86,6 @@ body {
   left: 0px;
   width: 100%;
   height: 100%; }
-
-.menuWrapper {
-  margin-top: 20%; }
 
 .content {
   opacity: 0;
@@ -118,7 +121,9 @@ div {
 
 .chara {
   position: relative;
-  top: 30%; }
+  top: 24%;
+  left: 40%;
+  max-width: 200px; }
 
 .greeting {
   font-family: "Rounded Mplus 1c";
@@ -130,7 +135,7 @@ div {
   max-width: 100%;
   color: #ffffff;
   border-radius: 4px;
-  background: #6a70a4; }
+  background: #3a7094; }
 
 .greeting:before {
   content: "";
@@ -139,7 +144,7 @@ div {
   left: 50%;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top: 15px solid #6a70a4; }
+  border-top: 15px solid #3a7094; }
 
 .footer {
   position: relative;
@@ -149,7 +154,8 @@ div {
   padding: 20px;
   height: 50px;
   color: #ffffff;
-  background-color: #222034; }
+  background-color: #222034;
+  z-index: 3; }
 
 .copy {
   font-family: "Rounded Mplus 1c";
@@ -236,11 +242,10 @@ a {
   transition: color .2s;
   text-decoration: none; }
 
-.component-fade-enter-active, .component-fade-leave-active {
-  transition: opacity .3s ease; }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s; }
 
-.component-fade-enter, .component-fade-leave-to
- {
+.fade-enter, .fade-leave-to {
   opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */
