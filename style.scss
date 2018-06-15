@@ -38,7 +38,7 @@ body {
   position:absolute;
   top:0px;
   left:100%;
-  width:200px;
+  width:250px;
   height:100%;
   color:#fff;
   background:$cornerColor;
@@ -50,7 +50,7 @@ body {
   position:absolute;
   top:0px;
   left:80%;
-  width:200px;
+  width:250px;
   height:100%;
   color:#fff;
   background:$cornerColor;
@@ -58,10 +58,21 @@ body {
   animation-duration:0.4s;
   animation-name:slidein;
 }
+.label{
+  width:100px;
+  height:8px;
+  background-color:#fff;
+  opacity:0.5;
+}
 .item{
-  text-align:center;
+  font-size:24px;
+  align:center;
   font-family: "Nico Moji";
-  padding:10px;
+  padding:16px;
+  transition:all 70ms 0s ease-in;
+}
+.item:hover{
+  background-color:#ce3443;
 }
 @keyframes slidein{
   from{left:100%}
@@ -149,7 +160,7 @@ $hambarHoverColor:$cornerColor;
   z-index:-1;
 }
 .bar{
-  margin-left:95%;
+  margin-left:97%;
   width:48px;
   height:48px;
   z-index:3;
