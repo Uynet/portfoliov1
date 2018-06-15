@@ -50,6 +50,9 @@
           <br>
           <img src="chara.png">
           <div class=logo_subtext>イメージキャラクター"ゆいちゃん"</div>
+          <span style="font-size:8pt">
+          ※すいません、ポートフォリオページ作成中です。曲やゲームなどを作ってます。作ったものは左上のリンクみてください。
+          </span>
         </div>
 
         <div id="hambar" class="bar">
@@ -57,8 +60,10 @@
 
           <transition name="fade">
           <div v-bind:class="lass">
-            <div class = "menu" v-for="item in items">
-              {{item.message}}
+            <div class = "menu">
+              <div class = "item" v-for="item in items">
+                {{item.message}}
+              </div>
             </div>
           </div>
           </transition>

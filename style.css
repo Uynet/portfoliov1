@@ -53,7 +53,9 @@ body {
   animation-duration: 0.4s;
   animation-name: slidein; }
 
-.menu {
+.item {
+  text-align: center;
+  font-family: "Nico Moji";
   padding: 10px; }
 
 @keyframes slidein {
@@ -97,6 +99,9 @@ body {
     left: -6 px;
     font-size: 48 px;
     color: #334478; } }
+.menu {
+  margin-top: 50%; }
+
 .logo {
   position: absolute;
   top: 30%;

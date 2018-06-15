@@ -58,7 +58,9 @@ body {
   animation-duration:0.4s;
   animation-name:slidein;
 }
-.menu{
+.item{
+  text-align:center;
+  font-family: "Nico Moji";
   padding:10px;
 }
 @keyframes slidein{
@@ -106,6 +108,9 @@ $hambarHoverColor:$cornerColor;
     font-size:(36+$dist)px;
     color:$hambarHoverColor;
   }
+}
+.menu{
+  margin-top:50%;
 }
 .logo{
   position:absolute;
