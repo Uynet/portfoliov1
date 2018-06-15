@@ -103,7 +103,7 @@ body {
     top: -12px;
     left: -12px;
     font-size: 60px;
-    color: #0044ff; }
+    color: #771121; }
   100% {
     position: relative;
     top: -6 px;
@@ -137,24 +137,46 @@ body {
   width: 100%;
   height: 100%; }
 
-.content {
-  opacity: 0;
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  width: 90%;
-  height: 90%;
-  z-index: -1; }
-
 .bar {
   margin-left: 97%;
   width: 48px;
   height: 48px;
   z-index: 3; }
 
+.layer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.0;
+  background-color: #121331;
+  z-index: 1;
+  animation-duration: 0.5s;
+  animation-name: undark; }
+
+.layer_dark {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #121331;
+  z-index: 1;
+  animation-duration: 0.5s;
+  animation-name: dark; }
+
+@keyframes dark {
+  0% {
+    opacity: 0.0; }
+  100% {
+    opacity: 0.5; } }
+@keyframes undark {
+  0% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0.0; } }
 .box {
   box-shadow: 0px 0px 2px #220033;
   border-radius: 10px;

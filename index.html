@@ -28,7 +28,8 @@
     </div>
 
 
-    <section class = container>
+    <section id="page" class="container">
+      <div v-bind:class="layer"></div>
 
       <div class = "links">
         <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-black"></i></a>
@@ -52,15 +53,14 @@
           <div class=logo_subtext>イメージキャラクター"ゆいちゃん"</div>
         </div>
 
-        <div id="hambar" class="bar">
-          <i class="fas fa-bars" v-on:click="po"></i>
+        <div class="bar">
+          <i class="fas fa-bars" v-on:click="slide"></i>
 
           <transition name="fade">
-          <div v-bind:class="lass">
+          <div v-bind:class="sidebar">
             <div class = "menu">
               <div class = "item" v-for="item in items">
-                {{item.message}}
-                <div class="label"></div>
+                <item-menu v-bind:open="item.open" v-bind:title="item.message"></item-menu>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@
 
         </div>
         <span style="font-size:8pt">
-          ※すいません、ポートフォリオページ作成中です。曲やゲームなどを作ってます。作ったものは左上のリンクみてください。
+          ※ポートフォリオページ作成中です。曲やゲームなどを作ってます。作ったものは左上のリンクみてください。
         </span>
       </div>
 
