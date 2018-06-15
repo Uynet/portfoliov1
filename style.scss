@@ -34,15 +34,34 @@ body {
   z-index:-5;
 }
 .sidebar{
+  box-shadow:0px 0px 4px #000;
   position:absolute;
   top:0px;
-  left:800px;
+  left:100%;
   width:200px;
   height:100%;
   color:#fff;
-  background-color:$cornerColor;
+  background:$cornerColor;
   z-index:2;
+  transition:all 300ms 0s ease;
 }
+.sidebar_open{
+  box-shadow:0px 0px 4px #000;
+  position:absolute;
+  top:0px;
+  width:200px;
+  height:100%;
+  color:#fff;
+  background:$cornerColor;
+  z-index:2;
+  animation-duration:0.4s;
+  animation-name:slidein;
+}
+@keyframes slidein{
+  from{left:100%}
+  to{left:80%}
+}
+
 .unko{
   position:absolute;
   top:-10px;
@@ -54,19 +73,46 @@ body {
   background-color:#000;
   z-index:0;
 }
-.bar{
-  border-radius:4px;
-  width:48px;
-  height:48px;
-  font-size:36px;
-  transition:all 100ms 0s ease;
+.fa-bars{
   position:relative;
-  top:240px;
-  left:700px;
-}
-.bar:hover{
+  top:0px;
+  left:0px;
+  border-radius:4px;
+  font-size:36px;
   backgroun-color:#000000;
+}
+$hambarHoverColor:#993355;
+.fa-bars:hover{
+  position:relative;
+  top:-6px;
+  left:-6px;
   font-size:48px;
+  animation-duration:0.1s;
+  animation-name:pulpul;
+  color:$hambarHoverColor;
+}
+@keyframes pulpul{
+  $dist:12;
+  0%{
+    position:relative;
+    top:0px;
+    left:0px;
+    font-size:36px;
+  }
+  30%{
+    position:relative;
+    top:-12px;
+    left:-12px;
+    font-size:60px;
+    color:white;
+  }
+  100%{
+    position:relative;
+    top:-($dist/2)px;
+    left:-($dist/2)px;
+    font-size:(36+$dist)px;
+    color:$hambarHoverColor;
+  }
 }
 .logo{
   position:absolute;
@@ -82,7 +128,7 @@ body {
 }
 .logo_subtext{
   color:#90747c;
-  font-size:16px;
+  font-size:8px;
   font-family: "Rounded Mplus 1c"; 
 }
 .container{
@@ -103,6 +149,11 @@ body {
   width:90%;
   height:90%;
   z-index:-1;
+}
+.bar{
+  margin-left:87%;
+  width:48px;
+  height:48px;
 }
 .sidebar{
   /*background-color:#000000;*/
@@ -126,11 +177,11 @@ body {
 div{
   display:block;
 }
+.mainspace{
+  margin:10%;
+}
 .chara{
-  position:relative;
-  top:24%;
-  left:40%;
-  max-width:200px;
+  margin-top:10%;
 }
 .greeting{
   font-family: "Rounded Mplus 1c"; 
@@ -185,7 +236,7 @@ div{
   border-radius:2px;
   background-color:$cornerColor;
   position:relative;
-  top:368px;
+  top:92%;
   left:16px;
   width:32px;
   height:32px;
@@ -253,8 +304,9 @@ a {
   text-decoration: none;
 }
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transition: all .5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+  opacity: 1.0;
+  left:70%;
 }

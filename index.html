@@ -37,44 +37,40 @@
         <a href = "http://uynet.work"><i class="fab fa-blogger fa-black"></i></a>
       </div>
 
-      <div class="sidebar">
-        さいどばー
-      </div>
-      <div id="demo">
-        <button v-on:click="show = !show">
-          Toggle
-        </button>
-        <transition name="fade">
-        <p v-if="show">hello</p>
-        </transition>
-      </div>
 
-      <div align="center" id=hambar class="bar">
-        <i class="fas fa-bars" v-on:click="po"></i>
-        <component v-bind:is="view"></component>
-      </div>
+      <div class="mainspace">
+        <div class = "logo">
+          ゆいブログ
+          <div class = "logo_subtext"></div>
+        </div>
+        <div class="chara" align="center">
+          <div class="greeting" align="center">
+            <marquee scrolldelay="500">よおこそ</marquee>
+          </div>
+          <br>
+          <img src="chara.png">
+          <div class=logo_subtext>イメージキャラクター"ゆいちゃん"</div>
+        </div>
 
+        <div id="hambar" class="bar">
+          <i class="fas fa-bars" v-on:click="po"></i>
 
-      <div class = "logo">
-        ゆいブログ
-        <div class = "logo_subtext">
+          <transition name="fade">
+          <div v-bind:class="lass">
+            さいどばー
+          </div>
+          </transition>
+
         </div>
       </div>
 
-      <div class="chara" align="center">
-        <div class="greeting" align="center">
-          <marquee scrolldelay="500">よおこそ</marquee>
-        </div>
-        <br>
-        <img src="chara.png">
-      </div>
 
     </section>
-      <footer class="footer" align="center">
-        <div class = "copy">
-          <span style="font-size:10pt">Copyright 2018 uynet</span>
-        </div>
-      </footer>
+    <footer class="footer" align="center">
+      <div class = "copy">
+        <span style="font-size:10pt">Copyright 2018 uynet</span>
+      </div>
+    </footer>
   </body>
   <script src="dist/build.js"></script>
 </html>
