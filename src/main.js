@@ -5,11 +5,17 @@ new Vue({
   el:"#hambar",
   data:{
     lass:"sidebar",
+    items:[
+      {message:"about"},
+      {message:"works"},
+      {message:"unko"},
+    ],
   },
   methods:{
     po:function(){
-      this.lass = "sidebar_open";
-      console.log(this.lass)
+      if(this.lass=="sidebar")this.lass = "sidebar_open";
+      else this.lass = "sidebar";
     }
   }
 })
+
