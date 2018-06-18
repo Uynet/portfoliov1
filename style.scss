@@ -66,15 +66,19 @@ body {
   background-color:#fff;
   opacity:0.5;
 }
+$itemmargin:10px;
 .item{
   font-size:24px;
   align:center;
   font-family: "Nico Moji";
+  text-align:10px;
   padding:16px;
   transition:all 70ms 0s ease-in;
+  color:#fff;
 }
 .item:hover{
-  background-color:#ce3443;
+  /*background-color:#ce3443;*/
+  background-color:#cd3462;
 }
 @keyframes slidein{
   from{left:100%}
@@ -86,10 +90,19 @@ body {
   left:0px;
   border-radius:4px;
   font-size:36px;
-  backgroun-color:#000000;
+  color:$cornerColor;
+  z-index:1;
+}
+.fa-times{
+  position:relative;
+  top:0px;
+  left:0px;
+  border-radius:4px;
+  font-size:36px;
+  backgroun-color:#fff;
   z-index:3;
 }
-$hambarHoverColor:$cornerColor;
+
 .fa-bars:hover{
   position:relative;
   top:-6px;
@@ -97,7 +110,6 @@ $hambarHoverColor:$cornerColor;
   font-size:48px;
   animation-duration:0.1s;
   animation-name:pulpul;
-  color:$hambarHoverColor;
 }
 @keyframes pulpul{
   $dist:12;
@@ -112,18 +124,23 @@ $hambarHoverColor:$cornerColor;
     top:-12px;
     left:-12px;
     font-size:60px;
-    color:#771121;
   }
   100%{
     position:relative;
     top:-($dist/2)px;
     left:-($dist/2)px;
     font-size:(36+$dist)px;
-    color:$hambarHoverColor;
   }
 }
 .menu{
-  margin-top:50%;
+  margin-top:30%;
+}
+.menutitle{
+  color:#f5dd68;
+  font-size:30px;
+  margin-left:20px;
+  margin:20px;
+  font-family: "Nico Moji";
 }
 .logo{
   position:absolute;
@@ -149,8 +166,15 @@ $hambarHoverColor:$cornerColor;
   width:100%;
   height:100%;
 }
-.bar{
+.menu_open{
   margin-left:97%;
+  width:48px;
+  height:48px;
+  z-index:3;
+}
+.menu_close{
+  margin-left:30%;
+  margin-top:10%;
   width:48px;
   height:48px;
   z-index:3;
@@ -159,8 +183,8 @@ $hambarHoverColor:$cornerColor;
   position:absolute;
   top:0px;
   left:0px;
-  width:100%;
-  height:100%;
+  width:0%;
+  height:0%;
   opacity:0.0;
   background-color:#121331;
   z-index:1;
@@ -193,6 +217,34 @@ $hambarHoverColor:$cornerColor;
   }
   100%{
     opacity:0.0;
+  }
+}
+.layer2{
+  z-index:1;
+  position:absolute;
+  top:100%;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:#000;
+}
+.layer2_trans{
+  z-index:1;
+  position:absolute;
+  top:-100%;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:#000;
+  animation-duration:1s;
+  animation-name:trans;
+}
+@keyframes trans{
+  0%{
+    top:100%;
+  }
+  100%{
+    top:-100%;
   }
 }
 #app{
@@ -314,12 +366,14 @@ div{
 .links{
   margin-top:5%;
   margin-left:5%;
+  z-index:5;
 }
 .fa-black{
   color:#ccf;
   background-color: $BGColor;
   transition:all 100ms 0s ease;
   font-size:28px;
+  z-index:3;
 }
 .fa-black:hover{
   font-size:40px;
@@ -331,8 +385,6 @@ a:visited {
 
 a:link {
   color: #e0e0e1; }
-
-
 a {
   color: powderblue;
   transition: color .2s;

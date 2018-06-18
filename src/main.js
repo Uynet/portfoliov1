@@ -2,9 +2,24 @@ import Vue from 'vue'
 import App from './App.vue'
 
 Vue.component('item-menu', {
-  props:["title","open"],
+  props:["title","layer2"],
+  methods:{
+    open:function(){
+      switch(this.title){
+        case "About" :
+          console.log(this.layer2);
+          break;
+        case "Works" :
+          break;
+        case "Music" :
+          break;
+      }
+    }
+  },
   template:`
-  <div v-on:click="open">{{title}}<div class="label"></div></div>
+  <div v-on:click="open">{{title}}
+    <div class="label"></div>
+  </div>
   `
 });
 
@@ -14,30 +29,21 @@ new Vue({
     sidebar:"sidebar",
     container:"container",
     layer:"layer",
+    layer2:"layer2",
     items:[
       {
         message:"About",
-        open:function(){
-          console.log("po");
-        }
       },
       {
         message:"Works",
-        open:function(){
-          console.log("po");
-        }
       },
       {
-        message:"Unko",
-        open:function(){
-          console.log("po");
-        }
+        message:"Music",
       },
     ],
   },
   methods:{
     slide:function(){
-      console.log(this.layer)
       if(this.sidebar=="sidebar"){
         this.sidebar = "sidebar_open";
         this.layer = "layer_dark";
@@ -47,6 +53,8 @@ new Vue({
         this.layer = "layer";
       }
     },
+    open:function(){
+    }
   }
 })
 
