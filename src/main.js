@@ -7,7 +7,7 @@ Vue.component('item-menu', {
     open:function(){
       switch(this.title){
         case "About" :
-          console.log(this.layer2);
+          container.open("About");
           break;
         case "Works" :
           break;
@@ -23,7 +23,7 @@ Vue.component('item-menu', {
   `
 });
 
-new Vue({
+const container = new Vue({
   el:"#page",
   data:{
     state:"fas fa-bars",
@@ -32,15 +32,9 @@ new Vue({
     layer:"layer",
     layer2:"layer2",
     items:[
-      {
-        message:"About",
-      },
-      {
-        message:"Works",
-      },
-      {
-        message:"Unko",
-      },
+      { message:"About", },
+      { message:"Works", },
+      { message:"Unko", },
     ],
   },
   methods:{
@@ -57,6 +51,7 @@ new Vue({
       }
     },
     open:function(){
+      this.layer2 = "layer2_trans"
     }
   }
 })
