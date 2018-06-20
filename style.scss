@@ -1,7 +1,10 @@
 $BGColor:#ffffff;
-$cornerColor:#334478;
-$footerColor:#222034;
+/*$cornerColor:#334478;*/
+$cornerColor:#6a446d;
+/*$footerColor:#222034;*/
+$footerColor:#334478;
 $popColor:#3a7094;
+$popColor:#334478;
 html {
   height:100%;
 }
@@ -14,6 +17,7 @@ body {
 
 .BG1{
   background-color: #e6eeff;
+  background-color: #eeeeee;
   position:absolute;
   top:0px;
   left:40%;
@@ -91,7 +95,7 @@ $itemmargin:10px;
   border-radius:4px;
   font-size:36px;
   color:$cornerColor;
-  z-index:1;
+  z-index:3;
 }
 .fa-times{
   position:relative;
@@ -99,7 +103,8 @@ $itemmargin:10px;
   left:0px;
   border-radius:4px;
   font-size:36px;
-  backgroun-color:#fff;
+  transition:all 600ms 0s ease;
+  color:#fff;
   z-index:3;
 }
 
@@ -108,11 +113,11 @@ $itemmargin:10px;
   top:-6px;
   left:-6px;
   font-size:48px;
-  animation-duration:0.1s;
+  animation-duration:0.3s;
   animation-name:pulpul;
 }
 @keyframes pulpul{
-  $dist:12;
+  $dist:8;
   0%{
     position:relative;
     top:0px;
@@ -121,9 +126,9 @@ $itemmargin:10px;
   }
   30%{
     position:relative;
-    top:-12px;
-    left:-12px;
-    font-size:60px;
+    top:-10px;
+    left:-10px;
+    font-size:56px;
   }
   100%{
     position:relative;
@@ -143,11 +148,6 @@ $itemmargin:10px;
   font-family: "Nico Moji";
 }
 .logo{
-  position:absolute;
-  top:30%;
-  left:50%;
-  margin-top: -42.5px;
-  margin-left: -175px;
   color:#e44265;
   padding:6px 40px;
   font-size:70px;
@@ -265,10 +265,9 @@ div{
   display:block;
 }
 .mainspace{
-  margin:10%;
+  margin:8%;
 }
 .chara{
-  margin-top:10%;
 }
 .greeting{
   font-family: "Rounded Mplus 1c"; 
@@ -296,16 +295,17 @@ div{
   position:relative;
   left:-3%;
   width:100%;
-  display:flex;
   padding:20px;
-  height:50px;
+  height:70px;
   color:$BGColor;
   background-color: $footerColor;
+  font-family: "Nico Moji";
   z-index:3; 
 }
 .copy{
   font-family: "Rounded Mplus 1c";
   margin-left:80%;
+  margin-top:20px;
 }
 .side{
   z-index:-2;
@@ -321,16 +321,16 @@ div{
 }
 .cornerLB{
   border-radius:2px;
-  background-color:$cornerColor;
+  /*background-color:$cornerColor;*/
   position:relative;
   top:92%;
   left:16px;
-  width:32px;
+  width:320px;
   height:32px;
 }
 .cornerRT{
   border-radius:2px;
-  background-color:$cornerColor;
+  /*background-color:$cornerColor;*/
   position:relative;
   left:-40px;
   width:32px;
@@ -364,12 +364,10 @@ div{
   height:78%;
 }
 .links{
-  margin-top:5%;
-  margin-left:5%;
   z-index:5;
 }
 .fa-black{
-  color:#ccf;
+  color:$cornerColor;
   background-color: $BGColor;
   transition:all 100ms 0s ease;
   font-size:28px;
@@ -390,10 +388,8 @@ a {
   transition: color .2s;
   text-decoration: none;
 }
-.fade-enter-active, .fade-leave-active {
-  transition: all .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 1.0;
-  left:70%;
+.po{
+  font-size:8px;
+  color:#999;
+  margin-left:20%;
 }

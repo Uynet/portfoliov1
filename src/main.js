@@ -26,6 +26,7 @@ Vue.component('item-menu', {
 new Vue({
   el:"#page",
   data:{
+    state:"fas fa-bars",
     sidebar:"sidebar",
     container:"container",
     layer:"layer",
@@ -38,7 +39,7 @@ new Vue({
         message:"Works",
       },
       {
-        message:"Music",
+        message:"Unko",
       },
     ],
   },
@@ -47,10 +48,12 @@ new Vue({
       if(this.sidebar=="sidebar"){
         this.sidebar = "sidebar_open";
         this.layer = "layer_dark";
+        this.state = "fas fa-times";
       }
       else{
         this.sidebar = "sidebar";
         this.layer = "layer";
+        this.state = "fas fa-bars";
       }
     },
     open:function(){

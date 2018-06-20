@@ -1,3 +1,5 @@
+/*$cornerColor:#334478;*/
+/*$footerColor:#222034;*/
 html {
   height: 100%; }
 
@@ -9,6 +11,7 @@ body {
 
 .BG1 {
   background-color: #e6eeff;
+  background-color: #eeeeee;
   position: absolute;
   top: 0px;
   left: 40%;
@@ -36,7 +39,7 @@ body {
   width: 250px;
   height: 100%;
   color: #fff;
-  background: #334478;
+  background: #6a446d;
   z-index: 2;
   transition: all 300ms 0s ease; }
 
@@ -48,7 +51,7 @@ body {
   width: 250px;
   height: 100%;
   color: #fff;
-  background: #334478;
+  background: #6a446d;
   z-index: 2;
   animation-duration: 0.4s;
   animation-name: slidein; }
@@ -83,8 +86,8 @@ body {
   left: 0px;
   border-radius: 4px;
   font-size: 36px;
-  color: #334478;
-  z-index: 1; }
+  color: #6a446d;
+  z-index: 3; }
 
 .fa-times {
   position: relative;
@@ -92,7 +95,8 @@ body {
   left: 0px;
   border-radius: 4px;
   font-size: 36px;
-  backgroun-color: #fff;
+  transition: all 600ms 0s ease;
+  color: #fff;
   z-index: 3; }
 
 .fa-bars:hover {
@@ -100,7 +104,7 @@ body {
   top: -6px;
   left: -6px;
   font-size: 48px;
-  animation-duration: 0.1s;
+  animation-duration: 0.3s;
   animation-name: pulpul; }
 
 @keyframes pulpul {
@@ -111,14 +115,14 @@ body {
     font-size: 36px; }
   30% {
     position: relative;
-    top: -12px;
-    left: -12px;
-    font-size: 60px; }
+    top: -10px;
+    left: -10px;
+    font-size: 56px; }
   100% {
     position: relative;
-    top: -6 px;
-    left: -6 px;
-    font-size: 48 px; } }
+    top: -4 px;
+    left: -4 px;
+    font-size: 44 px; } }
 .menu {
   margin-top: 30%; }
 
@@ -130,11 +134,6 @@ body {
   font-family: "Nico Moji"; }
 
 .logo {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  margin-top: -42.5px;
-  margin-left: -175px;
   color: #e44265;
   padding: 6px 40px;
   font-size: 70px;
@@ -241,10 +240,7 @@ div {
   display: block; }
 
 .mainspace {
-  margin: 10%; }
-
-.chara {
-  margin-top: 10%; }
+  margin: 8%; }
 
 .greeting {
   font-family: "Rounded Mplus 1c";
@@ -256,7 +252,7 @@ div {
   max-width: 100%;
   color: #ffffff;
   border-radius: 4px;
-  background: #3a7094; }
+  background: #334478; }
 
 .greeting:before {
   content: "";
@@ -265,29 +261,30 @@ div {
   left: 50%;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top: 15px solid #3a7094; }
+  border-top: 15px solid #334478; }
 
 .footer {
   position: relative;
   left: -3%;
   width: 100%;
-  display: flex;
   padding: 20px;
-  height: 50px;
+  height: 70px;
   color: #ffffff;
-  background-color: #222034;
+  background-color: #334478;
+  font-family: "Nico Moji";
   z-index: 3; }
 
 .copy {
   font-family: "Rounded Mplus 1c";
-  margin-left: 80%; }
+  margin-left: 80%;
+  margin-top: 20px; }
 
 .side {
   z-index: -2; }
 
 .cornerLT {
   border-radius: 2px;
-  background-color: #334478;
+  background-color: #6a446d;
   position: absolute;
   top: 12px;
   left: 44px;
@@ -296,16 +293,16 @@ div {
 
 .cornerLB {
   border-radius: 2px;
-  background-color: #334478;
+  /*background-color:$cornerColor;*/
   position: relative;
   top: 92%;
   left: 16px;
-  width: 32px;
+  width: 320px;
   height: 32px; }
 
 .cornerRT {
   border-radius: 2px;
-  background-color: #334478;
+  /*background-color:$cornerColor;*/
   position: relative;
   left: -40px;
   width: 32px;
@@ -313,7 +310,7 @@ div {
 
 .cornerRB {
   border-radius: 4px;
-  background-color: #334478;
+  background-color: #6a446d;
   position: absolute;
   top: 77%;
   left: 94.3%;
@@ -322,7 +319,7 @@ div {
 
 .sidelineL {
   border-radius: 1px;
-  background-color: #334478;
+  background-color: #6a446d;
   position: absolute;
   top: 12px;
   left: 24px;
@@ -331,7 +328,7 @@ div {
 
 .sidelineR {
   border-radius: 1px;
-  background-color: #334478;
+  background-color: #6a446d;
   position: absolute;
   top: 12px;
   left: 97%;
@@ -339,12 +336,10 @@ div {
   height: 78%; }
 
 .links {
-  margin-top: 5%;
-  margin-left: 5%;
   z-index: 5; }
 
 .fa-black {
-  color: #ccf;
+  color: #6a446d;
   background-color: #ffffff;
   transition: all 100ms 0s ease;
   font-size: 28px;
@@ -365,11 +360,9 @@ a {
   transition: color .2s;
   text-decoration: none; }
 
-.fade-enter-active, .fade-leave-active {
-  transition: all .5s; }
-
-.fade-enter, .fade-leave-to {
-  opacity: 1.0;
-  left: 70%; }
+.po {
+  font-size: 8px;
+  color: #999;
+  margin-left: 20%; }
 
 /*# sourceMappingURL=style.css.map */
