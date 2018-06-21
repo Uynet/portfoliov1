@@ -15,8 +15,8 @@ body {
   position: absolute;
   top: 0px;
   left: 40%;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   transform: rotate(-65deg);
   z-index: -3; }
 
@@ -72,7 +72,7 @@ body {
   color: #fff; }
 
 .item:hover {
-  /*background-color:#ce3443;*/
+  /*background-color:$hilight;*/
   background-color: #cd3462; }
 
 @keyframes slidein {
@@ -105,7 +105,8 @@ body {
   left: -6px;
   font-size: 48px;
   animation-duration: 0.3s;
-  animation-name: pulpul; }
+  animation-name: pulpul;
+  color: #ce3443; }
 
 @keyframes pulpul {
   0% {
@@ -215,7 +216,7 @@ body {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #f69;
   animation-duration: 1s;
   animation-name: trans; }
 
@@ -265,18 +266,19 @@ div {
 
 .footer {
   position: relative;
+  margin-top: 50%;
   left: -3%;
   width: 100%;
   padding: 20px;
-  height: 70px;
+  height: 60px;
   color: #ffffff;
   background-color: #334478;
   font-family: "Nico Moji";
-  z-index: 3; }
+  z-index: 1; }
 
 .copy {
   font-family: "Rounded Mplus 1c";
-  margin-left: 80%;
+  margin-left: 4%;
   margin-top: 20px; }
 
 .side {
@@ -284,20 +286,20 @@ div {
 
 .cornerLT {
   border-radius: 2px;
-  background-color: #6a446d;
+  /*background-color:$cornerColor;*/
   position: absolute;
-  top: 12px;
-  left: 44px;
-  width: 32px;
+  top: 6px;
+  left: 24px;
+  width: 320px;
   height: 32px; }
 
 .cornerLB {
   border-radius: 2px;
-  /*background-color:$cornerColor;*/
+  background-color: #6a446d;
   position: relative;
   top: 92%;
   left: 16px;
-  width: 320px;
+  width: 32px;
   height: 32px; }
 
 .cornerRT {
@@ -309,13 +311,13 @@ div {
   height: 32px; }
 
 .cornerRB {
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: #6a446d;
-  position: absolute;
-  top: 77%;
-  left: 94.3%;
+  position: relative;
+  top: 92%;
+  left: -40px;
   width: 32px;
-  height: 16px; }
+  height: 32px; }
 
 .sidelineL {
   border-radius: 1px;
@@ -342,12 +344,12 @@ div {
   color: #6a446d;
   background-color: #ffffff;
   transition: all 100ms 0s ease;
-  font-size: 28px;
+  font-size: 32px;
   z-index: 3; }
 
 .fa-black:hover {
-  font-size: 40px;
-  color: #3370c9; }
+  font-size: 32px;
+  color: #ce3443; }
 
 a:visited {
   color: #e0e0e1; }
@@ -364,5 +366,8 @@ a {
   font-size: 8px;
   color: #999;
   margin-left: 20%; }
+
+.unko {
+  z-index: 15; }
 
 /*# sourceMappingURL=style.css.map */

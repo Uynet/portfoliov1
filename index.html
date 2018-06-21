@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>uynet</title>
-
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
@@ -21,66 +20,31 @@
 
 
     <section id="page" class="container">
+      <side v-bind:state="state" v-on:open-menu="slide"></side>
+
       <div v-bind:class="layer" v-on:click="slide"></div>
       <div v-bind:class="layer2"></div>
 
+      <div v-bind:class="sidebar">
+        <div class = "menu">
+          <div class="menutitle">☆めにゅ〜</div>
+          <div class="label2"></div>
 
-
-      <div class="mainspace">
-        <div class = "logo" align="center">
-          ゆいブログ
-          <div class = "logo_subtext"></div>
-        </div>
-        <div class="chara" align="center">
-          <div class="greeting" align="center">
-            <marquee scrolldelay="500">よおこそ♨</marquee>
+          <div class = "item" v-for="item in items">
+            <item-menu v-bind:layer2="layer2" v-bind:title="item.message"></item-menu>
           </div>
-          <br>
-          <img src="chara.png">
-          <div class=logo_subtext>イメージキャラクター"ゆいちゃん"</div>
-        </div>
-
-        <div class="menu_open">
-          <div class="side">
-            <div class="sidelineR">
-              <div class="cornerRT">
-                <i v-bind:class="state" v-on:click="slide"></i>
-              </div>
-            </div>
-            <div class="sidelineL">
-              <div class="cornerLB">
-                <div class = "links">
-                  <a href = "http://twitter.com/highsate"><i class="fab fa-twitter-square fa-black"></i></a>
-                  <a href = "http://github.com/uynet"><i class="fab fa-github fa-black"></i></a>
-                  <a href = "https://soundcloud.com/saihate-1"><i class="fab fa-soundcloud fa-black"></i></a>
-                  <a href = "http://uynet.work"><i class="fab fa-blogger fa-black"></i></a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div v-bind:class="sidebar">
-            <div class = "menu">
-              <div class="menutitle">☆めにゅ〜</div>
-              <div class="label2"></div>
-
-              <div class = "item" v-for="item in items">
-                <item-menu v-bind:layer2="layer2" v-bind:title="item.message"></item-menu>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="po">
-          ※ポートフォリオページ作成中です。作ったものは左下のリンクみてください。
         </div>
       </div>
-        <footer class="footer" align="center">
-          <div class = "copy">
-            © 2018 uynet
-          </div>
-        </footer>
+
+      <router-view></router-view>
+
     </section>
+    <footer class="footer">
+      <div class = "copy">
+        © 2018 uynet
+      </div>
+    </footer>
   </body>
   <script src="dist/build.js"></script>
+
 </html>
