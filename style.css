@@ -255,7 +255,7 @@ div {
 
 .footer {
   position: relative;
-  margin-top: 0%;
+  margin-top: 47%;
   left: -3%;
   width: 100%;
   padding: 20px;
@@ -327,6 +327,8 @@ div {
   height: 78%; }
 
 .links {
+  display: inline;
+  margin: 2px;
   z-index: 5; }
 
 .fa-black {
@@ -337,7 +339,7 @@ div {
   z-index: 3; }
 
 .fa-black:hover {
-  font-size: 32px;
+  font-size: 36px;
   color: #ce3443; }
 
 a:visited {

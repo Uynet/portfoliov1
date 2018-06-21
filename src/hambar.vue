@@ -1,5 +1,5 @@
 <template>
-  <i v-bind:class="this.hambarclass" v-on:click="$emit('menu-open')"></i>
+  <i v-bind:class="this.hambarclass" v-on:click="$emit('toggle')"></i>
 </template>
 <script>
 export default{
