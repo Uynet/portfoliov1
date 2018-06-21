@@ -1,5 +1,16 @@
 <template>
-  <div v-on:click="open">{{title}}
+<router-link v-bind:to="path">
+  {{title}}
     <div class="label"></div>
-  </div>
+</router-link>
 </template>
+
+<script>
+export default{
+  props:["title","path"],
+  methods:{
+    open:function(){
+    }
+  },
+}
+</script>
