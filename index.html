@@ -41,16 +41,7 @@
       <div v-bind:class="layer" v-on:click="slide"></div>
       <div v-bind:class="layer2"></div>
 
-      <div v-bind:class="sidebar">
-        <div class = "menu">
-          <div class="menutitle">☆めにゅ〜</div>
-          <div class="label2"></div>
-
-          <div class = "item" v-for="item in items">
-            <item v-bind:path="item.path" v-bind:title="item.message"></item>
-          </div>
-        </div>
-      </div>
+      <sidebar v-bind:state="sidebarstate" v-bind:items="items"></sidebar>
 
     <div class="po">
       ※ポートフォリオページ作成中です。作ったものはリンクみてください。

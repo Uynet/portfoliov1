@@ -27,7 +27,7 @@ const container = new Vue({
   el:"#page",
   data:{
     state:"fas fa-bars",
-    sidebar:"sidebar",
+    sidebarstate:"sidebar",
     container:"container",
     layer:"layer",
     layer2:"layer2",
@@ -38,17 +38,18 @@ const container = new Vue({
     ],
   },
   components:{
+    sidebar:sidebar,
     item:item,
   },
   methods:{
     slide:function(){
-      if(this.sidebar=="sidebar"){
-        this.sidebar = "sidebar_open";
+      if(this.sidebarstate=="sidebar"){
+        this.sidebarstate = "sidebar_open";
         this.layer = "layer_dark";
         this.state = "fas fa-times";
       }
       else{
-        this.sidebar = "sidebar";
+        this.sidebarstate = "sidebar";
         this.layer = "layer";
         this.state = "fas fa-bars";
       }
