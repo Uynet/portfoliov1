@@ -3,8 +3,7 @@ $BGColor:#ffffff;
 $cornerColor:#6a446d;
 /*$footerColor:#222034;*/
 $footerColor:#334478;
-$popColor:#3a7094;
-$popColor:#334478;
+$popColor:#6a446d;
 $hilight:#ce3443;
 html {
   height:100%;
@@ -27,20 +26,9 @@ body {
   transform: rotate(-65deg);
   z-index:-3;
 }
-.BG2{
-  display:none;
-  background-color: #3370c4;
-  position:absolute;
-  top:10%;
-  left:25%;
-  width:200px;
-  height:200px;
-  transform: rotate(-25deg);
-  z-index:-5;
-}
 .container{
 }
-.sidebar{
+.sidebar_closed{
   box-shadow:0px 0px 4px #000;
   position:absolute;
   top:0px;
@@ -295,7 +283,7 @@ div{
 
 .footer {
   position:relative;
-  margin-top:50%;
+  margin-top:0%;
   left:-3%;
   width:100%;
   padding:20px;

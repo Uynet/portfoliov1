@@ -23,7 +23,7 @@
       <div class="side">
         <div class="sidelineR">
           <div class="cornerRT">
-            <i v-bind:class="state" v-on:click="slide"></i>
+            <hambar v-bind:state="sidebarstate" v-on:menu-open="slide"></hambar>
           </div>
         </div>
         <div class="sidelineL">

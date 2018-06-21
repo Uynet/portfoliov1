@@ -1,5 +1,5 @@
 <template>
-      <div v-bind:class="state">
+   <div v-bind:class="this.sidebarclass">
         <div class = "menu">
           <div class="menutitle">☆めにゅ〜</div>
           <div class="label2"></div>
@@ -17,6 +17,15 @@ export default{
   props:["items","state"],
   components:{
     item:item
+  },
+  computed:{
+    sidebarclass:function(){
+      switch(this.state){
+         case "closed" : return "sidebar_closed";
+         case "open" : return "sidebar_open";
+         default :return "error";
+      }
+    }
   }
 }
 </script>

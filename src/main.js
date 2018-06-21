@@ -3,31 +3,16 @@ import VueRouter from 'vue-router'
 import routes from "./routes.js"
 import item from "./item";
 import sidebar from "./sidebar";
+import hambar from "./hambar.vue";
 Vue.use(VueRouter);
 
-const cl = console.log
 const router = new VueRouter({routes})
-
-Vue.component('item-menu', {
-  props:["title","layer2"],
-  methods:{
-    open:function(){
-      container.open(this.title);
-    }
-  },
-  template:`
-  <div v-on:click="open">{{title}}
-    <div class="label"></div>
-  </div>
-  `
-});
 
 const container = new Vue({
   router,
-  el:"#page",
-  data:{
+  el:"#page", data:{
     state:"fas fa-bars",
-    sidebarstate:"sidebar",
+    sidebarstate:"closed",
     container:"container",
     layer:"layer",
     layer2:"layer2",
@@ -40,16 +25,17 @@ const container = new Vue({
   components:{
     sidebar:sidebar,
     item:item,
+    hambar:hambar,
   },
   methods:{
     slide:function(){
-      if(this.sidebarstate=="sidebar"){
-        this.sidebarstate = "sidebar_open";
+      if(this.sidebarstate=="closed"){
+        this.sidebarstate = "open";
         this.layer = "layer_dark";
         this.state = "fas fa-times";
       }
       else{
-        this.sidebarstate = "sidebar";
+        this.sidebarstate = "closed";
         this.layer = "layer";
         this.state = "fas fa-bars";
       }
