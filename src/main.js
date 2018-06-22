@@ -50,3 +50,4 @@ const container = new Vue({
   }
 })
 
+export default container;
