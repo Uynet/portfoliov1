@@ -4,7 +4,7 @@ $cornerColor:#6a446d;
 /*$footerColor:#222034;*/
 $footerColor:#334478;
 $popColor:#6a446d;
-$hilight:#ce3443;
+$hilight:#f23473;
 html {
   height:100%;
 }
@@ -32,7 +32,7 @@ body {
   box-shadow:0px 0px 4px #000;
   position:absolute;
   top:0px;
-  left:100%;
+  right:-250px;
   width:250px;
   height:100%;
   color:#fff;
@@ -44,7 +44,7 @@ body {
   box-shadow:0px 0px 4px #000;
   position:absolute;
   top:0px;
-  left:80%;
+  right:-50px;
   width:250px;
   height:100%;
   color:#fff;
@@ -52,6 +52,10 @@ body {
   z-index:2;
   animation-duration:0.4s;
   animation-name:slidein;
+}
+@keyframes slidein{
+  from{right:-250px}
+  to{right:-50px}
 }
 .label{
   width:100px;
@@ -71,11 +75,7 @@ $itemmargin:10px;
 }
 .item:hover{
   /*background-color:$hilight;*/
-  background-color:#cd3462;
-}
-@keyframes slidein{
-  from{left:100%}
-  to{left:80%}
+  background-color:$hilight;
 }
 .fa-bars{
   position:relative;
@@ -138,7 +138,7 @@ $itemmargin:10px;
   font-family: "Nico Moji";
 }
 .logo{
-  color:#e44265;
+  color:$hilight;
   padding:6px 40px;
   font-size:70px;
   /*font-family: "Rounded Mplus 1c";*/ 

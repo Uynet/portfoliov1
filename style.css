@@ -24,7 +24,7 @@ body {
   box-shadow: 0px 0px 4px #000;
   position: absolute;
   top: 0px;
-  left: 100%;
+  right: -250px;
   width: 250px;
   height: 100%;
   color: #fff;
@@ -36,7 +36,7 @@ body {
   box-shadow: 0px 0px 4px #000;
   position: absolute;
   top: 0px;
-  left: 80%;
+  right: -50px;
   width: 250px;
   height: 100%;
   color: #fff;
@@ -45,6 +45,11 @@ body {
   animation-duration: 0.4s;
   animation-name: slidein; }
 
+@keyframes slidein {
+  from {
+    right: -250px; }
+  to {
+    right: -50px; } }
 .label {
   width: 100px;
   height: 8px;
@@ -62,13 +67,8 @@ body {
 
 .item:hover {
   /*background-color:$hilight;*/
-  background-color: #cd3462; }
+  background-color: #f23473; }
 
-@keyframes slidein {
-  from {
-    left: 100%; }
-  to {
-    left: 80%; } }
 .fa-bars {
   position: relative;
   top: 0px;
@@ -95,7 +95,7 @@ body {
   font-size: 48px;
   animation-duration: 0.3s;
   animation-name: pulpul;
-  color: #ce3443; }
+  color: #f23473; }
 
 @keyframes pulpul {
   0% {
@@ -124,7 +124,7 @@ body {
   font-family: "Nico Moji"; }
 
 .logo {
-  color: #e44265;
+  color: #f23473;
   padding: 6px 40px;
   font-size: 70px;
   /*font-family: "Rounded Mplus 1c";*/
@@ -340,7 +340,7 @@ div {
 
 .fa-black:hover {
   font-size: 32px;
-  color: #ce3443; }
+  color: #f23473; }
 
 a:visited {
   color: #e0e0e1; }
