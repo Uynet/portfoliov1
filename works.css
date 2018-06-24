@@ -1,3 +1,20 @@
 .flame{
-  font-size:60px;
+  box-shadow:0px 0px 4px #000;
+  border-color:#eee;
+  border-radius:4px;
+  border-style:solid;
+  background-color:#fff;
+  width:328px;
+  height:328px;
+  margin:32px;
+  color:#888;
+}
+.image{
+  padding:14px;
+}
+.unko{
+  box-shadow:0px 0px 4px #000;
+}
+.passage{
+  font-family: "Rounded Mplus 1c";
 }

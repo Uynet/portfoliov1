@@ -1,6 +1,6 @@
 <template>
 <div>
-<div v-for="product in products">
+<div v-for="product in products" align="center">
 <flame v-bind:title="product.title"></flame>
 </div>
 </div>

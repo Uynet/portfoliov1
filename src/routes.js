@@ -1,6 +1,6 @@
 import index from './index.vue';
 import about from './about.vue';
-import works from './works.vue';
+import works from './Works/works.vue';
 
 export default [
   {

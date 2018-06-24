@@ -13,18 +13,13 @@
 </template>
 <script>
 import containts from "./containts";
-import container from "./main.js";
  
-console.log(container);
-
 export default{ 
   data:function(){
   return {
       products:[
-        {title:1},
-        {title:2},
-        {title:3},
-        {title:4},
+        {title:"kawasemi"},
+        {title:"artc"},
       ],
     }
   },
