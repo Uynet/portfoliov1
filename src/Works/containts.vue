@@ -1,7 +1,7 @@
 <template>
 <div>
 <div v-for="product in products" align="center">
-<flame v-bind:title="product.title"></flame>
+<flame v-bind:product="product"></flame>
 </div>
 </div>
 </template>

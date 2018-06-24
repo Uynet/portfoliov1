@@ -15,6 +15,10 @@
 .unko{
   box-shadow:0px 0px 4px #000;
 }
+.title{
+  font-family: "Rounded Mplus 1c";
+  color:#334;
+}
 .passage{
   font-family: "Rounded Mplus 1c";
 }

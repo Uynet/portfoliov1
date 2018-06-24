@@ -1,11 +1,8 @@
 <template>
 
-<div >
+<div>
 
 <div align="center">作品おきば</div>
-<div align="center">
-<router-link to="/">もどるポヨ</router-link>
-</div>
 
 <containts v-bind:products="this.products"></containts>
 
@@ -14,12 +11,21 @@
 <script>
 import containts from "./containts";
  
+
 export default{ 
   data:function(){
   return {
       products:[
-        {title:"kawasemi"},
-        {title:"artc"},
+        {
+        path:"kawasemi",
+        title:"kawasemi",
+        passage:"ゲームです",
+        },
+        {
+        path:"artc",
+        title:"芸術C",
+        passage:"スマホで開いてね",
+        },
       ],
     }
   },
