@@ -7,7 +7,8 @@ body {
   min-height: 100%;
   background-color: #ffffff;
   display: grid;
-  grid-template-rows: 1fr auto; }
+  grid-template-rows: 1fr auto;
+  overflow-x: hidden; }
 
 .BG1 {
   background-color: #e6eeff;
@@ -20,9 +21,12 @@ body {
   transform: rotate(-65deg);
   z-index: -3; }
 
+.container {
+  position: fixed; }
+
 .sidebar_closed {
   box-shadow: 0px 0px 4px #000;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: -250px;
   width: 250px;
@@ -34,7 +38,7 @@ body {
 
 .sidebar_open {
   box-shadow: 0px 0px 4px #000;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: -50px;
   width: 250px;
@@ -75,8 +79,7 @@ body {
   left: 0px;
   border-radius: 4px;
   font-size: 36px;
-  color: #6a446d;
-  z-index: 3; }
+  color: #6a446d; }
 
 .fa-times {
   position: relative;
@@ -85,8 +88,7 @@ body {
   border-radius: 4px;
   font-size: 36px;
   transition: all 600ms 0s ease;
-  color: #fff;
-  z-index: 3; }
+  color: #fff; }
 
 .fa-bars:hover {
   position: relative;
@@ -124,11 +126,12 @@ body {
   font-family: "Nico Moji"; }
 
 .logo {
+  margin-top: 10%;
   color: #f23473;
   padding: 6px 40px;
   font-size: 70px;
-  /*font-family: "Rounded Mplus 1c";*/
-  font-family: "Nico Moji"; }
+  font-family: "Nico Moji";
+  min-width: 350px; }
 
 .logo_subtext {
   color: #90747c;
@@ -156,7 +159,7 @@ body {
   z-index: 3; }
 
 .layer {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 0%;
@@ -168,13 +171,13 @@ body {
   animation-name: undark; }
 
 .layer_dark {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  background-color: #121331;
+  background-color: #121361;
   z-index: 1;
   animation-duration: 0.5s;
   animation-name: dark; }
@@ -230,7 +233,8 @@ div {
   display: block; }
 
 .mainspace {
-  margin: 15%; }
+  margin: 5%;
+  z-index: 4; }
 
 .greeting {
   font-family: "Rounded Mplus 1c";
@@ -270,9 +274,6 @@ div {
   margin-left: 4%;
   margin-top: 20px; }
 
-.side {
-  z-index: -2; }
-
 .cornerLT {
   border-radius: 2px;
   /*background-color:$cornerColor;*/
@@ -293,7 +294,6 @@ div {
 
 .cornerRT {
   border-radius: 2px;
-  /*background-color:$cornerColor;*/
   position: relative;
   left: -40px;
   width: 32px;
@@ -311,29 +311,29 @@ div {
 .sidelineL {
   border-radius: 1px;
   background-color: #6a446d;
-  position: absolute;
+  position: fixed;
   top: 12px;
   left: 24px;
   width: 8px;
-  height: 96%; }
+  height: 96%;
+  z-index: 5; }
 
 .sidelineR {
   border-radius: 1px;
   background-color: #6a446d;
-  position: absolute;
+  position: fixed;
   top: 12px;
   left: 97%;
   width: 8px;
-  height: 96%; }
+  height: 96%;
+  z-index: 5; }
 
 .links {
   display: inline;
-  margin: 2px;
-  z-index: 5; }
+  margin: 2px; }
 
 .fa-black {
   color: #6a446d;
-  background-color: #ffffff;
   transition: all 100ms 0s ease;
   font-size: 32px;
   z-index: 3; }

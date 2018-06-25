@@ -1,7 +1,9 @@
 <template>
 <div class="flame">
      <div class="image">
-       <img v-bind:src="path" class="unko"></img>
+     <a v-bind:href="product.link">
+       <img v-bind:src="path" class="img_show"></img>
+     </a>
      </div>
 
      <div class="title">

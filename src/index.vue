@@ -1,5 +1,5 @@
 <template>
-      <div class="mainspace">
+<div>
         <div class = "logo" align="center">
           ゆいブログ
           <div class = "logo_subtext"></div>
@@ -13,6 +13,6 @@
           <img src="resource/chara.png">
           <div class=logo_subtext>イメージキャラクター"ゆいちゃん"</div>
         </div>
-      </div>
+        </div>
 </template>
 

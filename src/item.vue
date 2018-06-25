@@ -1,8 +1,8 @@
 <template>
-<router-link v-bind:to="path">
+<div>
   {{title}}
     <div class="label"></div>
-</router-link>
+</div>
 </template>
 
 <script>

@@ -13,6 +13,7 @@ body {
   background-color: $BGColor;
   display: grid;
   grid-template-rows: 1fr auto;
+  overflow-x: hidden;
 }
 
 .BG1{
@@ -27,10 +28,11 @@ body {
   z-index:-3;
 }
 .container{
+  position:fixed;
 }
 .sidebar_closed{
   box-shadow:0px 0px 4px #000;
-  position:absolute;
+  position:fixed;
   top:0px;
   right:-250px;
   width:250px;
@@ -42,7 +44,7 @@ body {
 }
 .sidebar_open{
   box-shadow:0px 0px 4px #000;
-  position:absolute;
+  position:fixed;
   top:0px;
   right:-50px;
   width:250px;
@@ -84,7 +86,6 @@ $itemmargin:10px;
   border-radius:4px;
   font-size:36px;
   color:$cornerColor;
-  z-index:3;
 }
 .fa-times{
   position:relative;
@@ -94,7 +95,6 @@ $itemmargin:10px;
   font-size:36px;
   transition:all 600ms 0s ease;
   color:#fff;
-  z-index:3;
 }
 
 .fa-bars:hover{
@@ -138,11 +138,12 @@ $itemmargin:10px;
   font-family: "Nico Moji";
 }
 .logo{
+  margin-top:10%;
   color:$hilight;
   padding:6px 40px;
   font-size:70px;
-  /*font-family: "Rounded Mplus 1c";*/ 
   font-family: "Nico Moji";
+  min-width:350px;
 }
 .logo_subtext{
   color:#90747c;
@@ -170,7 +171,7 @@ $itemmargin:10px;
   z-index:3;
 }
 .layer{
-  position:absolute;
+  position:fixed;
   top:0px;
   left:0px;
   width:0%;
@@ -182,13 +183,13 @@ $itemmargin:10px;
   animation-name:undark;
 }
 .layer_dark{
-  position:absolute;
+  position:fixed;
   top:0px;
   left:0px;
   width:100%;
   height:100%;
   opacity:0.5;
-  background-color:#121331;
+  background-color:#121361;
   z-index:1;
   animation-duration:0.5s;
   animation-name:dark;
@@ -255,7 +256,8 @@ div{
   display:block;
 }
 .mainspace{
-  margin:15%;
+  margin:5%;
+  z-index:4;
 }
 .chara{
 }
@@ -299,7 +301,6 @@ div{
   margin-top:20px;
 }
 .side{
-  z-index:-2;
 }
 .cornerLT{
   border-radius:2px;
@@ -321,7 +322,6 @@ div{
 }
 .cornerRT{
   border-radius:2px;
-  /*background-color:$cornerColor;*/
   position:relative;
   left:-40px;
   width:32px;
@@ -339,29 +339,29 @@ div{
 .sidelineL{
   border-radius:1px;
   background-color:$cornerColor;
-  position:absolute;
+  position:fixed;
   top:12px;
   left:24px;
   width:8px;
   height:96%;
+  z-index:5;
 }
 .sidelineR{
   border-radius:1px;
   background-color:$cornerColor;
-  position:absolute;
+  position:fixed;
   top:12px;
   left:97%;
   width:8px;
   height:96%;
+  z-index:5;
 }
 .links{
   display:inline;
   margin:2px;
-  z-index:5;
 }
 .fa-black{
   color:$cornerColor;
-  background-color: $BGColor;
   transition:all 100ms 0s ease;
   font-size:32px;
   z-index:3;

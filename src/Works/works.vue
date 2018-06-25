@@ -2,7 +2,7 @@
 
 <div>
 
-<div align="center">作品おきば</div>
+<div align="center" class="works">作品おきば</div>
 
 <containts v-bind:products="this.products"></containts>
 
@@ -10,7 +10,6 @@
 </template>
 <script>
 import containts from "./containts";
- 
 
 export default{ 
   data:function(){
@@ -19,12 +18,14 @@ export default{
         {
         path:"kawasemi",
         title:"kawasemi",
-        passage:"ゲームです",
+        passage:"JS製2Dアクションゲームです",
+        link:"http://kawasemi.uynet.trap.show",
         },
         {
         path:"artc",
         title:"芸術C",
         passage:"スマホで開いてね",
+        link:"http://artc.uynet.trap.show",
         },
       ],
     }
