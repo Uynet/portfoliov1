@@ -39,7 +39,7 @@ body {
   height:100%;
   color:#fff;
   background:$cornerColor;
-  z-index:2;
+  z-index:20;
   transition:all 300ms 0s ease;
 }
 .sidebar_open{
@@ -51,7 +51,7 @@ body {
   height:100%;
   color:#fff;
   background:$cornerColor;
-  z-index:2;
+  z-index:20;
   animation-duration:0.4s;
   animation-name:slidein;
 }
@@ -178,7 +178,7 @@ $itemmargin:10px;
   height:0%;
   opacity:0.0;
   background-color:#121331;
-  z-index:1;
+  z-index:10;
   animation-duration:0.5s;
   animation-name:undark;
 }
@@ -190,7 +190,7 @@ $itemmargin:10px;
   height:100%;
   opacity:0.5;
   background-color:#121361;
-  z-index:1;
+  z-index:10;
   animation-duration:0.5s;
   animation-name:dark;
 }
@@ -303,12 +303,12 @@ div{
 .side{
 }
 .cornerLT{
+  background-color:#fff;
   border-radius:2px;
-  /*background-color:$cornerColor;*/
   position:absolute;
   top:6px;
   left:24px;
-  width:320px;
+  width:146px;
   height:32px;
 }
 .cornerLB{
@@ -354,9 +354,10 @@ div{
   left:97%;
   width:8px;
   height:96%;
-  z-index:5;
+  z-index:21;
 }
 .links{
+  opacity:1;
   display:inline;
   margin:2px;
 }
@@ -388,4 +389,7 @@ a {
 }
 .unko{
   z-index:15;
+}
+.popo{
+  color:#3394b8;
 }

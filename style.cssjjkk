@@ -33,7 +33,7 @@ body {
   height: 100%;
   color: #fff;
   background: #6a446d;
-  z-index: 20;
+  z-index: 2;
   transition: all 300ms 0s ease; }
 
 .sidebar_open {
@@ -45,7 +45,7 @@ body {
   height: 100%;
   color: #fff;
   background: #6a446d;
-  z-index: 20;
+  z-index: 2;
   animation-duration: 0.4s;
   animation-name: slidein; }
 
@@ -166,7 +166,7 @@ body {
   height: 0%;
   opacity: 0.0;
   background-color: #121331;
-  z-index: 10;
+  z-index: 1;
   animation-duration: 0.5s;
   animation-name: undark; }
 
@@ -178,7 +178,7 @@ body {
   height: 100%;
   opacity: 0.5;
   background-color: #121361;
-  z-index: 10;
+  z-index: 1;
   animation-duration: 0.5s;
   animation-name: dark; }
 
@@ -275,12 +275,11 @@ div {
   margin-top: 20px; }
 
 .cornerLT {
-  background-color: #fff;
   border-radius: 2px;
-  position: absolute;
+  position: fixed;
   top: 6px;
   left: 24px;
-  width: 146px;
+  width: 320px;
   height: 32px; }
 
 .cornerLB {
@@ -324,12 +323,11 @@ div {
   position: fixed;
   top: 12px;
   left: 97%;
-  width: 8px;
+  width: 80px;
   height: 96%;
-  z-index: 21; }
+  z-index: 5; }
 
 .links {
-  opacity: 1;
   display: inline;
   margin: 2px; }
 
@@ -362,7 +360,4 @@ a {
 .unko {
   z-index: 15; }
 
-.popo {
-  color: #3394b8; }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.cssjjkk.map */
