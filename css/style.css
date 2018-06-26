@@ -11,16 +11,25 @@ body {
   overflow-x: hidden; }
 
 .BG1 {
-  background-color: #e6eeff;
   background-color: #f5eff1;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 40%;
   width: 100%;
-  height: 100%;
+  height: 110%;
   transform: rotate(-65deg);
   z-index: -3; }
 
+@media screen and (max-width: 489px) {
+  .BG1 {
+    background-color: #eff1f5;
+    position: fixed;
+    top: 0px;
+    left: 40%;
+    width: 100%;
+    height: 10%;
+    transform: rotate(-65deg);
+    z-index: -3; } }
 .container {
   position: fixed; }
 
@@ -33,7 +42,7 @@ body {
   height: 100%;
   color: #fff;
   background: #6a446d;
-  z-index: 2;
+  z-index: 20;
   transition: all 300ms 0s ease; }
 
 .sidebar_open {
@@ -45,7 +54,7 @@ body {
   height: 100%;
   color: #fff;
   background: #6a446d;
-  z-index: 2;
+  z-index: 20;
   animation-duration: 0.4s;
   animation-name: slidein; }
 
@@ -126,7 +135,7 @@ body {
   font-family: "Nico Moji"; }
 
 .logo {
-  margin-top: 10%;
+  margin-top: 15%;
   color: #f23473;
   padding: 6px 40px;
   font-size: 70px;
@@ -166,7 +175,7 @@ body {
   height: 0%;
   opacity: 0.0;
   background-color: #121331;
-  z-index: 1;
+  z-index: 10;
   animation-duration: 0.5s;
   animation-name: undark; }
 
@@ -178,7 +187,7 @@ body {
   height: 100%;
   opacity: 0.5;
   background-color: #121361;
-  z-index: 1;
+  z-index: 10;
   animation-duration: 0.5s;
   animation-name: dark; }
 
@@ -275,11 +284,12 @@ div {
   margin-top: 20px; }
 
 .cornerLT {
+  background-color: #fff;
   border-radius: 2px;
-  position: fixed;
+  position: absolute;
   top: 6px;
   left: 24px;
-  width: 320px;
+  width: 146px;
   height: 32px; }
 
 .cornerLB {
@@ -323,11 +333,12 @@ div {
   position: fixed;
   top: 12px;
   left: 97%;
-  width: 80px;
+  width: 8px;
   height: 96%;
-  z-index: 5; }
+  z-index: 21; }
 
 .links {
+  opacity: 1;
   display: inline;
   margin: 2px; }
 
@@ -360,4 +371,7 @@ a {
 .unko {
   z-index: 15; }
 
-/*# sourceMappingURL=style.cssjjkk.map */
+.popo {
+  color: #3394b8; }
+
+/*# sourceMappingURL=style.css.map */

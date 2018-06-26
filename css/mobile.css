@@ -1,0 +1,13 @@
+@media screen and (max-width:489px)
+{
+  .BG1{
+    background-color: #eff1f5;
+    position:fixed;
+    top:0px;
+    left:40%;
+    width:100%;
+    height:10%;
+    transform: rotate(-65deg);
+    z-index:-3;
+  }
+}
