@@ -20,6 +20,8 @@
     <div class="BG1"></div>
 
     <section id="page" class="container">
+      <layer v-bind:state="sidebarstate" v-on:toggle="toggle"></layer>
+
       <div class="side">
          <div class="sidelineR">
           <div class="cornerRT">
@@ -34,9 +36,6 @@
           </div>
         </div>
       </div>
-
-      <layer v-bind:state="sidebarstate" v-on:toggle="toggle"></layer>
-
       <sidebar v-bind:state="sidebarstate" v-bind:items="items"></sidebar>
 
     <div class="po">

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import routes from "./routes.js"
 import item from "./item";
 import sidebar from "./sidebar";
+import side from "./side";
 import hambar from "./hambar.vue";
 import layer from "./layer.vue";
 import linkicon from "./linkIcon.vue";
@@ -31,6 +32,7 @@ const container = new Vue({
   },
   components:{
     sidebar:sidebar,
+    side:side,
     item:item,
     hambar:hambar,
     layer:layer,
