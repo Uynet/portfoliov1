@@ -2,9 +2,9 @@
 
 <div>
 
-<div align="center" class="works">作品おきば</div>
+<h3>作品おきば</h3>
 
-<containts v-bind:products="this.products"></containts>
+<containts v-bind:products="this.products" align="center"></containts>
 
 <div align="center" class="works">音楽</div>
 

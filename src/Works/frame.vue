@@ -1,5 +1,5 @@
 <template>
-<div class="flame">
+<div class="frame" align="center">
      <div class="image">
      <a v-bind:href="product.link">
        <img v-bind:src="path" class="img_show"></img>

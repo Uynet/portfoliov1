@@ -57,13 +57,6 @@ body {
   from{right:-250px}
   to{right:-50px}
 }
-.label{
-  width:100px;
-  height:8px;
-  background-color:#fff;
-  opacity:0.5;
-}
-$itemmargin:10px;
 .item{
   font-size:24px;
   align:center;
@@ -74,8 +67,13 @@ $itemmargin:10px;
   color:#fff;
 }
 .item:hover{
-  /*background-color:$hilight;*/
   background-color:$hilight;
+}
+.label{
+  width:100px;
+  height:8px;
+  background-color:#fff;
+  opacity:0.5;
 }
 .fa-bars{
   position:relative;
@@ -94,7 +92,6 @@ $itemmargin:10px;
   transition:all 600ms 0s ease;
   color:#fff;
 }
-
 .fa-bars:hover{
   position:relative;
   top:-6px;
@@ -136,7 +133,7 @@ $itemmargin:10px;
   font-family: "Nico Moji";
 }
 .logo{
-  margin-top:15%;
+  margin-top:5%;
   color:$hilight;
   padding:6px 40px;
   font-size:70px;
@@ -254,8 +251,8 @@ div{
   display:block;
 }
 .mainspace{
-  margin:5%;
-  z-index:4;
+  margin:15%;
+  z-index:6;
 }
 .chara{
 }
@@ -301,7 +298,7 @@ div{
 .side{
 }
 .cornerLT{
-  background-color:#fff;
+  background:rgba(255,255,255,0.7);
   border-radius:2px;
   position:absolute;
   top:6px;
@@ -387,7 +384,4 @@ a {
 }
 .unko{
   z-index:15;
-}
-.popo{
-  color:#3394b8;
 }

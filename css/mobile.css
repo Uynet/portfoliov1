@@ -11,7 +11,27 @@
     z-index:-3;
   }
   .mainspace{
-    margin:15%;
+    margin-top:15%;
     z-index:4;
+  }
+  .logo{
+    margin-left:-10%;
+    margin-top:35%;
+    color:$hilight;
+    padding:6px 40px;
+    font-size:70px;
+    font-family: "Nico Moji";
+    min-width:350px;
+  }
+  .chara{
+    margin-left:10%;
+  }
+  .fa-bars:hover{
+    position:relative;
+    top:-6px;
+    left:-6px;
+    font-size:48px;
+    animation-duration:300.0s;
+    animation-name:pulpul;
   }
 }

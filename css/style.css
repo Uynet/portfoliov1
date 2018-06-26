@@ -53,12 +53,6 @@ body {
     right: -250px; }
   to {
     right: -50px; } }
-.label {
-  width: 100px;
-  height: 8px;
-  background-color: #fff;
-  opacity: 0.5; }
-
 .item {
   font-size: 24px;
   align: center;
@@ -69,8 +63,13 @@ body {
   color: #fff; }
 
 .item:hover {
-  /*background-color:$hilight;*/
   background-color: #f23473; }
+
+.label {
+  width: 100px;
+  height: 8px;
+  background-color: #fff;
+  opacity: 0.5; }
 
 .fa-bars {
   position: relative;
@@ -125,7 +124,7 @@ body {
   font-family: "Nico Moji"; }
 
 .logo {
-  margin-top: 15%;
+  margin-top: 5%;
   color: #f23473;
   padding: 6px 40px;
   font-size: 70px;
@@ -232,8 +231,8 @@ div {
   display: block; }
 
 .mainspace {
-  margin: 5%;
-  z-index: 4; }
+  margin: 15%;
+  z-index: 6; }
 
 .greeting {
   font-family: "Rounded Mplus 1c";
@@ -274,7 +273,7 @@ div {
   margin-top: 20px; }
 
 .cornerLT {
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 2px;
   position: absolute;
   top: 6px;
@@ -360,8 +359,5 @@ a {
 
 .unko {
   z-index: 15; }
-
-.popo {
-  color: #3394b8; }
 
 /*# sourceMappingURL=style.css.map */
