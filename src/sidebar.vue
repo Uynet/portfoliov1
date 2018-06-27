@@ -5,7 +5,7 @@
           <div class="label2"></div>
 
           <div class = "item" v-for="item in items">
-          <router-link v-bind:to="item.path">
+          <router-link v-bind:to="item.path"style="color:#e0e0e1">
             <item v-bind:path="item.path" v-bind:title="item.message"></item>
           </router-link>
           </div>

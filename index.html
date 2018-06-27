@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-      <sidebar v-bind:state="sidebarstate" v-bind:items="items"></sidebar>
+      <sidebar v-bind:state="sidebarstate" v-bind:items="items" v-on:click="toggle"></sidebar>
 
     <div class="mainspace">
       <router-view></router-view>

@@ -12,6 +12,12 @@
      <div class="passage">
      {{this.product.passage}}
      </div>
+     <div class="icons">
+     <a v-if="product.moment" v-bind:href="product.moment"><i class="fas fa-bolt"></i></a>
+     <i class="fab fa-blogger"></i>
+     <i class="fas fa-ellipsis-h"></i>
+
+     </div>
 </div>
 </template>
 <script>
@@ -20,6 +26,9 @@ export default{
   computed:{
     path:function(){
       return "../../resource/" + this.product.path + ".png"; 
+    },
+    isBolt:function(){
+      return this.product.moment != "null";
     }
   }
 }

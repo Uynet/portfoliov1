@@ -9,7 +9,7 @@ h3{
 .frame{
   background:rgba(255,255,255,0.5);
   border-radius:4px;
-  border:solid 5px #f5eff1;
+  border:solid 5px #6a446d;
   min-width:320px;
   height:328px;
   margin:32px;
@@ -33,4 +33,30 @@ h3{
 }
 .works{
   font-family: "Rounded Mplus 1c";
+}
+.icons{
+  text-align:left;
+  margin-left:4%;
+  margin-top:8%;
+  color:#6a446d;
+}
+.fa-bolt{
+  padding:2px 4px;
+  transition:all 200ms  ease;
+}
+.fa-bolt:hover{
+  color:#e6ae19;
+}
+.fa-blogger{
+  transition:all 200ms  ease;
+}
+.fa-blogger:hover{
+  color:#54abde;
+}
+.fa-ellipsis-h{
+  padding:2px 4px;
+  transition:all 200ms  ease;
+}
+.fa-ellipsis-h:hover{
+  color:#f23473;
 }

@@ -2,7 +2,8 @@
 
 <div>
 
-<h3>作品おきば</h3>
+<h3 style="color:#334478">さくひんおきば</h3>
+<div class="label"></div>
 
 <containts v-bind:products="this.products" align="center"></containts>
 
@@ -19,22 +20,6 @@
 
 NinjaFlicker
 
-<iframe width="100%" height="128" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=
-https://soundcloud.com/saihate-1/nmqlbynuqwaf
-&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
-
-NinjaFlicker ステージ曲
-
-<iframe width="100%" height="128" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/saihate-1/pobattle4&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
-ポ
-
-<iframe width="100%" height="128" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/saihate-1/2017m3preview&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
-
-2017秋M3
-
-<iframe width="100%" height="128" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/saihate-1/rainbow-treasure&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
-
-無料音源で本気だした
 </div>
 
 </div>
@@ -51,12 +36,21 @@ export default{
         title:"kawasemi",
         passage:"JS製2Dアクションゲームです",
         link:"http://kawasemi.uynet.trap.show",
+        moment:"https://twitter.com/i/moments/953677385584427008",
         },
         {
         path:"artc",
         title:"芸術C",
         passage:"スマホで開いてね",
         link:"http://artc.uynet.trap.show",
+        moment:false,
+        },
+        {
+        path:"raitracing",
+        title:"レイトレ",
+        passage:"レイトレしただけ",
+        link:false,
+        moment:false,
         },
       ],
     }

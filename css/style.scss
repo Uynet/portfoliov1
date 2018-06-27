@@ -49,6 +49,7 @@ body {
   height:100%;
   color:#fff;
   background:$cornerColor;
+  background-color:rgba(166,88,129,0.7);
   z-index:20;
   animation-duration:0.4s;
   animation-name:slidein;
@@ -336,7 +337,7 @@ div{
   background-color:$cornerColor;
   position:fixed;
   top:12px;
-  left:24px;
+  left:2%;
   width:8px;
   height:96%;
   z-index:5;
@@ -367,13 +368,7 @@ div{
   color:$hilight;
 }
 
-a:visited {
-  color: #e0e0e1; }
-
-a:link {
-  color: #e0e0e1; }
 a {
-  color: powderblue;
   transition: color .2s;
   text-decoration: none;
 }
