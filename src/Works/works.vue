@@ -37,6 +37,7 @@ export default{
         passage:"JS製2Dアクションゲームです",
         link:"http://kawasemi.uynet.trap.show",
         moment:"https://twitter.com/i/moments/953677385584427008",
+        code:"https://github.com/Uynet/kawasemi",
         },
         {
         path:"artc",
@@ -44,6 +45,7 @@ export default{
         passage:"スマホで開いてね",
         link:"http://artc.uynet.trap.show",
         moment:false,
+        code:"https://github.com/Uynet/artc",
         },
         {
         path:"raitracing",
@@ -51,6 +53,7 @@ export default{
         passage:"レイトレしただけ",
         link:false,
         moment:false,
+        code:"https://github.com/Uynet/RayTracing",
         },
       ],
     }

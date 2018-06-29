@@ -16,9 +16,19 @@
 <script>
 import item from "./item";
 export default{ 
-  props:["items","state"],
+  props:["state"],
   components:{
     item:item
+  },
+  data:function(){
+    return{
+      items:[
+      { message:"Top",path:"./" },
+      { message:"About",path:"/about" },
+      { message:"Works",path:"./works" },
+      { message:"Project",path:"./project" },
+      ],
+    }
   },
   computed:{
     sidebarclass:function(){

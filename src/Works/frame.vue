@@ -15,7 +15,9 @@
      <div class="icons">
      <a v-if="product.moment" v-bind:href="product.moment"><i class="fas fa-bolt"></i></a>
      <i class="fab fa-blogger"></i>
+     <a v-if="product.code" v-bind:href="product.code"><i class="fas fa-code"></i></a>
      <i class="fas fa-ellipsis-h"></i>
+
 
      </div>
 </div>

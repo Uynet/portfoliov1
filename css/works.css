@@ -7,17 +7,17 @@ h3{
   margin:-20px;
 }
 .frame{
-  background:rgba(255,255,255,0.5);
+  background-blend-mode: color-dodge;
+  background:rgba(255,245,235,0.5);
   border-radius:4px;
   border:solid 5px #6a446d;
-  min-width:320px;
-  height:328px;
   margin:32px;
 }
 .image{
   padding:14px;
 }
 .img_show{
+  width:100%;
   box-shadow:0px 0px 4px #000;
   transition:all 300ms ease;
 }
@@ -43,20 +43,27 @@ h3{
 .fa-bolt{
   padding:2px 4px;
   transition:all 200ms  ease;
+  color:#e6ae19;
 }
 .fa-bolt:hover{
   color:#e6ae19;
 }
 .fa-blogger{
+  color:#54abde;
   transition:all 200ms  ease;
 }
 .fa-blogger:hover{
   color:#54abde;
 }
 .fa-ellipsis-h{
-  padding:2px 4px;
+  color:#f23473;
   transition:all 200ms  ease;
 }
 .fa-ellipsis-h:hover{
   color:#f23473;
+}
+.fa-code{
+  color:#7dc873;
+  padding:2px 4px;
+  transition:all 200ms  ease;
 }

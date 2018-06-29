@@ -18,11 +18,6 @@ const container = new Vue({
     sidebarstate:"closed",
     container:"container",
     layer:"layer",
-    items:[
-      { message:"Top",path:"./" },
-      { message:"About",path:"/about" },
-      { message:"Works",path:"./works" },
-    ],
     links:[
       {url: "http://twitter.com/highsate" , icon : "twitter"},
       {url : "http://github.com/uynet", icon : "github"},
