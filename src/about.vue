@@ -1,6 +1,7 @@
 <template>
 <div>
 <div>
+<h3>ぷろふぃーる</h3>
 <div class="frame">
 <div class="passage" style="margin-left:32px">
 <br><br><br>

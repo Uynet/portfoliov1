@@ -1,6 +1,8 @@
 h3{
-  text-align:center;
+ text-align:center;
  font-family:"Nico Moji";
+ font-size:30px;
+ color:#6a446d;
 }
 .containts{
   display:inline-block;
@@ -40,30 +42,15 @@ h3{
   margin-top:8%;
   color:#6a446d;
 }
-.fa-bolt{
-  padding:2px 4px;
-  transition:all 200ms  ease;
+.fa-yellow{
   color:#e6ae19;
 }
-.fa-bolt:hover{
-  color:#e6ae19;
-}
-.fa-blogger{
-  color:#54abde;
-  transition:all 200ms  ease;
-}
-.fa-blogger:hover{
+.fa-azure{
   color:#54abde;
 }
-.fa-ellipsis-h{
-  color:#f23473;
-  transition:all 200ms  ease;
-}
-.fa-ellipsis-h:hover{
+.fa-hilight{
   color:#f23473;
 }
-.fa-code{
+.fa-green{
   color:#7dc873;
-  padding:2px 4px;
-  transition:all 200ms  ease;
 }

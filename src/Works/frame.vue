@@ -13,10 +13,10 @@
      {{this.product.passage}}
      </div>
      <div class="icons">
-     <a v-if="product.moment" v-bind:href="product.moment"><i class="fas fa-bolt"></i></a>
-     <i class="fab fa-blogger"></i>
-     <a v-if="product.code" v-bind:href="product.code"><i class="fas fa-code"></i></a>
-     <i class="fas fa-ellipsis-h"></i>
+     <a v-if="product.moment" v-bind:href="product.moment"><i class="fas fa-bolt fa-yellow"></i></a>
+     <i class="fab fa-blogger fa-azure"></i>
+     <a v-if="product.code" v-bind:href="product.code"><i class="fas fa-code fa-green"></i></a>
+     <i class="fas fa-ellipsis-h fa-hilight"></i>
 
 
      </div>

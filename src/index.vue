@@ -7,7 +7,7 @@
         <div class="chara" align="center">
 
           <div class="greeting" align="center">
-            <marquee scrolldelay="500">よおこそ♨</marquee>
+            <marquee scrolldelay="400">{{emo}}</marquee>
           </div>
           <br>
           <img src="resource/chara.png">
@@ -16,3 +16,16 @@
         </div>
 </template>
 
+<script>
+export default{ 
+  computed:{
+    emo:function(){
+      if(Math.random()<0.5){
+        return "よおこそ♨";
+      }else{
+        return "こんにちわ☼";
+      }
+    },
+  }
+}
+</script>

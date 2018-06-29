@@ -1,15 +1,15 @@
 <template>
-<div>
+<div v-on:click="sound">
   {{title}}
-    <div class="label"></div>
+  <div class="label"></div>
 </div>
 </template>
 
-<script>
+<script type="module">
 export default{
   props:["title","path"],
   methods:{
-    open:function(){
+    sound:function(){
     }
   },
 }

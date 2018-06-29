@@ -223,29 +223,26 @@ body {
 }
 #app{
 }
+$borderWidth:10px;
+$pad:5px;
 .box{
-  box-shadow:0px 0px 2px #220033;
-  border-radius:10px;
-  text-align:center;
-  margin:10px;
-  width:100px;
-  display:inline;
-  padding:8px;
-  background-color:#222034;
-  color:#e0e0e1;
-  font-family: "Rounded Mplus 1c"; 
+  border-left:solid $borderWidth $cornerColor;
+  border-right:solid $borderWidth $cornerColor;
+  padding:$pad;
+  color:#888;
+  width:100%;
+  height:100%;
 }
 div{
   display:block;
 }
 .mainspace{
-  margin-top:30%;
+  padding:8px 10+2*$borderWidth+$pad 0px $pad;
   z-index:6;
 }
 .logo{
-  margin-top:5%;
   color:$hilight;
-  padding:6px 40px;
+  padding:60px 40px;
   font-size:70px;
   font-family: "Nico Moji";
   min-width:350px;
@@ -296,41 +293,18 @@ div{
   margin-left:4%;
   margin-top:20px;
 }
-.side{
+.bar{
 }
-.cornerLT{
-  background:rgba(255,255,255,0.7);
+.Header{
+  display:inline;
+  background:rgba(106,68,108,1.0);
+  background:rgba(255,255,255,0.5);
   border-radius:2px;
-  position:absolute;
+  width:100%;
+  height:36px;
+  position:fixed;
   top:6px;
-  left:24px;
-  width:146px;
-  height:32px;
-}
-.cornerLB{
-  border-radius:2px;
-  background-color:$cornerColor;
-  position:relative;
-  top:92%;
-  left:16px;
-  width:32px;
-  height:32px;
-}
-.cornerRT{
-  border-radius:2px;
-  position:relative;
-  left:-40px;
-  width:32px;
-  height:32px;
-}
-.cornerRB{
-  border-radius:2px;
-  background-color:$cornerColor;
-  position:relative;
-  top:92%;
-  left:-40px;
-  width:32px;
-  height:32px;
+  z-index:22;
 }
 .sidelineL{
   border-radius:1px;
@@ -340,7 +314,6 @@ div{
   left:1%;
   width:8px;
   height:96%;
-  z-index:5;
 }
 .sidelineR{
   border-radius:1px;
@@ -350,12 +323,14 @@ div{
   left:97%;
   width:8px;
   height:96%;
-  z-index:21;
 }
 .links{
   opacity:1;
   display:inline;
   margin:2px;
+}
+.bar{
+  display:inline;
 }
 .fa-black{
   color:$cornerColor;
