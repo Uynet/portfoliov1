@@ -12,7 +12,7 @@ h3{
   background-blend-mode: color-dodge;
   background:rgba(255,245,235,0.5);
   border-radius:4px;
-  border:solid 5px #6a446d;
+  box-shadow:0px 0px 4px #6a446d;
   margin:32px;
 }
 .image{
