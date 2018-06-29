@@ -133,19 +133,6 @@ body {
   margin:20px;
   font-family: "Nico Moji";
 }
-.logo{
-  margin-top:5%;
-  color:$hilight;
-  padding:6px 40px;
-  font-size:70px;
-  font-family: "Nico Moji";
-  min-width:350px;
-}
-.logo_subtext{
-  color:#90747c;
-  font-size:8px;
-  font-family: "Rounded Mplus 1c"; 
-}
 .container{
   position:absolute;
   top:0px;
@@ -252,8 +239,21 @@ div{
   display:block;
 }
 .mainspace{
-  margin:15%;
+  margin-top:30%;
   z-index:6;
+}
+.logo{
+  margin-top:5%;
+  color:$hilight;
+  padding:6px 40px;
+  font-size:70px;
+  font-family: "Nico Moji";
+  min-width:350px;
+}
+.logo_subtext{
+  color:#90747c;
+  font-size:8px;
+  font-family: "Rounded Mplus 1c"; 
 }
 .chara{
 }
@@ -337,7 +337,7 @@ div{
   background-color:$cornerColor;
   position:fixed;
   top:12px;
-  left:2%;
+  left:1%;
   width:8px;
   height:96%;
   z-index:5;
