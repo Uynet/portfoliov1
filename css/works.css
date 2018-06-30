@@ -4,19 +4,31 @@ h3{
  font-size:30px;
  color:#6a446d;
 }
-.containts{
+.products{
   display:inline-block;
   margin:-20px;
 }
+.containts{
+}
 .frame{
+  padding:14px;
   background-blend-mode: color-dodge;
   background:rgba(255,245,235,0.5);
   border-radius:4px;
   box-shadow:0px 0px 4px #6a446d;
+  max-width:320px;
+  margin:32px;
+}
+.frame_music{
+  padding:14px;
+  background-blend-mode: color-dodge;
+  background:rgba(255,245,235,0.5);
+  border-radius:4px;
+  box-shadow:0px 0px 4px #6a446d;
+  min-width:540px;
   margin:32px;
 }
 .image{
-  padding:14px;
 }
 .img_show{
   width:100%;
@@ -53,4 +65,7 @@ h3{
 }
 .fa-green{
   color:#7dc873;
+}
+.fa-gray{
+  color:#888;
 }

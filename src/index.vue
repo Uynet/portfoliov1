@@ -2,7 +2,9 @@
 <div>
         <div class = "logo" align="center">
           ゆいブログ
-          <div class = "logo_subtext"></div>
+          <div class = "logo_subtext">
+- ポートフォリオサイト制作中です -
+          </div>
         </div>
         <div class="chara" align="center">
 
