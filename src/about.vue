@@ -2,6 +2,7 @@
 <div>
 <div align="center">
 <h3>ぷろふぃーる</h3>
+<div style="font-size:12px">\コンニチワ/</div>
 <div class="image">
 <img src="../resource/chara.png" align="center"></img>
 </div>

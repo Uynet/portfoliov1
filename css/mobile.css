@@ -22,15 +22,13 @@
     font-family: "Nico Moji";
     min-width:0px;
   }
-  .chara{
-  }
   .fa-bars:hover{
-    position:relative;
-    top:-6px;
-    left:-6px;
-    font-size:48px;
     animation-duration:300.0s;
-    animation-name:pulpul;
     color:#6a446d;
   }
 }
+@media screen and (max-width:640px){
+  .frame_music{
+    min-width:0px;
+  }
+{
