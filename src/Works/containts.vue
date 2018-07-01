@@ -7,18 +7,34 @@
 
 <h3 align="center" class="works">参加作品</h3>
 
+<section class="products" style="display:inline">
 <div class="frame">
 <div class="image">
-<img src="../../resource/ninja.png" class="img_show"></img>
+<a href="https://trap.jp/post/480/"><img src="../../resource/ninja.png" class="img_show"></img></a>
 </div>
+<div class="fa-hilight"><b>GooglePlayIGF Top10</b></div>
 <div class="title">
 -  NinjaFlicker  -
 </div>
-<passage>スマホゲー</passage>
+<passage>部制作のスマホゲー<br>
+サウンドすべて、一部グラフィックを担当</passage>
 </div>
 
-<h3 align="center" class="works">音楽</h3>
 
+<div class="frame">
+<div class="image">
+<a href="https://trap.jp/post/35/"><img src="../../resource/po.png" class="img_show"></img></a>
+</div>
+<div class="title">
+-  Polar Snow Fantasy  -
+</div>
+<passage>部制作のPCゲー<br>
+サウンドすべて、一部グラフィックを担当</passage>
+</div>
+</section>
+
+
+<h3 align="center" class="works">音楽</h3>
 <section class="products">
 <div class="frame_music">
 <iframe style="border: 0; width: 100%; height: 112px;" src="https://bandcamp.com/EmbeddedPlayer/album=1352470804/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=2081494030/transparent=true/" seamless><a href="http://trap-titech.bandcamp.com/album/trap-2018"]traP新歓コンピ2018 by uynet</a></iframe>

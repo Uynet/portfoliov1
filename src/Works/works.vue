@@ -27,6 +27,7 @@ export default{
         {
         path:"kawasemi",
         title:"kawasemi",
+        hilight:"第七回GAME^3優勝",
         passage:"JS製2Dアクションゲームです",
         link:"http://kawasemi.uynet.trap.show",
         moment:"https://twitter.com/i/moments/953677385584427008",
@@ -35,6 +36,7 @@ export default{
         {
         path:"artc",
         title:"芸術C",
+        hilight:false,
         passage:"スマホで開いてね",
         link:"http://artc.uynet.trap.show",
         moment:false,
@@ -43,6 +45,7 @@ export default{
         {
         path:"raitracing",
         title:"レイトレ",
+        hilight:false,
         passage:"レイトレしただけ",
         link:false,
         moment:false,

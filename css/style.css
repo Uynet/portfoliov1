@@ -1,4 +1,3 @@
-/*$mainColor:#334478;*/
 html {
   height: 100%; }
 
@@ -210,6 +209,7 @@ body {
   100% {
     top: -100%; } }
 .box {
+  font-family: "Rounded Mplus 1c";
   padding: 60px 0px;
   box-shadow: 0 0 2px #000;
   background: rgba(255, 255, 255, 0.96);
