@@ -5,6 +5,18 @@
 <frame v-bind:product="product"></frame>
 </section>
 
+<h3 align="center" class="works">参加作品</h3>
+
+<div class="frame">
+<div class="image">
+<img src="../../resource/ninja.png" class="img_show"></img>
+</div>
+<div class="title">
+-  NinjaFlicker  -
+</div>
+<passage>スマホゲー</passage>
+</div>
+
 <h3 align="center" class="works">音楽</h3>
 
 <section class="products">

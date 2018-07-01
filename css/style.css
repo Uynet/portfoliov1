@@ -213,7 +213,7 @@ body {
   padding: 60px 0px;
   box-shadow: 0 0 2px #000;
   background: rgba(255, 255, 255, 0.96);
-  color: #888;
+  color: #6a446d;
   width: 100%;
   height: 100%; }
 
@@ -221,7 +221,8 @@ div {
   display: block; }
 
 .mainspace {
-  padding: 48px 48px;
+  padding: 24px;
+  min-height: 85%;
   z-index: 6;
   background: #f5eff1;
   background-image: url("../resource/bg.png"); }

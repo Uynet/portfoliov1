@@ -235,7 +235,7 @@ $pad:32px;
   padding:60px 0px;
   box-shadow:0 0 2px #000;
   background:rgba(#fff,0.96);
-  color:#888;
+  color:$mainColor;
   width:100%;
   height:100%;
 }
@@ -243,7 +243,8 @@ div{
   display:block;
 }
 .mainspace{
-  padding:48px 48px;
+  padding:24px;
+  min-height:85%;
   z-index:6;
   background:$growPink;
   background-image: url("../resource/bg.png");

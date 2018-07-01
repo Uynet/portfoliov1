@@ -11,8 +11,9 @@
     z-index:-3;
   }
   .mainspace{
-    padding:8px 10+2*$borderWidth+$pad 0px $pad;
+    padding:24px;
     z-index:6;
+    min-height:100%;
   }
   .logo{
     padding:0px 0px;

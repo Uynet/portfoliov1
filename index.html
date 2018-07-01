@@ -21,7 +21,7 @@
     <section id="page" class="container">
       <layer v-bind:state="sidebarstate" v-on:toggle="toggle"></layer>
 
-      <sidebar v-bind:state="sidebarstate"></sidebar>
+      <sidebar v-bind:state="sidebarstate" v-on:toggle="toggle"></sidebar>
 
       <div class="head">
         <div class="links" v-for="link in links">
