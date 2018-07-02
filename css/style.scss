@@ -240,7 +240,7 @@ div{
   display:block;
 }
 .mainspace{
-  padding:24px;
+  padding:48px 24px;
   min-height:85%;
   z-index:6;
   background:$growPink;
@@ -329,6 +329,7 @@ div{
 
 a{
   transition: color .2s;
+color:#3394b8;
   text-decoration: none;
 }
 .unko{

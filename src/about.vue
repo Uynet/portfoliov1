@@ -9,11 +9,13 @@
 <div class="passage" >
 uynet/ゆい<br>
 所属:東京工業大学情報工学科B4<br>
-<a href="http://trap.jp" style="color:#3394b8">デジタル創作同好会traP</a><br>
+<a href="http://trap.jp" >デジタル創作同好会traP</a><br>
 birth:1996/12/19
-<h4>すき</h4>
-ピアノ ... 中学生のときからやっています(独学)<br>
-作曲(DTM) ... 上に並行してはじめました<br>
+<h4>趣味</h4>
+<a href="https://twitter.com/uynet/status/846618194513031168">ピアノ</a> ... 中学生のときからやっています(独学)<br>
+<a href="https://twitter.com/highsate/status/983628562870644736">作曲(DTM)</a> ... 上に並行してはじめました<br>
+Cubase7.5/QLSO/Sylenth1,<br>
+Pops/Artcore/Orchestra/Chiptune/...<br>
 ゲーム制作 ... サークルor個人でやります<br>
 ドット絵 ... ゲーム用<br>
 <h4>言語</h4>

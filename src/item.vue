@@ -1,5 +1,5 @@
 <template>
-<div v-on:click="sound">
+<div v-on:click="linkTo">
   {{title}}
   <div class="label"></div>
 </div>
@@ -9,7 +9,7 @@
 export default{
   props:["title","path"],
   methods:{
-    sound:function(){
+    linkTo:function(){
     }
   },
 }
