@@ -14,6 +14,7 @@
           <br>
           <img src="resource/chara.png">
           <div class=logo_subtext>イメージキャラクター"ゆいちゃん"</div>
+          <!-- img src="resource/web.png" -->
         </div>
         </div>
 </template>

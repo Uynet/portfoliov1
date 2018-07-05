@@ -2,7 +2,7 @@
 
 <div>
 
-<h3 style="color:#6a446d">さくひんおきば</h3>
+<h3>さくひんおきば</h3>
 <div class="label"></div>
 
 <containts v-bind:products="this.products" align="center">

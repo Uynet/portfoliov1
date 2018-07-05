@@ -1,3 +1,13 @@
+h3 {
+  text-align: center;
+  font-family: "Nico Moji";
+  font-size: 30px;
+  color: #4e6296; }
+
+h4 {
+  text-align: center;
+  color: #f23473; }
+
 html {
   height: 100%; }
 
@@ -28,7 +38,7 @@ body {
   width: 250px;
   height: 100%;
   color: #fff;
-  background: #6a446d;
+  background: #4e6296;
   z-index: 20;
   transition: all 300ms 0s ease; }
 
@@ -40,10 +50,10 @@ body {
   width: 220px;
   height: 100%;
   color: #fff;
-  background: #6a446d;
+  background: #4e6296;
   background-color: rgba(176, 88, 129, 0.7);
-  background-color: rgba(131, 78, 113, 0.7);
-  border: solid 5px #6a446d;
+  background-color: rgba(78, 98, 150, 0.7);
+  border: solid 5px #4e6296;
   z-index: 20;
   animation-duration: 0.4s;
   animation-name: slidein; }
@@ -78,7 +88,7 @@ body {
   left: 0px;
   border-radius: 4px;
   font-size: 36px;
-  color: #6a446d; }
+  color: #4e6296; }
 
 .fa-times {
   position: relative;
@@ -87,7 +97,7 @@ body {
   border-radius: 4px;
   font-size: 36px;
   transition: all 600ms 0s ease;
-  color: #6a446d; }
+  color: #4e6296; }
 
 .fa-times:hover {
   color: #f23473; }
@@ -212,8 +222,8 @@ body {
   font-family: "Rounded Mplus 1c";
   padding: 60px 0px;
   box-shadow: 0 0 2px #000;
-  background: rgba(255, 255, 255, 0.96);
-  color: #6a446d;
+  background: white;
+  color: #4e6296;
   width: 100%;
   height: 100%; }
 
@@ -225,6 +235,7 @@ div {
   min-height: 85%;
   z-index: 6;
   background: #f5eff1;
+  background-attachment: fixed;
   background-image: url("../resource/bg.png"); }
 
 .logo {
@@ -249,7 +260,7 @@ div {
   max-width: 100%;
   color: #ffffff;
   border-radius: 4px;
-  background: #6a446d; }
+  background: #4e6296; }
 
 .greeting:before {
   content: "";
@@ -258,7 +269,7 @@ div {
   left: 50%;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top: 15px solid #6a446d; }
+  border-top: 15px solid #4e6296; }
 
 .footer {
   padding: 2%;
@@ -266,7 +277,7 @@ div {
   width: 100%;
   height: 5%;
   color: #f5eff1;
-  background: #6a446d;
+  background: #4e6296;
   font-family: "Rounded Mplus 1c";
   box-shadow: 0px 0px 4px #746;
   z-index: 1; }
@@ -293,7 +304,7 @@ div {
   margin-right: 8px; }
 
 .fa-black {
-  color: #6a446d;
+  color: #4e6296;
   transition: all 100ms 0s ease;
   font-size: 32px;
   z-index: 3; }
@@ -305,6 +316,7 @@ div {
 a {
   transition: color .2s;
   color: #3394b8;
+  color: #3c79f6;
   text-decoration: none; }
 
 .unko {
