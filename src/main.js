@@ -18,6 +18,7 @@ const container = new Vue({
     sidebarstate:"closed",
     container:"container",
     layer:"layer",
+    box_state:"box",
     links:[
       {url: "http://twitter.com/highsate" , icon : "twitter"},
       {url : "http://github.com/uynet", icon : "github"},
@@ -38,13 +39,15 @@ const container = new Vue({
       if(this.sidebarstate=="closed"){
         this.sidebarstate = "open";
         this.layer = "layer_dark";
+        this.box_state = "box";
       }
       else{
         this.sidebarstate = "closed";
         this.layer = "layer";
+        this.box_state = "box_white";
       }
     },
-  }
+  },
 })
 
 export default container;

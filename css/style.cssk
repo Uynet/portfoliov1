@@ -52,7 +52,7 @@ body {
   color: #fff;
   background: #4e6296;
   background-color: rgba(176, 88, 129, 0.7);
-  background-color: rgba(78, 98, 150, 0);
+  background-color: rgba(78, 98, 150, 0.7);
   border: solid 5px #4e6296;
   z-index: 20;
   animation-duration: 0.4s;
@@ -88,7 +88,7 @@ body {
   left: 0px;
   border-radius: 4px;
   font-size: 36px;
-  color: #fff; }
+  color: #4e6296; }
 
 .fa-times {
   position: relative;
@@ -97,7 +97,7 @@ body {
   border-radius: 4px;
   font-size: 36px;
   transition: all 600ms 0s ease;
-  color: #fff; }
+  color: #4e6296; }
 
 .fa-times:hover {
   color: #f23473; }
@@ -221,20 +221,11 @@ body {
 .box {
   font-family: "Rounded Mplus 1c";
   padding: 60px 0px;
+  box-shadow: 0 0 2px #000;
+  background: white;
   color: #4e6296;
   width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0);
-  transition: all 300ms 0s ease; }
-
-.box_white {
-  font-family: "Rounded Mplus 1c";
-  padding: 60px 0px;
-  color: #4e6296;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.6);
-  transition: all 300ms 0s ease; }
+  height: 100%; }
 
 div {
   display: block; }
@@ -286,7 +277,7 @@ div {
   padding: 2%;
   font-size: 15px;
   width: 100%;
-  height: 25%;
+  height: 5%;
   color: #f5eff1;
   background: #4e6296;
   font-family: "Rounded Mplus 1c";
@@ -295,7 +286,7 @@ div {
 
 .head {
   background: rgba(106, 68, 108, 0.5);
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 2px;
   position: fixed;
   width: 100%;
@@ -315,7 +306,7 @@ div {
   margin-right: 8px; }
 
 .fa-black {
-  color: #fff;
+  color: #4e6296;
   transition: all 100ms 0s ease;
   font-size: 32px;
   z-index: 3; }
@@ -333,4 +324,4 @@ a {
 .unko {
   z-index: 15; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.cssk.map */

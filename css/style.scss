@@ -58,7 +58,7 @@ body {
   color:#fff;
   background:$mainColor;
   background-color:rgba(176,88,129,0.7);
-  background-color:rgba($mainColor,0.7);
+  background-color:rgba($mainColor,0.0);
   border:solid 5px $mainColor;
   z-index:20;
   animation-duration:0.4s;
@@ -93,7 +93,7 @@ body {
   left:0px;
   border-radius:4px;
   font-size:36px;
-  color:$mainColor;
+  color:#fff;
 }
 .fa-times{
   position:relative;
@@ -102,7 +102,7 @@ body {
   border-radius:4px;
   font-size:36px;
   transition:all 600ms 0s ease;
-  color:$mainColor;
+  color:#fff;
 }
 .fa-times:hover{
   color:$hilight;
@@ -243,11 +243,20 @@ $pad:32px;
 .box{
   font-family: "Rounded Mplus 1c"; 
   padding:60px 0px;
-  box-shadow:0 0 2px #000;
-  background:rgba(#fff,1.96);
   color:$mainColor;
   width:100%;
   height:100%;
+  background:rgba(#fff,0.0);
+  transition:all 300ms 0s ease;
+}
+.box_white{
+  font-family: "Rounded Mplus 1c"; 
+  padding:60px 0px;
+  color:$mainColor;
+  width:100%;
+  height:100%;
+  background:rgba(#fff,0.6);
+  transition:all 300ms 0s ease;
 }
 div{
   display:block;
@@ -256,15 +265,17 @@ div{
   padding:48px 24px;
   min-height:85%;
   z-index:6;
-  background:$growPink;
-  background-attachment: fixed;
-  background-image: url("../resource/bg.png");
+  background:#fff;
+  background-image: url("../resource/web.png");
+  background-repeat:no-repeat;
 }
 .logo{
   color:$hilight;
-  padding:0px 40px;
+  padding:0px 0px;
   font-size:70px;
   font-family: "Nico Moji";
+  margin-left:55%;
+  margin-top:40%;
   min-width:350px;
 }
 .logo_subtext{
@@ -300,7 +311,7 @@ div{
   padding:2%;
   font-size:15px;
   width:100%;
-  height:5%;
+  height:25%;
   color:$growPink;
   background:$mainColor;
   font-family: "Rounded Mplus 1c"; 
@@ -311,7 +322,7 @@ div{
 
 .head{
   background:rgba(106,68,108,0.5);
-  background:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.0);
   border-radius:2px;
   position:fixed;
   width:100%;
@@ -331,7 +342,7 @@ div{
   margin-right:8px;
 }
 .fa-black{
-  color:$mainColor;
+  color:#fff;
   transition:all 100ms 0s ease;
   font-size:32px;
   z-index:3;

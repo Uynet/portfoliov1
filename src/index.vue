@@ -3,18 +3,8 @@
         <div class = "logo" align="center">
           ゆいブログ
           <div class = "logo_subtext">
-- ポートフォリオサイト制作中です -
+          - トップ絵描き途中 -
           </div>
-        </div>
-        <div class="chara" align="center">
-
-          <div class="greeting" align="center">
-            <marquee scrolldelay="400">{{emo}}</marquee>
-          </div>
-          <br>
-          <img src="resource/chara.png">
-          <div class=logo_subtext>イメージキャラクター"ゆいちゃん"</div>
-          <!-- img src="resource/web.png" -->
         </div>
         </div>
 </template>
