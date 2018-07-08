@@ -21,6 +21,8 @@
     color:$hilight;
     font-size:70px;
     font-family: "Nico Moji";
+    margin-left:0%;
+    margin-top:-15%;
     min-width:0px;
   }
   .fa-bars:hover{
@@ -28,6 +30,11 @@
     color:#6a446d;
   }
 }
+@media screen and (min-width:900px){
+  .mainspace{
+    background-size:100%;
+  }
+{
 @media screen and (max-width:640px){
   .frame_music{
     min-width:0px;
