@@ -250,15 +250,16 @@ div {
 
 .logo {
   color: #f23473;
+  color: #4e6296;
   padding: 0px 0px;
   font-size: 70px;
   font-family: "Nico Moji";
-  margin-left: 55%;
-  margin-top: 40%;
+  margin-left: 25%;
+  margin-top: 5%;
   min-width: 350px; }
 
 .logo_subtext {
-  color: #90747c;
+  color: #4e6296;
   font-size: 12px;
   font-family: "Rounded Mplus 1c"; }
 
