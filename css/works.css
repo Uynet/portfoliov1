@@ -7,7 +7,7 @@
 .frame{
   padding:14px;
   background-blend-mode: color-dodge;
-  background:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.9);
   border-radius:4px;
   box-shadow:0px 0px 4px #6a446d;
   max-width:320px;
@@ -18,6 +18,7 @@
   background-blend-mode: color-dodge;
   border-radius:4px;
   box-shadow:0px 0px 4px #6a446d;
+  background:rgba(255,255,255,0.9);
   min-width:489px;
   margin:32px;
 }

@@ -2,6 +2,7 @@
 <div>
 <div align="center">
 <h3>ぷろふぃーる</h3>
+<div class="frame">
 <div style="font-size:12px">\コンニチワ/</div>
 (^o^)
 <div class="passage" >
@@ -22,4 +23,6 @@ vim<br>
 </div>
 </div>
 </div>
+</div>
+
 </template>

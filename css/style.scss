@@ -107,21 +107,17 @@ body {
   color:#fff;
 }
 .fa-times:hover{
-  position:relative;
-  top:0px;
-  left:36px;
-  font-size:48px;
-  animation-duration:0.3s;
-  animation-name:pulpul;
   color:$hilight;
 }
 .fa-bars:hover{
+  /*
   position:relative;
   top:0px;
   left:36px;
   font-size:48px;
   animation-duration:0.3s;
   animation-name:pulpul;
+  */
   color:$hilight;
 }
 @keyframes pulpul{
