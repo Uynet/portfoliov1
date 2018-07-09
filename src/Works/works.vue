@@ -2,8 +2,7 @@
 
 <div>
 
-<h3>さくひんおきば</h3>
-<div class="label"></div>
+<h3>制作物</h3>
 
 <containts v-bind:products="this.products" align="center">
 

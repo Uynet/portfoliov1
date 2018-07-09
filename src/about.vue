@@ -3,9 +3,7 @@
 <div align="center">
 <h3>ぷろふぃーる</h3>
 <div style="font-size:12px">\コンニチワ/</div>
-<div class="image">
-<img src="../resource/chara.png" align="center"></img>
-</div>
+(^o^)
 <div class="passage" >
 uynet/ゆい<br>
 🎂 1996/12/19<br>

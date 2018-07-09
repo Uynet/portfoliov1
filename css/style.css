@@ -1,12 +1,11 @@
 h3 {
   text-align: center;
-  font-family: "Nico Moji";
   font-size: 30px;
-  color: #4e6296; }
+  color: #16477f; }
 
 h4 {
   text-align: center;
-  color: #3c79f6; }
+  color: #16477f; }
 
 html {
   height: 100%; }
@@ -38,7 +37,7 @@ body {
   width: 250px;
   height: 100%;
   color: #fff;
-  background: #4e6296;
+  background: #16477f;
   z-index: 20;
   transition: all 300ms 0s ease; }
 
@@ -50,10 +49,9 @@ body {
   width: 220px;
   height: 100%;
   color: #fff;
-  background: #4e6296;
-  background-color: rgba(176, 88, 129, 0.7);
+  background: #16477f;
   background-color: rgba(22, 71, 127, 0.7);
-  border: solid 1px #4e6296;
+  border: solid 1px #16477f;
   z-index: 20;
   animation-duration: 0.4s;
   animation-name: slidein; }
@@ -87,7 +85,7 @@ body {
   left: 0px;
   border-radius: 4px;
   font-size: 36px;
-  color: #fff; }
+  color: #16477f; }
 
 .fa-times {
   position: relative;
@@ -95,38 +93,34 @@ body {
   left: 0px;
   border-radius: 4px;
   font-size: 36px;
-  transition: all 600ms 0s ease;
+  transition: font-size 600ms 0s ease;
+  transition: color 600ms 0s ease;
   color: #fff; }
 
 .fa-times:hover {
+  position: relative;
+  top: 0px;
+  left: 36px;
+  font-size: 48px;
+  animation-duration: 0.3s;
+  animation-name: pulpul;
   color: #3c79f6; }
 
 .fa-bars:hover {
-  /*
-  position:relative;
-  top:-6px;
-  left:-6px;
-  font-size:48px;
-  animation-duration:0.3s;
-  animation-name:pulpul;
-  */
+  position: relative;
+  top: 0px;
+  left: 36px;
+  font-size: 48px;
+  animation-duration: 0.3s;
+  animation-name: pulpul;
   color: #3c79f6; }
 
 @keyframes pulpul {
   0% {
-    position: relative;
-    top: 0px;
-    left: 0px;
     font-size: 36px; }
   30% {
-    position: relative;
-    top: -10px;
-    left: -10px;
     font-size: 56px; }
   100% {
-    position: relative;
-    top: -4 px;
-    left: -4 px;
     font-size: 44 px; } }
 .menu {
   margin-top: 30%; }
@@ -220,7 +214,7 @@ body {
 .box {
   font-family: "Rounded Mplus 1c";
   padding: 60px 0px;
-  color: #4e6296;
+  color: #16477f;
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0);
@@ -229,7 +223,7 @@ body {
 .box_white {
   font-family: "Rounded Mplus 1c";
   padding: 60px 0px;
-  color: #4e6296;
+  color: #16477f;
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.9);
@@ -248,7 +242,7 @@ div {
   background-repeat: no-repeat; }
 
 .logo {
-  color: #3c79f6;
+  color: #16477f;
   padding: 0px 0px;
   font-size: 70px;
   font-family: "Nico Moji";
@@ -257,7 +251,7 @@ div {
   min-width: 350px; }
 
 .logo_subtext {
-  color: #4e6296;
+  color: #16477f;
   font-size: 12px;
   font-family: "Rounded Mplus 1c"; }
 
@@ -271,7 +265,7 @@ div {
   max-width: 100%;
   color: #ffffff;
   border-radius: 4px;
-  background: #4e6296; }
+  background: #16477f; }
 
 .greeting:before {
   content: "";
@@ -280,15 +274,15 @@ div {
   left: 50%;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top: 15px solid #4e6296; }
+  border-top: 15px solid #16477f; }
 
 .footer {
-  padding: 2%;
+  padding: 48px;
   font-size: 15px;
   width: 100%;
-  height: 25%;
+  height: 10%;
   color: #f5eff1;
-  background: #4e6296;
+  background: #16477f;
   font-family: "Rounded Mplus 1c";
   box-shadow: 0px 0px 4px #746;
   z-index: 1; }
@@ -326,7 +320,6 @@ div {
 
 a {
   transition: color .2s;
-  color: #3394b8;
   color: #3c79f6;
   text-decoration: none; }
 

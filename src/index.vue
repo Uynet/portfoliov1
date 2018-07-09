@@ -3,7 +3,7 @@
         <div class = "logo" align="center">
           ゆいブログ
           <div class = "logo_subtext">
-          - トップ絵描き途中 -
+          - 夏ば〜じょん -
           </div>
         </div>
         </div>

@@ -12,12 +12,12 @@
 <div class="image">
 <a href="https://trap.jp/post/480/"><img src="../../resource/ninja.png" class="img_show"></img></a>
 </div>
-<div class="fa-hilight"><b>GooglePlayIGF Top10</b></div>
+<!-- div class="fa-hilight"><b>GooglePlayIGF Top10</b></div -->
 <div class="title">
 -  NinjaFlicker  -
 </div>
-<passage>部制作のスマホゲー<br>
-サウンドすべて、一部グラフィックを担当</passage>
+<div class="passage">部制作のスマホゲー<br>
+サウンドすべて、一部グラフィックを担当</div>
 </div>
 
 
@@ -28,8 +28,8 @@
 <div class="title">
 -  Polar Snow Fantasy  -
 </div>
-<passage>部制作のPCゲー<br>
-サウンドすべて、一部グラフィックを担当</passage>
+<div class="passage">部制作のPCゲー<br>
+サウンドすべて、一部グラフィックを担当</div>
 </div>
 </section>
 
