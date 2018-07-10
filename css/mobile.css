@@ -1,15 +1,5 @@
 @media screen and (max-width:489px)
 {
-  .BG1{
-    background-color: #f5eff1;
-    position:fixed;
-    top:0px;
-    left:40%;
-    width:0%;
-    height:0%;
-    transform: rotate(15deg);
-    z-index:-3;
-  }
   .mainspace{
     padding:48px 24px;
     z-index:6;
@@ -24,10 +14,6 @@
     margin-left:0%;
     margin-top:-15%;
     min-width:0px;
-  }
-  .fa-bars:hover{
-    animation-duration:300.0s;
-    color:#6a446d;
   }
   .frame_music{
     min-width:0px;

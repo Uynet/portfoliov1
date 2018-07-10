@@ -2,9 +2,9 @@
 <div>
         <div class = "logo" align="center">
           ゆいブログ
-          <div class = "logo_subtext">
+          <!--div class = "logo_subtext">
           - 夏ば〜じょん -
-          </div>
+          </div-->
         </div>
         </div>
 </template>
