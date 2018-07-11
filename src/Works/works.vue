@@ -50,6 +50,15 @@ export default{
         moment:false,
         code:"https://github.com/Uynet/RayTracing",
         },
+        {
+        path:"uyblog",
+        title:"ゆいブログ",
+        hilight:false,
+        passage:"vueでポートフォリオ(このサイト)",
+        link:false,
+        moment:false,
+        code:"https://github.com/Uynet/uynet.github.io",
+        },
       ],
     }
   },
