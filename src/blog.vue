@@ -5,8 +5,8 @@
 <div align="center">
 
 <div class="frame">
-<h4>ポートフォリオ作った</h4>
-ゆいブログができるまで<br>
+<h4>ゆいブログができるまで</h4>
+ポートフォリオサイト作ってみました<br>
 <router-link to="post/0">(...続きを読む)</router-link>
 <div style="font-size:12px">2018/7/12/1:22</div>
 </div>
