@@ -2,7 +2,7 @@
 
 <div>
 
-<h3>制作物</h3>
+<h2>制作物</h2>
 
 <containts v-bind:products="this.products" align="center">
 

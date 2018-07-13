@@ -1,7 +1,8 @@
 import index from './index.vue';
 import about from './about.vue';
 import works from './Works/works.vue';
-import project from './project.vue';
+import blog from './blog.vue';
+import post0 from './Posts/post0.vue';
 
 export default [
   {
@@ -17,7 +18,11 @@ export default [
     component: works
   },
   {
-    path: '/project',
-    component: project
+    path: '/blog',
+    component: blog
+  },
+  {
+    path: '/post/0',
+    component: post0
   },
 ]

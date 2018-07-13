@@ -8,13 +8,18 @@ $growPink:#f5eff1;
 
 $subColor:#16477f;
 $mainColor:#16477f;
-h3{
+h1{
  text-align:center;
- font-size:30px;
+ color:$mainColor;
+}
+h2{
+ text-align:center;
+ color:$mainColor;
+}
+h3{
  color:$mainColor;
 }
 h4{
- text-align:center;
  color:$mainColor;
 }
 html {
@@ -74,6 +79,7 @@ body {
   align:center;
   font-family: "Nico Moji";
   text-align:10px;
+  padding:16px;
   padding:16px;
   transition:all 70ms 0s ease-in;
   color:#fff;

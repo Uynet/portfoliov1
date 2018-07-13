@@ -23,12 +23,11 @@ const container = new Vue({
       {url: "http://twitter.com/highsate" , icon : "twitter"},
       {url : "http://github.com/uynet", icon : "github"},
       {url : "https://soundcloud.com/saihate-1", icon : "soundcloud"},
-      {url : "http://uynet.work", icon : "blog"},
+      //{url : "http://uynet.work", icon : "blog"},
     ],
   },
   components:{
     sidebar:sidebar,
-    side:side,
     item:item,
     hambar:hambar,
     layer:layer,
