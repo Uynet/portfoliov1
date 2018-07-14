@@ -1,7 +1,7 @@
 @media screen and (max-width:489px)
 {
   .mainspace{
-    padding:48px 24px;
+    padding:12px 0px;
     z-index:6;
     min-height:100%;
   }
@@ -12,7 +12,7 @@
     font-size:70px;
     font-family: "Nico Moji";
     margin-left:0%;
-    margin-top:-15%;
+    margin-top:0%;
     min-width:0px;
   }
   .frame_music{

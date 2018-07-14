@@ -5,9 +5,6 @@
 <h3>ぷろふぃーる</h3>
 <div style="font-size:12px">\コンニチワ/</div>
 (>∀<)
-<br>
-クリエイティブな物はたいてい好き
-<br>
 <div class="passage" >
 <table border="0">
   <tr>
