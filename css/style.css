@@ -18,6 +18,8 @@ html {
 body {
   min-height: 100%;
   display: grid;
+  background-image: url("../resource/web.png");
+  background-attachment: fixed;
   grid-template-rows: 1fr auto; }
 
 .BG1 {
@@ -237,8 +239,6 @@ div {
   padding: 48px 24px;
   min-height: 85%;
   z-index: 6;
-  background: #fff;
-  background-image: url("../resource/web.png");
   background-repeat: no-repeat; }
 
 .logo {
