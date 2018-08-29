@@ -16,7 +16,7 @@ const init = _=>{
   yo =0; 
   let a = new Object(280,680,0);
   a.setsize(30);
-  a.setV(13*(Math.random()-0.5),-40-10*Math.random());
+  a.setV(5*(Math.random()-0.5),-40-10*Math.random());
   a.settype(0);
   Entity.push(a);
 

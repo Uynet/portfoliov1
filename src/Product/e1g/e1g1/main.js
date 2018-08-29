@@ -19,7 +19,7 @@ let yo =0;
 const launch = _=>{
   let a = new Object(280,680,0);
   a.setsize(30);
-  a.setV(1*(Math.random()-0.5),-45-5*Math.random());
+  a.setV(5*(Math.random()-0.5),-45-5*Math.random());
   a.settype(0);
   a.r = 250;
   a.g = 0;
