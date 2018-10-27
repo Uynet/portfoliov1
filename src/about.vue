@@ -3,8 +3,10 @@
 <div align="center">
 <div class="frame" style="max-width:100%">
 <h3>ぷろふぃーる</h3>
-<div style="font-size:12px">\コンニチワ/</div>
-(>∀<)
+全体的にクリエータっぽいことをしてます。<br>
+ゲームの見栄えを良くするのがすきです<br>
+BGMを作るのも好きです<br>
+最近はCGのお勉強をしています。
 <div class="passage" >
 <table border="0">
   <tr>
@@ -23,6 +25,8 @@
     <td>Org </td><td><a href="http://trap.jp" >: デジタル創作同好会traP</a><br></td>
   </tr>
 </table>
+<div style="font-size:12px">\コンニチワ/</div>
+(>∀<)<br>
 <h4>Like♥</h4>
   </tr>
   <tr>
@@ -30,7 +34,7 @@
     </td>
   </tr>
   <tr>
-    <td></td><td><a href="https://twitter.com/highsate/status/983628562870644736">DTM</a></td>
+    <td></td><td><a href="https://twitter.com/highsate/status/983628562870644736">DTM</a>(歴6年?)</td>
   </tr>
   <tr>
     <td></td><td>ゲーム制作</td>
@@ -58,8 +62,7 @@ vim<br>
 <h4>GooglePlayIndieGameFestival</h4>
 2018/4/28 - <a href="https://gamefest.withgoogle.com/indie-game-fest#!?modal_active=none">Top10受賞</a>
 <br>
-主にサウンド・グラフィックを担当したNinjaFlickerがGoogleの主催する
-ゲームコンテストにおいてTop20に選ばれ、更にファイナルイベントでTop10を受賞しました。 
+主にサウンド・グラフィックを担当した<a href="https://trap.jp/post/480/">NinjaFlicker</a>がGoogleの主催するゲームコンテストにおいてTop20に選ばれ、更にファイナルイベントでTop10を受賞しました。 
 
 <h4>DeNAサマーインターンシップ ゲームエンジニアリングコース</h4>
 2018/8/25-8/27 - <a fref="https://twitter.com/highsate/status/1034010674475585537">優勝</a>

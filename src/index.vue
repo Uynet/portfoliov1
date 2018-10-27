@@ -3,6 +3,7 @@
         <div class = "logo" align="center">
           ゆいブログ
           <div class = "logo_subtext">
+          よおこそ
           </div>
         </div>
         </div>
