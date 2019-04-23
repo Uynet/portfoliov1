@@ -4,12 +4,20 @@
 }
 .containts{
 }
+.profile_name{
+  position: relative;
+  /*background-color:#5040c0;*/
+  padding:4px;
+  /*font-family: "SAO","Ronde";*/
+  width:40%;
+}
 .frame{
   padding:14px;
+  /*font-family: "SAO","Ronde";*/
   background-blend-mode: color-dodge;
-  background:rgba(255,255,255,0.93);
-  border-radius:4px;
-  box-shadow:0px 0px 4px #6a446d;
+  background:rgba(255,255,255,1.93);
+  /*border-radius:4px;*/
+  /*box-shadow:0px 0px 4px #6a446d;*/
   max-width:320px;
   margin:32px;
 }
@@ -18,7 +26,7 @@
   background-blend-mode: color-dodge;
   border-radius:4px;
   box-shadow:0px 0px 4px #6a446d;
-  background:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,1.9);
   min-width:489px;
   margin:32px;
 }

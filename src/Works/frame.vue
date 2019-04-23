@@ -2,7 +2,7 @@
 <div class="frame" align="center">
      <div class="image">
      <a v-bind:href="product.link">
-       <img v-bind:src="path" class="img_show"></img>
+       <img v-bind:src="path" class="img_show" width = 200 height = 125></img>
      </a>
      </div>
 
@@ -27,7 +27,7 @@ export default{
   props:["product"],
   computed:{
     path:function(){
-      return "../../resource/" + this.product.path + ".png"; 
+      return "../../resource/img/" + this.product.path + ".png"; 
     },
     isBolt:function(){
       return this.product.moment != "null";

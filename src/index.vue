@@ -1,12 +1,16 @@
 <template>
-<div>
-        <div class = "logo" align="center">
-          ゆいブログ
-          <div class = "logo_subtext">
-          よおこそ
-          </div>
-        </div>
-        </div>
+  <div>
+    <div class = "logo" align="center">
+      ゆいブログ
+          <div class = "logo_subtext"></div>
+    <img class = "chara" src = "../resource/img/bg.png" width=356></img>
+    </div>
+    <div class = "links" align="center">
+     <i class="diamonde"><i class="link fab fa-twitter"></i></i>
+     <i class="diamonde"><i class="link fab fa-soundcloud"></i></i>
+     <i class="diamonde"><i class="link fab fa-github"></i></i>
+    </div>
+  </div>
 </template>
 
 <script>

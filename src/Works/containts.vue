@@ -10,7 +10,7 @@
 <section class="products" style="display:inline">
 <div class="frame">
 <div class="image">
-<a href="https://trap.jp/post/480/"><img src="../../resource/ninja.png" class="img_show"></img></a>
+<a href="https://trap.jp/post/480/"><img src="../../resource/img/ninja.png" class="img_show"></img></a>
 </div>
 <!-- div class="fa-hilight"><b>GooglePlayIGF Top10</b></div -->
 <div class="title">
@@ -23,7 +23,7 @@
 
 <div class="frame">
 <div class="image">
-<a href="https://trap.jp/post/35/"><img src="../../resource/po.png" class="img_show"></img></a>
+<a href="https://trap.jp/post/35/"><img src="../../resource/img/po.png" class="img_show"></img></a>
 </div>
 <div class="title">
 -  Polar Snow Fantasy  -

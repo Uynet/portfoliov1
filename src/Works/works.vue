@@ -2,7 +2,7 @@
 
 <div>
 
-<h2>制作物</h2>
+<h2>works</h2>
 
 <containts v-bind:products="this.products" align="center">
 
@@ -25,12 +25,21 @@ export default{
       products:[
         {
         path:"kawasemi",
-        title:"kawasemi",
+        title:"サイハテドロップ",
         hilight:"第七回GAME^3優勝",
         passage:"JS製2Dアクションゲームです",
         link:"http://kawasemi.uynet.trap.show",
         moment:"https://twitter.com/i/moments/953677385584427008",
         code:"https://github.com/Uynet/kawasemi",
+        },
+        {
+        path:"visualizer",
+        title:"CPCTF visualizer2019",
+        hilight:false,
+        passage:"",
+        link:"https://trap.jp/post/697/",
+        moment:false,
+        code:"",
         },
         {
         path:"artc",
