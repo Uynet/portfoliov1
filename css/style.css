@@ -178,7 +178,7 @@ body {
   height: 100%;
   opacity: 0.5;
   opacity: 0.0;
-  background-color: #121361;
+  backgroundkcolor: #121361;
   z-index: 10;
   animation-duration: 0.5s;
   animation-name: dark; }
@@ -251,6 +251,7 @@ div {
   padding: 0px 0px;
   font-size: 70px;
   font-family: "Ronde";
+  font-family: "Nico Moji";
   /*margin-left:25%;*/
   margin-top: 0%;
   min-width: 350px; }
