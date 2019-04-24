@@ -1,9 +1,11 @@
 <template>
   <div>
-    <div class = "logo" align="center">
+    <div class = "logo" id="TitleLogo" align="center">
       ゆいブログ
           <div class = "logo_subtext"></div>
-    <img class = "chara" src = "../resource/img/bg.png" width=356></img>
+    </div>
+    <div align="center">
+      <img class = "chara" src = "../resource/img/bg.png"></img>
     </div>
     <div class = "links" align="center">
      <i class="diamonde"><i class="link fab fa-twitter"></i></i>

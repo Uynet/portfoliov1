@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Ronde";
-  src: url("../resource/Fonts/Ronde-B_square.otf") format("opentype"); }
+  font-family: "honoka";
+  src: url("../resource/Fonts/honoka.ttf") format("opentype"); }
 @font-face {
   font-family: "SAO";
   src: url("../resource/Fonts/Orbitron-Light.ttf") format("opentype"); }
@@ -10,17 +10,17 @@ img {
 
 h1 {
   text-align: center;
-  color: #d21443; }
+  color: #e2144a; }
 
 h2 {
   text-align: center;
-  color: #d21443; }
+  color: #e2144a; }
 
 h3 {
-  color: #d21443; }
+  color: #e2144a; }
 
 h4 {
-  color: #d21443; }
+  color: #e2144a; }
 
 html {
   height: 100%; }
@@ -32,25 +32,31 @@ body {
   background-size: cover;
   min-height: 100%;
   display: grid;
-  grid-template-rows: 1fr auto; }
+  grid-template-rows: 1fr auto;
+  /*-webkit-animation: fadeIn 2s ease 0s 1 normal;*/ }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .container {
   position: fixed; }
 
 .sidebar_closed {
-  box-shadow: 0px 0px 4px #000;
+  box-shadow: 0px 0px 4px #f4bebe;
   position: fixed;
   top: 0px;
   right: -250px;
   width: 250px;
   height: 100%;
   color: #fff;
-  background: #d21443;
+  background: #e2144a;
   z-index: 20;
   transition: all 300ms 0s ease; }
 
 .sidebar_open {
-  box-shadow: 0px 0px 4px #000;
+  box-shadow: 0px 0px 4px #f4bebe;
   position: fixed;
   top: 0px;
   right: -50px;
@@ -58,16 +64,24 @@ body {
   height: 100%;
   color: #fff;
   /*background-color:rgba(22,71,127,0.7);*/
-  background: #d21443;
-  border: solid 1px #d21443;
+  background: #e2144a;
+  border: solid 1px #e2144a;
   z-index: 20;
   animation-duration: 0.4s;
   animation-name: slidein; }
 
 @keyframes slidein {
-  from {
+  0% {
     right: -250px; }
-  to {
+  10% {
+    right: -50px; }
+  40% {
+    right: -40px; }
+  60% {
+    right: -50px; }
+  80% {
+    right: -45px; }
+  100% {
     right: -50px; } }
 .item {
   font-size: 24px;
@@ -88,22 +102,47 @@ body {
   background-color: #fff;
   opacity: 0.5; }
 
+@keyframes downIn {
+  0% {
+    top: -148px;
+    box-shadow: 0px 0px #f4bebe; }
+  10% {
+    top: 16px; }
+  100% {
+    box-shadow: 10px 10px #f4bebe; } }
+.bar {
+  position: absolute;
+  right: 48px;
+  top: 8px;
+  height: 48px;
+  width: 64px;
+  margin-right: 8px;
+  padding-top: 16px; }
+
 .fa-bars {
-  position: relative;
-  top: 0px;
-  left: 0px;
+  border: solid;
+  border-color: #f4bebe 1px;
   border-radius: 4px;
-  font-size: 36px;
-  color: #d21443; }
+  color: #e2144a;
+  position: relative;
+  left: 0px;
+  font-size: 32px;
+  box-shadow: 10px 10px #f4bebe;
+  transition: all 100ms 0s ease;
+  animation-name: downIn;
+  animation-duration: 0.7s;
+  animation-delay: 0.3s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both; }
 
 .fa-times {
+  visibility: hidden;
   position: relative;
-  top: 0px;
   left: 0px;
   border-radius: 4px;
-  font-size: 36px;
+  font-size: 32px;
   transition: font-size 600ms 0s ease;
-  transition: color 600ms 0s ease;
+  transition: color 300ms 0s ease;
   color: #fff; }
 
 .fa-times:hover {
@@ -111,10 +150,6 @@ body {
 
 .fa-bars:hover {
   /*
-  position:relative;
-  top:0px;
-  left:36px;
-  font-size:48px;
   animation-duration:0.3s;
   animation-name:pulpul;
   */
@@ -178,7 +213,7 @@ body {
   height: 100%;
   opacity: 0.5;
   opacity: 0.0;
-  backgroundkcolor: #121361;
+  background-color: #121361;
   z-index: 10;
   animation-duration: 0.5s;
   animation-name: dark; }
@@ -220,47 +255,56 @@ body {
   100% {
     top: -100%; } }
 .box {
-  font-family: "Rounded Mplus 1c";
+  z-index: -1;
+  font-family: "honoka";
   padding: 60px 0px;
-  color: #d21443;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0);
-  transition: all 300ms 0s ease; }
-
-.box_white {
-  font-family: "Rounded Mplus 1c";
-  padding: 60px 0px;
-  color: #d21443;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  transition: all 300ms 0s ease; }
+  transition: all 300ms 0s ease;
+  color: #9a449d; }
 
 div {
   display: block; }
 
 .mainspace {
   padding: 48px 24px;
-  min-height: 85%;
   z-index: 6;
   background-repeat: no-repeat; }
 
 .logo {
-  color: #d21443;
+  color: #e2144a;
   padding: 0px 0px;
   font-size: 70px;
   font-family: "Ronde";
   font-family: "Nico Moji";
   /*margin-left:25%;*/
   margin-top: 0%;
-  min-width: 350px; }
+  min-width: 350px;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both; }
 
 .logo_subtext {
-  color: #d21443;
+  color: #e2144a;
   font-size: 16px;
   font-family: "Rounded Mplus 1c"; }
 
+.chara {
+  width: 356px;
+  position: relative;
+  animation-name: charaFadeIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.0s;
+  animation-fill-mode: both; }
+
+@keyframes charaFadeIn {
+  0% {
+    left: -18px;
+    opacity: 0; }
+  100% {
+    left: 0px;
+    opacity: 1; } }
 .greeting {
   font-family: "Rounded Mplus 1c";
   position: relative;
@@ -271,7 +315,7 @@ div {
   max-width: 100%;
   color: #ffffff;
   border-radius: 4px;
-  background: #d21443; }
+  background: #e2144a; }
 
 .greeting:before {
   content: "";
@@ -280,16 +324,16 @@ div {
   left: 50%;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top: 15px solid #d21443; }
+  border-top: 15px solid #e2144a; }
 
 .footer {
   font-size: 15px;
   width: 100%;
   height: 25%;
   color: #fff;
-  background: #d21443;
+  background: #e2144a;
   font-family: "Rounded Mplus 1c";
-  box-shadow: 0px 0px 4px #d21443;
+  box-shadow: 0px 0px 4px #e2144a;
   z-index: 1; }
 
 .footer-content {
@@ -306,37 +350,65 @@ div {
   z-index: 22; }
 
 .links {
-  font-size: 22px; }
+  height: 48px;
+  padding: 30px; }
 
 .fab {
-  background-color: #d21443;
+  font-size: 32px;
+  margin: 20px;
+  background-color: #e2144a;
   color: #ead8e4;
   border-radius: 4px;
-  padding-top: 8px;
-  width: 38px;
-  height: 30px;
-  transition: all 100ms 0s ease;
-  box-shadow: 2px 2px 4px #6a446d; }
+  padding-top: 16px;
+  opacity: 0;
+  height: 43px;
+  width: 58px;
+  box-shadow: 2px 2px 4px #f4bebe;
+  transition: all 100ms 0s ease; }
+
+@keyframes PopIn {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg); }
+  40% {
+    transform: rotate(-20deg); }
+  60% {
+    transform: rotate(8deg); }
+  80% {
+    transform: rotate(-3deg); }
+  100% {
+    top: 0px;
+    opacity: 1;
+    transform: rotate(0deg); } }
+.fa-twitter {
+  padding-left: 1px;
+  animation-name: PopIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.8s;
+  animation-fill-mode: both; }
 
 .fa-soundcloud {
-  padding-left: 1px; }
+  padding-left: 1px;
+  animation-name: PopIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.9s;
+  animation-fill-mode: both; }
 
-.bar {
-  position: absolute;
-  right: 32px;
-  display: inline;
-  margin-right: 8px; }
+.fa-github {
+  padding-left: 1px;
+  animation-name: PopIn;
+  animation-duration: 0.5s;
+  animation-delay: 1.0s;
+  animation-fill-mode: both;
+  transition: all 100ms 0s ease; }
 
 .fab:hover {
   background-color: #f2b473;
-  color: #d21443; }
+  color: #e2144a; }
 
 a {
   transition: color .2s;
   color: #f2b473;
   text-decoration: none; }
-
-.unko {
-  z-index: 15; }
 
 /*# sourceMappingURL=style.css.map */

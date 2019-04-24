@@ -1,6 +1,6 @@
 @font-face {
-  font-family:"Ronde";
-  src:url("../resource/Fonts/Ronde-B_square.otf") format("opentype");
+  font-family:"honoka";
+  src:url("../resource/Fonts/honoka.ttf") format("opentype");
 }
 @font-face {
   font-family:"SAO";
@@ -13,6 +13,11 @@ $hilight:#f23473;
 $hilight:#f2b473;
 $BGColor:#ead8e4;
 $baseColor:#d21443;
+$baseColor:#e2144a;
+$baseColor2:#f4bebe;
+$fontColor:#9a449d;
+$shadow:#6a446d;
+$shadow:#f4bebe;
 img {
   object-fit: cover;
 }
@@ -41,12 +46,18 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
+  /*-webkit-animation: fadeIn 2s ease 0s 1 normal;*/
 }
+@keyframes fadeIn{
+   0%{opacity:0}
+   100%{opacity:1}
+}
+
 .container{
   position:fixed;
 }
 .sidebar_closed{
-  box-shadow:0px 0px 4px #000;
+  box-shadow:0px 0px 4px $shadow;
   position:fixed;
   top:0px;
   right:-250px;
@@ -58,7 +69,7 @@ body {
   transition:all 300ms 0s ease;
 }
 .sidebar_open{
-  box-shadow:0px 0px 4px #000;
+  box-shadow:0px 0px 4px $shadow ;
   position:fixed;
   top:0px;
   right:-50px;
@@ -73,8 +84,12 @@ body {
   animation-name:slidein;
 }
 @keyframes slidein{
-  from{right:-250px}
-  to{right:-50px}
+  0%{right:-250px}
+  10%{right:-50px}
+  40%{right:-40px}
+  60%{right:-50px}
+  80%{right:-45px}
+  100%{right:-50px}
 }
 .item{
   font-size:24px;
@@ -95,22 +110,54 @@ body {
   background-color:#fff;
   opacity:0.5;
 }
+@keyframes downIn{
+  0%{
+    top:-148px;
+  box-shadow:0px 0px $baseColor2;
+  }
+  10%{
+    top:16px;
+  }
+  100%{
+  box-shadow:10px 10px $baseColor2;
+  }
+}
+
+.bar{
+  position:absolute;
+  right:48px;
+  top:8px;
+  height:48px;
+  width:64px;
+  margin-right:8px;
+  padding-top:16px;
+}
 .fa-bars{
-  position:relative;
-  top:0px;
-  left:0px;
+  border:solid;
+  border-color:$baseColor2 1px;
   border-radius:4px;
-  font-size:36px;
   color:$baseColor;
+  position:relative;
+  left:0px;
+  font-size:32px;
+  box-shadow:10px 10px $baseColor2;
+
+  transition:all 100ms 0s ease;
+
+  animation-name: downIn;
+  animation-duration:0.7s;
+  animation-delay:0.3s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode:both;
 }
 .fa-times{
+  visibility:hidden;//
   position:relative;
-  top:0px;
   left:0px;
   border-radius:4px;
-  font-size:36px;
+  font-size:32px;
   transition:font-size 600ms 0s ease;
-  transition:color 600ms 0s ease;
+  transition:color 300ms 0s ease;
   color:#fff;
 }
 .fa-times:hover{
@@ -118,10 +165,6 @@ body {
 }
 .fa-bars:hover{
   /*
-  position:relative;
-  top:0px;
-  left:36px;
-  font-size:48px;
   animation-duration:0.3s;
   animation-name:pulpul;
   */
@@ -190,7 +233,7 @@ body {
   height:100%;
   opacity:0.5;
   opacity:0.0;//
-  backgroundkcolor:#121361;
+  background-color:#121361;
   z-index:10;
   animation-duration:0.5s;
   animation-name:dark;
@@ -244,29 +287,19 @@ body {
 }
 $pad:32px;
 .box{
-  font-family: "Rounded Mplus 1c"; 
+  z-index:-1;
+  font-family: "honoka"; 
   padding:60px 0px;
-  color:$baseColor;
   width:100%;
   height:100%;
-  background:rgba(#fff,0.0);
   transition:all 300ms 0s ease;
-}
-.box_white{
-  font-family: "Rounded Mplus 1c"; 
-  padding:60px 0px;
-  color:$baseColor;
-  width:100%;
-  height:100%;
-  background:rgba(#fff,0.9);
-  transition:all 300ms 0s ease;
+  color:$fontColor;
 }
 div{
   display:block;
 }
 .mainspace{
   padding:48px 24px;
-  min-height:85%;
   z-index:6;
   background-repeat:no-repeat;
 }
@@ -279,6 +312,10 @@ div{
   /*margin-left:25%;*/
   margin-top:0%;
   min-width:350px;
+  animation-name:fadeIn;
+  animation-duration:0.5s;
+  animation-delay:0.5s;
+  animation-fill-mode: both;
 }
 .logo_subtext{
   color:$baseColor;
@@ -286,6 +323,24 @@ div{
   font-family: "Rounded Mplus 1c"; 
 }
 .chara{
+  width:356px;
+  position: relative;
+  animation-name:charaFadeIn;
+  animation-duration:0.5s;
+  animation-delay:0.0s;
+  animation-fill-mode: both;
+}
+
+
+@keyframes charaFadeIn{
+   0%{
+     left:-18px;
+     opacity:0
+    }
+   100%{
+     left:0px;
+     opacity:1
+    }
 }
 .greeting{
   font-family: "Rounded Mplus 1c"; 
@@ -332,26 +387,63 @@ div{
   z-index:22;
 }
 .links{
-  font-size:22px;
+  height:48px;
+  padding:30px;
 }
 .fab{
+  font-size:32px;
+  margin:20px;
   background-color:$baseColor;
   color:$BGColor;
   border-radius:4px;
-  padding-top:8px;
-  width:38px;
-  height:30px;
+  padding-top:16px;
+  opacity:0;
+  height:43px;
+  width:58px;
+  box-shadow:2px 2px 4px $shadow;
   transition:all 100ms 0s ease;
-  box-shadow:2px 2px 4px #6a446d;
+}
+@keyframes PopIn{
+  0% {
+  opacity:0;
+  transform: rotate(180deg);
+  }
+  40% {
+  transform: rotate(-20deg);
+  }
+  60% {
+  transform: rotate(8deg);
+  }
+  80% {
+  transform: rotate(-3deg);
+  }
+  100% {
+  top:0px;
+  opacity:1;
+  transform: rotate(0deg);
+  }
+}
+.fa-twitter{
+  padding-left:1px;
+  animation-name: PopIn;
+  animation-duration:0.5s;
+  animation-delay:0.8s;
+  animation-fill-mode:both;
 }
 .fa-soundcloud{
   padding-left:1px;
+  animation-name: PopIn;
+  animation-duration:0.5s;
+  animation-delay:0.9s;
+  animation-fill-mode:both;
 }
-.bar{
-  position:absolute;
-  right:32px;
-  display:inline;
-  margin-right:8px;
+.fa-github{
+  padding-left:1px;
+  animation-name: PopIn;
+  animation-duration:0.5s;
+  animation-delay:1.0s;
+  animation-fill-mode:both;
+  transition:all 100ms 0s ease;
 }
 .fab:hover{
   background-color:$hilight;
@@ -362,8 +454,4 @@ a{
   transition: color .2s;
   color:$hilight;
   text-decoration: none;
-
-}
-.unko{
-  z-index:15;
 }

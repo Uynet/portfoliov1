@@ -14,6 +14,7 @@
 .frame{
   padding:14px;
   /*font-family: "SAO","Ronde";*/
+  font-family: "honoka"; 
   background-blend-mode: color-dodge;
   background:rgba(255,255,255,1.93);
   /*border-radius:4px;*/
