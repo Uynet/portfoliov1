@@ -2,7 +2,8 @@
 
 <div>
 
-<h2>works</h2>
+<div class="headbox" align="center">作ったもの</div>
+<div class="dummy_padding"></div>
 
 <containts v-bind:products="this.products" align="center">
 

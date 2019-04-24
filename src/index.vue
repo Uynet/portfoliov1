@@ -8,9 +8,9 @@
       <img class = "chara" src = "../resource/img/bg.png"></img>
     </div>
     <div class = "links" align="center">
-     <i class="diamonde"><i class="link fab fa-twitter"></i></i>
-     <i class="diamonde"><i class="link fab fa-soundcloud"></i></i>
-     <i class="diamonde"><i class="link fab fa-github"></i></i>
+     <a class="link fab fa-twitter"    href="http://twitter.com/uynet"></a>
+     <a class="link fab fa-soundcloud" href="http://soundcloud.com/saihate-1"></a>
+     <a class="link fab fa-github"     href="http://github.com/Uynet"></a>
     </div>
   </div>
 </template>

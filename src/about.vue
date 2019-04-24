@@ -1,31 +1,35 @@
 <template>
 <div>
 <div align="center">
+  <div class="headbox">︎こんにちわ♨︎</div>
+  <div align="center">
+    <img class="profile_icon" src = "../resource/img/icon.png"></img>
+
+    <div class="profile_name">uynet </div>
+  </div>
 <div class="frame" style="max-width:100%">
-<img src = "../resource/img/icon.png" width = 96></img>
-<div class="profile_name">uynet</div>
 <table border="0">
   <tr>
     <th></th><th></th>
   </tr>
-  <!--tr>
-    <td>Name </td><td>:</td><td>uynet/ゆい</td>
-  </tr-->
   <tr>
-    <td>Birth </td><td>:</td><td>1996/12/19</td>
+    <td>Name </td><td>|</td><td>Tenyu Miza</td>
   </tr>
   <tr>
-    <td>Grade </td><td>:</td><td> 東京工業大学/情報理工学院M1</td>
+    <td>Birth </td><td>|</td><td>1996/12/19</td>
   </tr>
-  <!--tr>
-    <td>Org </td><td><a href="http://trap.jp" >: デジタル創作同好会traP</a><br></td>
-  </tr-->
+  <tr>
+    <td>Grade </td><td>|</td><td> 東京工業大学/情報理工学院M1</td>
+  </tr>
+    <td>サークル </td><td>|</td><td><a href="http://trap.jp" > デジタル創作同好会traP
+    <i class="fas fa-external-link-alt"></i></a>
+    <br></td>
 </table>
 
 
 </div>
 </div>
-<div class="frame" style="max-width:100%">
+<div class="frame" style="max-width:100%" align="center">
 <h3>受賞とか</h3>
 <!--
 <h4>2016冬ADC</h4>

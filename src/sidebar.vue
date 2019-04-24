@@ -1,7 +1,7 @@
 <template>
    <div v-bind:class="this.sidebarclass">
         <div class = "menu">
-          <div class="menutitle">♡めにゅ〜</div>
+          <div class="menutitle">★めにゅ〜</div>
           <div class="label2"></div>
 
           <div class = "item" v-for="item in items" v-on:click="$emit('toggle')">
