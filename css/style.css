@@ -2,8 +2,8 @@
   font-family: "honoka";
   src: url("../resource/Fonts/honoka.ttf") format("opentype"); }
 @font-face {
-  font-family: "SAO";
-  src: url("../resource/Fonts/Orbitron-Light.ttf") format("opentype"); }
+  font-family: "gkktt";
+  src: url("../resource/Fonts/gkktt.ttf") format("opentype"); }
 /*$hilight:#3c79f6;*/
 img {
   object-fit: cover; }
@@ -44,7 +44,7 @@ body {
   position: fixed; }
 
 .sidebar_closed {
-  box-shadow: 0px 0px 4px #f4bebe;
+  box-shadow: 0px 0px #f4bebe;
   position: fixed;
   top: 0px;
   right: -250px;
@@ -56,10 +56,9 @@ body {
   transition: all 300ms 0s ease; }
 
 .sidebar_open {
-  box-shadow: 0px 0px 4px #f4bebe;
+  /*box-shadow:0px 0px $shadow ;*/
   position: fixed;
   top: 0px;
-  right: -50px;
   width: 220px;
   height: 100%;
   color: #fff;
@@ -68,7 +67,8 @@ body {
   border: solid 1px #e2144a;
   z-index: 20;
   animation-duration: 0.4s;
-  animation-name: slidein; }
+  animation-name: slidein;
+  animation-fill-mode: both; }
 
 @keyframes slidein {
   0% {
@@ -87,7 +87,8 @@ body {
   font-size: 24px;
   align: center;
   /*font-family: "SAO","Ronde"*/
-  font-family: "Nico Moji";
+  /*font-family: "Nico Moji"; */
+  font-family: "gkktt";
   text-align: 10px;
   padding: 16px;
   transition: all 70ms 0s ease-in;
@@ -127,13 +128,12 @@ body {
   position: relative;
   left: 0px;
   font-size: 32px;
-  box-shadow: 10px 10px #f4bebe;
+  box-shadow: 10px 10px #e2144a;
   transition: all 100ms 0s ease;
   animation-name: downIn;
   animation-duration: 0.7s;
   animation-delay: 0.3s;
-  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-fill-mode: both; }
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 .fa-times {
   visibility: hidden;
@@ -153,7 +153,8 @@ body {
   animation-duration:0.3s;
   animation-name:pulpul;
   */
-  color: #f2b473; }
+  color: #f2b473;
+  color: #5244fa; }
 
 @keyframes pulpul {
   0% {
@@ -267,14 +268,33 @@ div {
   display: block; }
 
 .mainspace {
-  padding: 48px 24px;
+  /*padding:48px 24px;*/
   z-index: 6;
   background-repeat: no-repeat; }
 
+.BGbox {
+  position: absolute;
+  top: 20%;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: #f4bebe;
+  z-index: -10;
+  animation: BGbox 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 1.5s both; }
+
+/*
+@keyframes boxrot{
+   0%{ transform: rotate(0deg); }
+   100%{ transform: rotate(359deg); }
+}
+*/
+@keyframes BGbox {
+  100% {
+    width: 50%; } }
 .logo {
   color: #e2144a;
   padding: 0px 0px;
-  font-size: 70px;
+  font-size: 150px;
   font-family: "Ronde";
   font-family: "Nico Moji";
   /*margin-left:25%;*/
@@ -291,20 +311,49 @@ div {
   font-family: "Rounded Mplus 1c"; }
 
 .chara {
-  width: 356px;
+  width: 256px;
   position: relative;
-  animation-name: charaFadeIn;
-  animation-duration: 0.5s;
-  animation-delay: 0.0s;
-  animation-fill-mode: both; }
+  opacity: 0;
+  animation: charaFadeIn 0.5s ease 0.0s 1 normal both, charaMotionX 4.5s ease-in 0.3s infinite normal, charaMotionY 3.5s ease 0.3s infinite normal; }
 
+@keyframes charaMotionX {
+  0% {
+    transform: rotate(5deg);
+    left: -4px;
+    opacity: 1; }
+  25% {
+    transform: rotate(0deg);
+    left: 0px; }
+  50% {
+    transform: rotate(-5deg);
+    left: 4px; }
+  75% {
+    transform: rotate(0deg);
+    left: 0px; }
+  100% {
+    transform: rotate(5deg);
+    left: -10px;
+    opacity: 1; } }
+@keyframes charaMotionY {
+  0% {
+    top: 0px; }
+  25% {
+    top: 10px; }
+  50% {
+    top: 0px; }
+  75% {
+    top: -10px; }
+  100% {
+    top: 0px; } }
 @keyframes charaFadeIn {
   0% {
     left: -18px;
-    opacity: 0; }
+    opacity: 0;
+    transform: rotate(-2deg); }
   100% {
     left: 0px;
-    opacity: 1; } }
+    opacity: 1;
+    transform: rotate(4deg); } }
 .greeting {
   font-family: "Rounded Mplus 1c";
   position: relative;
@@ -408,7 +457,10 @@ div {
 
 a {
   transition: color .2s;
-  color: #f2b473;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #f23473; }
+
+a:hover {
+  color: #f2b473; }
 
 /*# sourceMappingURL=style.css.map */

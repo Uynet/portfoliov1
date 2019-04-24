@@ -8,13 +8,51 @@
   .logo{
     padding:0px 0px;
     text-align:center;
-    color:$hilight;
     font-size:70px;
     font-family: "Nico Moji";
     margin-left:0%;
-    margin-top:0%;
+    margin-top:15%;
     min-width:0px;
   }
+.sidebar_closed{
+  width:100%;
+  top:-100%;
+}
+.sidebar_open{
+  animation-duration:0.5s;
+  animation-name:slidein;
+  animation-timing-function: linear; 
+  animation-fill-mode:both;
+  width:100%;
+  top:-100%;
+}
+.item{
+  vertical-align:center;
+}
+@keyframes slidein{
+  0%{
+    top:-100%;
+  }
+  20%{
+    top:0%;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  40%{
+    top:-10%;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  }
+  60%{
+    top:-0%;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  80%{
+    top:-2%;
+    animation-timing-function: linear; 
+  }
+  100%{
+    top:0%;
+  }
+}
   .frame_music{
     min-width:0px;
   }

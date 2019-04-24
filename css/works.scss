@@ -1,0 +1,186 @@
+@import "./style.scss";
+
+@font-face {
+  font-family: "gkktt";
+  src: url("../resource/Fonts/gkktt.ttf") format("opentype"); 
+}
+$hilight:#f2b473;
+$hilight2:#f23473;
+$BGColor:#ead8e4;
+$baseColor:#d21443;
+$baseColor:#e2144a;
+$baseColor2:#f4bebe;
+$baseColor3:#5224fa;
+$fontColor:#9a449d;
+$shadow:#6a446d;
+$shadow:#f4bebe;
+
+.products{
+  display:inline-block;
+  margin:-20px;
+}
+.containts{
+}
+.profile_name{
+  position: relative;
+  /*background-color:#5040c0;*/
+  padding:4px;
+  font-size:40px;
+  font-family: "gkktt";
+  width:40%;
+
+  animation-duration:0.5s;
+  animation-name:nameIn;
+  animation-delay:0.3s;
+  animation-timing-function: step-start; 
+  animation-timing-function: linear;
+  animation-fill-mode:both;
+}
+.profile_name_shadow{
+  position: absolute;
+  top:6px;
+  color:$baseColor;
+  color:$hilight2;
+  z-index:-1;
+  font-size:40px;
+  font-family: "gkktt";
+  width:40%;
+}
+.frame{
+  padding:14px;
+  /*font-family: "SAO","Ronde";*/
+  font-family: "honoka"; 
+  background-blend-mode: color-dodge;
+  background:rgba(255,255,255,1.93);
+  border-radius:4px;
+  box-shadow:0px 0px 4px #6a446d;
+  max-width:320px;
+  margin:32px;
+  font-size:20px;
+  animation:fadeIn 0.5s linear 0.5s both;
+}
+.frame_music{
+  padding:14px;
+  background-blend-mode: color-dodge;
+  border-radius:4px;
+  box-shadow:0px 0px 4px #6a446d;
+  background:rgba(255,255,255,1.9);
+  min-width:489px;
+  margin:32px;
+}
+img{
+  max-width:100%;
+}
+.img_show{
+  box-shadow:0px 0px 4px #000;
+  transition:all 300ms ease;
+}
+.img_show:hover{
+  opacity:0.7;
+}
+.title{
+  font-family: "gkktt";
+}
+.passage{
+}
+.works{
+}
+.icons{
+  text-align:left;
+  margin-left:4%;
+  margin-top:8%;
+  color:#6a446d;
+}
+.fa-yellow{
+  color:#e6ae19;
+}
+.fa-azure{
+  color:#54abde;
+}
+.fa-hilight{
+  color:#f23473;
+}
+.fa-green{
+  color:#7dc873;
+}
+.fa-gray{
+  color:#888;
+}
+.profile_icon{
+  margin-top:15%;
+  width:96px;
+  height:96px;
+  border-radius: 10%; 
+  box-shadow:0px 0px 4px #6a446d;
+
+  animation-duration:0.5s;
+  animation-name:iconPopIn;
+  animation-delay:0.2s;
+  animation-timing-function: linear; 
+  animation-fill-mode:both;
+}
+.headbox{
+  z-index:10;
+  padding-top:7%;
+  margin-bottom:7%;
+  position: absolute;
+  position:fixed;
+  top:-100px;
+  left:0px;
+  width:100%;
+  height:100px;
+  background-color: $baseColor;
+  color:#fff;
+  font-size:40px;
+  animation-duration:0.5s;
+  animation-name:slidedown;
+  animation-timing-function: linear; 
+  animation-fill-mode:both;
+}
+@keyframes iconPopIn{
+   0%{ width:0px; }
+   25%{ width:108px; }
+   50%{ width:92px; }
+   75%{ width:98px; }
+   100%{ width:96px; }
+}
+@keyframes nameIn{
+   0%{opacity:0}
+   5%{opacity:1}
+   10%{opacity:0}
+   30%{opacity:1}
+   40%{opacity:0}
+   80%{opacity:1}
+   100%{opacity:1}
+}
+@keyframes fadeIn{
+   0%{opacity:0}
+   100%{opacity:1}
+}
+@keyframes slidedown{
+  0%{
+    top:-100px;
+  }
+  20%{
+    top:0%;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  40%{
+    top:-10px;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  }
+  60%{
+    top:-0%;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  80%{
+    top:-5px;
+    animation-timing-function: linear; 
+  }
+  100%{
+    top:0%;
+  }
+}
+.dummy_padding{
+  margin-top:15%;
+}
