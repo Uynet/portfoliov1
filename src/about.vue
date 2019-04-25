@@ -13,13 +13,13 @@
     <th></th><th></th>
   </tr>
   <tr>
-    <td>Name </td><td>|</td><td>Tenyu Miza</td>
+    <td>名前</td><td>|</td><td>Tenyu Miza</td>
   </tr>
   <tr>
-    <td>Birth </td><td>|</td><td>1996/12/19</td>
+    <td>誕生日</td><td>|</td><td>1996/12/19</td>
   </tr>
   <tr>
-    <td>Grade </td><td>|</td><td> 東京工業大学/情報理工学院M1</td>
+    <td>所属 </td><td>|</td><td> 東京工業大学/情報理工学院M1</td>
   </tr>
     <td>サークル </td><td>|</td><td><a href="http://trap.jp" > デジタル創作同好会traP
     <i class="fas fa-external-link-alt"></i></a>

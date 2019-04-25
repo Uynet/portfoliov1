@@ -139,27 +139,28 @@ body {
   border-color:$baseColor2 1px;
   border-radius:4px;
   color:$baseColor;
+  background-color:$BGColor;
   position:relative;
   left:0px;
   font-size:32px;
-  box-shadow:10px 10px $baseColor;
+  box-shadow:10px 10px $shadow;
 
-  transition:all 100ms 0s ease;
+  transition:all 300ms 0s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   animation-name: downIn;
   animation-duration:0.7s;
   animation-delay:0.3s;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  //animation-fill-mode:both;
+  animation-fill-mode:both;
 }
 .fa-times{
   visibility:hidden;//
   position:relative;
   left:0px;
   border-radius:4px;
-  font-size:32px;
+  font-size:12px;
+  transition:all 300ms 0s ease;
   transition:font-size 600ms 0s ease;
-  transition:color 300ms 0s ease;
   color:#fff;
 }
 .fa-times:hover{
@@ -170,8 +171,9 @@ body {
   animation-duration:0.3s;
   animation-name:pulpul;
   */
-  color:$hilight;
   color:$baseColor3;
+  //top:20px;
+  box-shadow:1px 1px $shadow;
 }
 @keyframes pulpul{
   $dist:8;
@@ -485,7 +487,6 @@ div{
   transform: rotate(-3deg);
   }
   100% {
-  top:0px;
   opacity:1;
   transform: rotate(0deg);
   }
@@ -498,6 +499,8 @@ div{
   animation-fill-mode:both;
 }
 .fa-soundcloud{
+  position: relative;
+  top:10px;
   padding-left:1px;
   animation-name: PopIn;
   animation-duration:0.5s;
