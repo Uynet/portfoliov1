@@ -8,7 +8,7 @@ $hilight:#f2b473;
 $hilight2:#f23473;
 $BGColor:#ead8e4;
 $baseColor:#d21443;
-$baseColor:#e2144a;
+$baseColor:#e2146a;
 $baseColor2:#f4bebe;
 $baseColor3:#5224fa;
 $fontColor:#9a449d;
@@ -53,7 +53,7 @@ $shadow:#f4bebe;
   background-blend-mode: color-dodge;
   background:rgba(255,255,255,1.93);
   border-radius:4px;
-  box-shadow:0px 0px 4px #6a446d;
+  box-shadow:0px 0px 4px $shadow;
   max-width:320px;
   margin:32px;
   font-size:20px;
@@ -63,7 +63,7 @@ $shadow:#f4bebe;
   padding:14px;
   background-blend-mode: color-dodge;
   border-radius:4px;
-  box-shadow:0px 0px 4px #6a446d;
+  box-shadow:0px 0px 4px $shadow;
   background:rgba(255,255,255,1.9);
   min-width:489px;
   margin:32px;
@@ -88,7 +88,7 @@ img{
   text-align:left;
   margin-left:4%;
   margin-top:8%;
-  color:#6a446d;
+  color:$shadow;
 }
 .fa-yellow{
   color:#e6ae19;
@@ -106,11 +106,10 @@ img{
   color:#888;
 }
 .profile_icon{
-  margin-top:15%;
   width:96px;
   height:96px;
   border-radius: 10%; 
-  box-shadow:0px 0px 4px #6a446d;
+  box-shadow:0px 0px 4px $shadow; 
 
   animation-duration:0.5s;
   animation-name:iconPopIn;
@@ -121,17 +120,17 @@ img{
 .headbox{
   z-index:10;
   padding-top:7%;
-  margin-bottom:7%;
+  //margin-bottom:7%;
   position: absolute;
   position:fixed;
-  top:-100px;
   left:0px;
   width:100%;
-  height:100px;
+  height:10%;
   background-color: $baseColor;
   color:#fff;
   font-size:40px;
-  animation-duration:0.5s;
+  animation-duration:0.8s;
+  animation-delay: 0.5s;
   animation-name:slidedown;
   animation-timing-function: linear; 
   animation-fill-mode:both;
@@ -158,8 +157,16 @@ img{
    0%{ width:0px; }
    25%{ width:108px; }
    50%{ width:92px; }
-   75%{ width:98px; }
-   100%{ width:96px; }
+   75%{ 
+     width:98px;
+     }
+   80%{
+     border-radius:20%;
+     }
+   100%{
+     border-radius:50%;
+      width:96px;
+     }
 }
 @keyframes nameIn{
    0%{opacity:0}
@@ -176,7 +183,7 @@ img{
 }
 @keyframes slidedown{
   0%{
-    top:-100px;
+    top:-200px;
   }
   20%{
     top:0%;
@@ -199,7 +206,7 @@ img{
   }
 }
 .dummy_padding{
-  margin-top:15%;
+  margin-top:20%;
 }
 .fas{
   font-size:24px;

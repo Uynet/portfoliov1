@@ -1,14 +1,17 @@
 <template>
-<div>
 <div align="center">
-  <div class="headbox">︎こんにちわ♨︎</div>
-  <div align="center">
-    <img class="profile_icon" src = "../resource/img/icon.png"></img>
+    <div class="headbox">︎こんにちわ♨︎</div>
+      <div class="sideline rightside"></div>
+      <div class="sideline leftside"></div>
+    <div class="dummy_padding"></div>
 
-    <div class="profile_name">uynet </div>
-  </div>
-<div class="frame" style="max-width:100%">
-<table border="0">
+    <div align="center">
+      <img class="profile_icon" src = "../resource/img/icon.png"></img>
+      <div class="profile_name">uynet </div>
+    </div>
+
+  <div class="frame" style="max-width:100%">
+    <table border="0">
   <tr>
     <th></th><th></th>
   </tr>
@@ -24,11 +27,10 @@
     <td>サークル </td><td>|</td><td><a href="http://trap.jp" > デジタル創作同好会traP
     <i class="fas fa-external-link-alt"></i></a>
     <br></td>
-</table>
+     </table>
 
 
-</div>
-</div>
+  </div>
 <div class="frame" style="max-width:100%" align="center">
 <h3>受賞とか</h3>
 <!--
@@ -55,9 +57,6 @@ BCN ITジュニア賞<br>
 <a href="http://kawasemi.uynet.trap.show">さいはてどろっぷ</a>が全460作品の中から最終審査を勝ち抜き、経済産業大臣賞(プロダクト部門)を獲得しました
 -->
 
-</div>
-</div>
-</div>
 </div>
 </div>
 

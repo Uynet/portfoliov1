@@ -1,8 +1,12 @@
 <template>
   <div>
+    <div class="sideline rightside"></div>
+    <div class="sideline leftside"></div>
     <div class = "logo" id="TitleLogo" align="center">
       ゆいブログ
-          <div class = "logo_subtext"></div>
+          <marquee class = "logo_subtext" >
+            {{emo}}
+            </marquee>
     </div>
     <div align="center">
       <img class = "chara" src = "../resource/img/bg.png"></img>
@@ -19,11 +23,8 @@
 export default{ 
   computed:{
     emo:function(){
-      if(Math.random()<0.5){
-        return "よおこそ♨";
-      }else{
-        return "こんにちわ☼";
-      }
+      let a = Math.random();
+      return "(*'-'*)よおこそ";
     },
   }
 }
