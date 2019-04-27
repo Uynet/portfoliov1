@@ -162,7 +162,7 @@ body {
   transition: all 300ms 0s ease;
   animation-name: downIn;
   animation-duration: 0.7s;
-  animation-delay: 0.3s;
+  animation-delay: 0.9s;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-fill-mode: both; }
 
@@ -588,8 +588,8 @@ img {
     width: 92px; }
   75% {
     width: 98px; }
-  80% {
-    border-radius: 20%; }
+  90% {
+    border-radius: 10%; }
   100% {
     border-radius: 50%;
     width: 96px; } }
