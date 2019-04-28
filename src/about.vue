@@ -3,6 +3,9 @@
     <div class="headbox">︎こんにちわ♨︎</div>
       <div class="sideline rightside"></div>
       <div class="sideline leftside"></div>
+    <div class="BGCircle1"></div>
+    <div class="BGCircle2"></div>
+    <div class="BGCircle3"></div>
     <div class="dummy_padding"></div>
 
     <div align="center">
@@ -11,12 +14,15 @@
     </div>
 
   <div class="frame" style="max-width:100%">
+    すいません、ブログじゃないです
+  </div>
+  <div class="frame" style="max-width:100%">
     <table border="0">
   <tr>
     <th></th><th></th>
   </tr>
   <tr>
-    <td>名前</td><td>|</td><td>Tenyu Miza</td>
+    <td>名前</td><td>|</td><td>美座天佑</td>
   </tr>
   <tr>
     <td>誕生日</td><td>|</td><td>1996/12/19</td>

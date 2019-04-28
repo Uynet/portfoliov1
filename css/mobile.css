@@ -6,17 +6,26 @@
     min-height:100%;
   }
   .logo{
-    padding:0px 0px;
-    text-align:center;
     font-size:70px;
-    font-family: "Nico Moji";
-    margin-left:0%;
-    margin-top:15%;
-    min-width:0px;
+    animation:
+      LogoRotation 1.9s ease 1.00s both, 
+      LogoDrop 0.6s ease 0.4s both; 
   }
+@keyframes LogoDrop{
+  0%{ margin-top:-200px; }
+  20%{ margin-top:20%; animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+  40%{ margin-top:15%; animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22); }
+  60%{ margin-top:20%; animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+  80%{ margin-top:19%; animation-timing-function: linear; }
+  100%{ margin-top:20%; }
+}
 .sidebar_closed{
   width:100%;
   top:-100%;
+}
+.headbox{
+  padding-left:3%;
+  text-align:left;
 }
 .sidebar_open{
   animation-duration:0.5s;

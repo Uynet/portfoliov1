@@ -72,7 +72,7 @@ animation-fill-mode: both;
   };
   100%{
     background:$fontColor; 
-    right:10px
+    right:-10px
   };
 }
 @keyframes sidelineInL{
@@ -81,7 +81,7 @@ animation-fill-mode: both;
     left:100%
   };
   100%{
-    left:10px;
+    left:-10px;
     background:$fontColor; 
   }
 }
@@ -304,21 +304,39 @@ animation-fill-mode: both;
 div {
   display: block; }
 
-@keyframes LogoFadeIn {
+@keyframes LogoDrop{
+  0%{ margin-top:-200px; }
+  20%{ margin-top:10%; animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+  40%{ margin-top:5%; animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22); }
+  60%{ margin-top:10%; animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+  80%{ margin-top:9%; animation-timing-function: linear; }
+  100%{ margin-top:10%; }
+}
+@keyframes LogoRotation{
   0% {
-    top: -18px;
-    opacity: 0; }
+     transform: rotate(0deg);
+     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); 
+     }
+  6% {
+     transform: rotate(4deg); 
+     animation-timing-function: ease; 
+    }
   100% {
-    top: 0x;
-    opacity: 1; }
+     transform: rotate(5deg); 
+    }
  }
 .logo_subtext {
   color: $baseColor;
   font-size: 16px;
-  z-index:-100;
+  z-index:-1;
+  position:absolute;
+  top:50%;
+  margin: auto;
+  margin:auto;
   font-family: "honoka";
 }
 .chara {
+  z-index:2;
   max-width:250px;
   min-width:150px;
   position: absolute;
@@ -327,13 +345,62 @@ div {
   opacity: 0;
   animation:
      charaFadeIn 0.9s ease 0.0s 1 normal both,
-     charaMotionX 14.5s ease-in 0.9s infinite normal,
      charaMotionY 3.5s ease 0.9s infinite normal;
 }
+.BGbox{
+  position:absolute;
+  left:0px;top:0px;
+  width:100px;
+  height:100px;
+  background:$baseColor2;
+}
 
+.BGCircle1{
+  z-index:-3;
+  position:fixed;
+  right:0px;left:0px;
+  bottom:0px;top:0px;
+  margin:auto;
+  border-radius:50%;
+  background:$baseColor2;
+  animation:BGIn 1.2s  ease 0.5s both;
+}
+.BGCircle2{
+  z-index:-2;
+  position:fixed;
+  right:0px;left:0px;
+  bottom:0px;top:0px;
+  margin:auto;
+  border-radius:50%;
+  background:$BGColor;
+  animation-name:BGIn;
+  animation-duration:0.5s;
+  animation-delay:1.1s;
+  animation-fill-mode: both;
+}
+@keyframes BGIn{
+  0% {
+  width:0vw;
+  height:0vw;
+   }
+  100% {
+  width:100vw;
+  height:100vw;
+   }
+}
+@keyframes BGIn2{
+  0% {
+  width:0vw;
+  height:0vw;
+   }
+  100% {
+  width:99vw;
+  height:99vw;
+   }
+}
 @keyframes charaMotionX {
   0% {}
-  100% { }
+  100% {}
  }
 @keyframes charaMotionY {
   0% {
@@ -388,6 +455,7 @@ div {
 .footer-content {
   padding: 48px; }
 .logo {
+  transform: rotate(0deg); 
   color: $baseColor;
   padding: 0px 0px;
   font-size:150px;
@@ -395,12 +463,11 @@ div {
   font-family: "Nico Moji";
   /*margin-left:25%;*/
   margin-top:10%;
-
   min-width: 350px;
-  animation-name: LogoFadeIn;
-  animation-duration: 0.5s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both; 
+  transform-origin:20% 50%;
+  animation:
+   LogoRotation 1.9s ease 0.90s both, 
+   LogoDrop 0.5s ease 0.4s both; 
 }
 .links {
   position: absolute;
@@ -440,7 +507,7 @@ div {
   padding-left: 1px;
   animation-name: PopIn;
   animation-duration: 0.5s;
-  animation-delay: 0.8s;
+  animation-delay: 1.3s;
   animation-fill-mode: both; }
 
 .fa-soundcloud {
@@ -449,14 +516,14 @@ div {
   padding-left: 1px;
   animation-name: PopIn;
   animation-duration: 0.5s;
-  animation-delay: 0.9s;
+  animation-delay: 1.4s;
   animation-fill-mode: both; }
 
 .fa-github {
   padding-left: 1px;
   animation-name: PopIn;
   animation-duration: 0.5s;
-  animation-delay: 1.0s;
+  animation-delay: 1.5s;
   animation-fill-mode: both;
   transition: all 100ms 0s ease; }
 
