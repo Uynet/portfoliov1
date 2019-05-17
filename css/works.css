@@ -117,7 +117,7 @@ body {
   /*font-family: "Nico Moji"; */
   font-family: "gkktt";
   text-align: 10px;
-  padding: 16px;
+  margin-top: 16px;
   transition: all 70ms 0s ease-in;
   color: #fff; }
 
@@ -159,10 +159,10 @@ body {
   left: 0px;
   font-size: 32px;
   box-shadow: 10px 10px #f4bebe;
-  transition: all 300ms 0s ease;
+  transition: all 200ms 0s cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-name: downIn;
   animation-duration: 0.7s;
-  animation-delay: 0.9s;
+  animation-delay: 0.3s;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-fill-mode: both; }
 
@@ -312,12 +312,31 @@ div {
     animation-timing-function: ease; }
   100% {
     transform: rotate(5deg); } }
+.opening {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding-top: 45%;
+  font-size: 10px;
+  color: #fff;
+  background: #e2146a;
+  z-index: 100;
+  animation: fadeOut 0.5s ease 2.0s both; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 .logo_subtext {
   color: #e2146a;
   font-size: 16px;
   z-index: -1;
   position: absolute;
-  top: 50%;
+  top: 90%;
+  left: 3%;
   margin: auto;
   margin: auto;
   font-family: "honoka"; }
@@ -342,6 +361,61 @@ div {
   width: 100px;
   height: 100px;
   background: #f4bebe; }
+
+.BGLine {
+  position: absolute;
+  width: 3%;
+  height: 100%;
+  background: #a4befe;
+  position: fixed;
+  top: 0px;
+  z-index: -1;
+  animation: BGLine 0.9s ease 1.5s both; }
+
+@keyframes BGLine {
+  0% {
+    width: 0%; }
+  100% {
+    width: 2%; } }
+#line0 {
+  left: 70%;
+  animation-delay: 1.3s; }
+
+#line1 {
+  left: 40%;
+  animation-delay: 1.33s; }
+
+#line2 {
+  left: 10%;
+  animation-delay: 1.36s; }
+
+#line3 {
+  left: 80%;
+  animation-delay: 1.39s; }
+
+#line4 {
+  left: 50%;
+  animation-delay: 1.42s; }
+
+#line5 {
+  left: 20%;
+  animation-delay: 1.45s; }
+
+#line6 {
+  left: 90%;
+  animation-delay: 1.48s; }
+
+#line7 {
+  left: 60%;
+  animation-delay: 1.51s; }
+
+#line8 {
+  left: 30%;
+  animation-delay: 1.54s; }
+
+#line9 {
+  left: 00%;
+  animation-delay: 1.57s; }
 
 .BGCircle1 {
   z-index: -3;
@@ -537,7 +611,7 @@ a:hover {
   width: 40%;
   animation-duration: 0.5s;
   animation-name: nameIn;
-  animation-delay: 0.3s;
+  animation-delay: 1.6s;
   animation-timing-function: step-start;
   animation-timing-function: linear;
   animation-fill-mode: both; }
@@ -563,7 +637,7 @@ a:hover {
   max-width: 320px;
   margin: 32px;
   font-size: 20px;
-  animation: fadeIn 0.5s linear 0.5s both; }
+  animation: fadeIn 0.5s linear 1.0s both; }
 
 .frame_music {
   padding: 14px;
@@ -621,10 +695,9 @@ img {
   padding-top: 3%;
   padding-bottom: 3%;
   position: absolute;
-  position: fixed;
   left: 0px;
   width: 100%;
-  height: 10%;
+  height: 7%;
   background-color: #e2146a;
   color: #fff;
   font-size: 40px;
@@ -702,7 +775,8 @@ img {
     top: -5px;
     animation-timing-function: linear; }
   100% {
-    top: 0%; } }
+    top: 0%;
+    position: sticky; } }
 .dummy_padding {
   margin-top: 20%; }
 

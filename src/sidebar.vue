@@ -26,7 +26,7 @@ export default{
       { message:"Top",path:"./" },
       { message:"About",path:"/about" },
       { message:"Works",path:"./works" },
-      /*{ message:"Blog",path:"./blog" },*/
+      { message:"Blog",path:"./blog" },
       ],
     }
   },

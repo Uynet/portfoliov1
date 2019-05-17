@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div class="sideline rightside"></div>
     <div class="sideline leftside"></div>
     <div class="BGCircle1"></div>
@@ -8,9 +9,11 @@
     <div class = "logo" id="TitleLogo" align="center">
       ゆいブログ
     </div>
-   <marquee class = "logo_subtext" >
-   {{emo}}
-   </marquee>
+   <div class = "logo_subtext" >
+暗闇は無く、無知があるのみ。 
+<br>
+    　　　 　　　ーウィリアム・シェイクスピアー
+   </div>
     <div align="center">
       <img class = "chara" src = "../resource/img/bg.png"></img>
     </div>

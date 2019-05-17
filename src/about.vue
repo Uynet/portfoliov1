@@ -1,5 +1,6 @@
 <template>
 <div align="center">
+
     <div class="headbox">︎こんにちわ♨︎</div>
       <div class="sideline rightside"></div>
       <div class="sideline leftside"></div>
