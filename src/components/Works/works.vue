@@ -1,13 +1,8 @@
 <template>
-<div>
+<div align="center">
 
+<BGEffect></BGEffect>
   <div class="headbox" align="center">作ったもの</div>
-    <div class="sideline rightside"></div>
-    <div class="sideline leftside"></div>
-    <div class="BGCircle1"></div>
-    <div class="BGCircle2"></div>
-    <div class="BGCircle3"></div>
-  <!-- div class="dummy_padding"></div-->
 
   <containts v-bind:products="this.products" align="center"></containts>
 
@@ -15,6 +10,7 @@
 </template>
 <script>
 import containts from "./containts";
+import BGEffect from "../BGEffect";
 
 export default{ 
   data:function(){
@@ -97,7 +93,8 @@ export default{
     }
   },
   components:{
-    containts:containts
+    containts:containts,
+    BGEffect:BGEffect
   },
 }
 </script>

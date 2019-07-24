@@ -1,15 +1,10 @@
 <template>
 <div align="center">
     <div class="headbox">︎ブログ</div>
-      <div class="sideline rightside"></div>
-      <div class="sideline leftside"></div>
-    <div class="BGCircle1"></div>
-    <div class="BGCircle2"></div>
-    <div class="BGCircle3"></div>
-    <!--div class="dummy_padding"></div-->
+<BGEffect></BGEffect>
 
 <div class="frame">
-△工事中!△
+△!工事中!△
 </div>
 <!--div class="frame">
 <h4>ゆいブログができるまで</h4>
@@ -23,4 +18,12 @@
 </div>
 </template>
 <script>
+import BGEffect from "./BGEffect";
+export default{
+  props:["products"],
+  components:{
+    BGEffect:BGEffect
+  },
+}
 </script>
+

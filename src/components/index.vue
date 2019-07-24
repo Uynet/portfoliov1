@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div class="sideline rightside"></div>
-    <div class="sideline leftside"></div>
-    <div class="BGCircle1"></div>
-    <div class="BGCircle2"></div>
-    <div class="BGCircle3"></div>
+  <BGEffect></BGEffect>
     <div class = "logo" id="TitleLogo" align="center">
       ゆいブログ
     </div>
@@ -25,12 +21,16 @@
 </template>
 
 <script>
+import BGEffect from "./BGEffect";
 export default{ 
   computed:{
     emo:function(){
       let a = Math.random();
       return "(*'-'*)よおこそ";
     },
-  }
+  },
+  components:{
+    BGEffect:BGEffect
+  },
 }
 </script>

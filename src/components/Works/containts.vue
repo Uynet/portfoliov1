@@ -5,8 +5,6 @@
 <frame v-bind:product="product"></frame>
 </section>
 
-
-
 <h2 align="center" class="works">★--*--音楽--*--★︎</h2>
 <section class="products">
 <div class="frame_music">
