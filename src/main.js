@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Vuex from 'vuex'
 import routes from "./routes.js"
 import item from "./item";
 import sidebar from "./sidebar";
@@ -9,12 +10,20 @@ import layer from "./layer.vue";
 import linkicon from "./linkIcon.vue";
 
 Vue.use(VueRouter);
+Vue.use(Vuex);
 
 const router = new VueRouter({routes})
 
+const store = new Vuex.Store({
+  state: { },
+  mutations: { }
+})
+
 const container = new Vue({
   router,
-  el:"#page", data:{
+  el:"#page",
+  store,
+  data:{
     sidebarstate:"closed",
     container:"container",
     layer:"layer",

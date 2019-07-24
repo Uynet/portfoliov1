@@ -7,7 +7,6 @@
     <div class="BGCircle1"></div>
     <div class="BGCircle2"></div>
     <div class="BGCircle3"></div>
-    <div class="dummy_padding"></div>
 
     <div align="center">
       <img class="profile_icon" src = "../resource/img/icon.png"></img>
@@ -15,7 +14,7 @@
     </div>
 
   <div class="frame" style="max-width:100%">
-    すいません、ブログじゃないです
+  　　作曲かプログラミング
   </div>
   <div class="frame" style="max-width:100%">
     <table border="0">
