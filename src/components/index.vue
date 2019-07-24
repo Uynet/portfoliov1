@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="sideline rightside"></div>
     <div class="sideline leftside"></div>
     <div class="BGCircle1"></div>
@@ -15,7 +14,7 @@
     　　　 　　　ーウィリアム・シェイクスピアー
    </div>
     <div align="center">
-      <img class = "chara" src = "../resource/img/bg.png"></img>
+      <img class = "chara" src = "../../resource/img/bg.png"></img>
     </div>
     <div class = "links" align="center">
      <a class="link fab fa-twitter"    href="http://twitter.com/uynet"></a>

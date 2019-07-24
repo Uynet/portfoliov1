@@ -6,7 +6,7 @@
     <div class="BGCircle1"></div>
     <div class="BGCircle2"></div>
     <div class="BGCircle3"></div>
-    <div class="dummy_padding"></div>
+    <!--div class="dummy_padding"></div-->
 
 <div class="frame">
 △工事中!△

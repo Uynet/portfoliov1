@@ -9,7 +9,7 @@
     <div class="BGCircle3"></div>
 
     <div align="center">
-      <img class="profile_icon" src = "../resource/img/icon.png"></img>
+      <img class="profile_icon" src = "../../resource/img/icon.png"></img>
       <div class="profile_name">uynet </div>
     </div>
 
